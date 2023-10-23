@@ -7,3 +7,6 @@ Objetivos:
     Crear un componente ItemListContainer y Renderizarlo en APP pasandole una Prop llamada Greeting
 
 Nota: para mi comodidad, no gener todo en APP si no que genere un componete intermedio llamado Home.
+
+
+DEPLOY: https://mineralizarte-react-1.vercel.app/
