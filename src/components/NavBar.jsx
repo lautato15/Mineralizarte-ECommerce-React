@@ -1,41 +1,44 @@
 import React from "react";
+import "./NavBar.css";
+import CartWidget from "./CartWidget";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 function NavBar() {
   return (
-    <Navbar collapseOnSelect expand="lg" className="bg-black">
+    <Navbar collapseOnSelect expand="lg" className="bg-dark">
       <Container>
         <Navbar.Brand href="#home" className="text-white">
+          <i class="fa-solid fa-gem  me-3"></i>
           Mineralizarte
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#features" className="text-white">
-              Features
+            <Nav.Link href="#tienda" className="text-white">
+              Tienda
             </Nav.Link>
-            <Nav.Link href="#pricing" className="text-white">
-              Pricing
+            <Nav.Link href="#sobrenos" className="text-white">
+              Sobre Nosotros
             </Nav.Link>
-            <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
+            <Nav.Link href="#contacto" className="text-white">
+              Contacto
+            </Nav.Link>
+            <NavDropdown
+              title="Blog"
+              id="collasible-nav-dropdown"
+              className="text-white"
+            >
+              <NavDropdown.Item href="#Rings">Anillos</NavDropdown.Item>
+              <NavDropdown.Item href="#Hoops">Aros</NavDropdown.Item>
+              <NavDropdown.Item href="#Pendants">Colgantes</NavDropdown.Item>
+
+              <NavDropdown.Item href="#Bracelets">Brazaletes</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
-            </Nav.Link>
+            <CartWidget />
           </Nav>
         </Navbar.Collapse>
       </Container>
