@@ -8,12 +8,18 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 function NavBar() {
   return (
     <Navbar collapseOnSelect expand="lg" className="bg-dark">
-      <Container>
+      <Container className="position-relative">
         <Navbar.Brand href="#home" className="text-white">
           <i class="fa-solid fa-gem  me-3"></i>
           Mineralizarte
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <div className=" position-absolute end-0 top-0 d-flex">
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Nav className="ms-auto me-4">
+            <CartWidget />
+          </Nav>
+        </div>
+
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#tienda" className="text-white">
@@ -36,9 +42,6 @@ function NavBar() {
 
               <NavDropdown.Item href="#Bracelets">Brazaletes</NavDropdown.Item>
             </NavDropdown>
-          </Nav>
-          <Nav>
-            <CartWidget />
           </Nav>
         </Navbar.Collapse>
       </Container>

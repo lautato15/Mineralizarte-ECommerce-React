@@ -11,3 +11,6 @@
 .nav-link:hover {
     color: white;
 }
+.navbar-toggler {
+    background-color: white;
+}
