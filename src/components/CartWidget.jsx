@@ -25,14 +25,8 @@ function CartWidget() {
         <Offcanvas.Header className="bg-body-secondary" closeButton>
           <Offcanvas.Title>CARRITO de COMPRAS</Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body className="p-0">
-          <div className="main-Canvas">
-            {/* <MainCartCanvas handleClose={handleClose} />
-            <FooterCartCanvas
-              handleClose={handleClose}
-              handleOpenModal={handleOpenModal}
-            /> */}
-          </div>
+        <Offcanvas.Body className="d-flex h-100 align-items-center justify-content-center fw-bold">
+          DATA CART
         </Offcanvas.Body>
       </Offcanvas>
     </>
