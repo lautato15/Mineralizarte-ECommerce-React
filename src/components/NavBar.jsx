@@ -14,7 +14,10 @@ function NavBar() {
           Mineralizarte
         </Navbar.Brand>
         <div className=" position-absolute end-0 top-0 d-flex">
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Toggle
+            aria-controls="responsive-navbar-nav"
+            style={{ scale: "0.7" }}
+          />
           <Nav className="ms-auto me-4">
             <CartWidget />
           </Nav>
