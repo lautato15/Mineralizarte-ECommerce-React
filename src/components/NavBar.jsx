@@ -10,7 +10,7 @@ function NavBar() {
     <Navbar collapseOnSelect expand="lg" className="bg-dark">
       <Container className="position-relative">
         <Navbar.Brand href="#home" className="text-white">
-          <i class="fa-solid fa-gem  me-3"></i>
+          <i className="fa-solid fa-gem  me-3"></i>
           Mineralizarte
         </Navbar.Brand>
         <div className=" position-absolute end-0 top-0 d-flex">

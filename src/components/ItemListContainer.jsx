@@ -1,17 +1,32 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import "./ItemListContainer.css";
-function ItemListContainer({ greeting }) {
+import ItemList from "./ItemList";
+function ItemListContainer() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const callData = async () => {
+      try {
+        const response = await fetch("/filedata.json");
+        const data = await response.json();
+        setProducts(data.productos);
+        console.log("ACA");
+        console.log(data.productos);
+      } catch (error) {
+        console.error("Error call or parsing of products:", error);
+      }
+    };
+    callData();
+  }, []);
   return (
-    <>
-      <div className="d-flex w-100 h-100 justify-content-center align-items-center">
-        <h2 style={{ fontFamily: "sans-serif" }}>
-          {greeting}
-          <span className="shine">
-            <i class="fa-solid fa-gem "></i>
-          </span>
-        </h2>
-      </div>
-    </>
+    products.length > 0 && (
+      <>
+        <div className="d-flex w-100 h-100  align-items-center flex-column">
+          <ItemList products={products} />
+        </div>
+      </>
+    )
   );
 }
 
