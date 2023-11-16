@@ -7,7 +7,7 @@ import Contact from "./components/Contact";
 import Cart from "./components/Cart";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
-
+import NotFound from "./components/NotFound";
 function App() {
   return (
     <>
@@ -17,8 +17,9 @@ function App() {
         <Route path="/about" element={<AboutThisPj />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/category/:category" element={<ItemListContainer />} />
+        <Route path="/category/:catid" element={<ItemListContainer />} />
         <Route path="/item/:id" element={<ItemDetailContainer />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );

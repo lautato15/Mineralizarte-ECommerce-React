@@ -1,17 +1,35 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./NavBar.css";
 import CartWidget from "./CartWidget";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import { Link, NavLink } from "react-router-dom";
 function NavBar() {
+  const [categories, setCategories] = useState(false);
+  useEffect(() => {
+    const callData = async () => {
+      try {
+        const response = await fetch("/filedata.json");
+        const data = await response.json();
+
+        setCategories(data.categories);
+      } catch (error) {
+        console.error("Error call or parsing of products:", error);
+      }
+    };
+    callData();
+    // ACLARACION, YO NO HARIA ESTE USEEFFECT ACA, LO COLOCARIA EN EL HOME Y TRAERIA LOS DATOS UNA SOLA VES, Y NO DOBLE COMO EN ESTE CASO, PERO SI HAGO ESO DEJO SIN NINGUN TIPO DE UTILIDAD EL ITEMLISTCONTAINER, ENTONCES PARA CUMPLIR CON LA LETRA ESTRICTAMENTE LO HAGO REDUNDANTE
+  }, []);
   return (
     <Navbar collapseOnSelect expand="lg" className="bg-dark">
       <Container className="position-relative">
-        <Navbar.Brand href="#home" className="text-white">
-          <i className="fa-solid fa-gem  me-3"></i>
-          Mineralizarte
+        <Navbar.Brand className="text-white">
+          <Link to="/" className="text-decoration-none text-white">
+            <i className="fa-solid fa-gem  me-3"></i>
+            Mineralizarte
+          </Link>
         </Navbar.Brand>
         <div className=" position-absolute end-0 top-0 d-flex">
           <Navbar.Toggle
@@ -25,25 +43,58 @@ function NavBar() {
 
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#tienda" className="text-white">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive
+                  ? "navActive text-decoration-none text-white nav-link"
+                  : "text-decoration-none text-white nav-link"
+              }
+            >
               Tienda
-            </Nav.Link>
-            <Nav.Link href="#sobrenos" className="text-white">
+            </NavLink>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive
+                  ? "navActive text-decoration-none text-white nav-link"
+                  : "text-decoration-none text-white nav-link"
+              }
+            >
               Sobre Nosotros
-            </Nav.Link>
-            <Nav.Link href="#contacto" className="text-white">
-              Contacto
-            </Nav.Link>
+            </NavLink>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                isActive
+                  ? "navActive text-decoration-none text-white nav-link"
+                  : "text-decoration-none text-white nav-link"
+              }
+            >
+              Contact
+            </NavLink>
+
             <NavDropdown
-              title="Blog"
+              title="Categorias"
               id="collasible-nav-dropdown"
               className="text-white"
             >
-              <NavDropdown.Item href="">Anillos</NavDropdown.Item>
-              <NavDropdown.Item href=" #Hoops">Aros</NavDropdown.Item>
-              <NavDropdown.Item href="#Pendants">Colgantes</NavDropdown.Item>
-
-              <NavDropdown.Item href="#Bracelets">Brazaletes</NavDropdown.Item>
+              {categories.length > 0 &&
+                categories.map((c) => {
+                  return (
+                    <NavLink
+                      key={c.id}
+                      to={`/category/${c.id}`}
+                      className={({ isActive }) =>
+                        isActive
+                          ? "navActive text-decoration-none text-black mx-2 nav-link"
+                          : "text-decoration-none text-black mx-2 nav-link"
+                      }
+                    >
+                      {c.name}
+                    </NavLink>
+                  );
+                })}
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

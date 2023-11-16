@@ -1,76 +1,93 @@
 {
+  "categories": [
+    {
+      "id": 1,
+      "name": "Anillos",
+      "image": "https://ejemplo.com/categoria_anillos.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Pendientes",
+      "image": "https://ejemplo.com/categoria_pendientes.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Dijes",
+      "image": "https://ejemplo.com/categoria_dijes.jpg"
+    }
+  ],
   "products": [
     {
       "id": 1,
       "name": "Anillo de Oro Blanco",
-      "category": "anillos",
+      "category_id": 1,
       "price": 500.0,
       "description": "Anillo elegante de oro blanco con incrustaciones de diamantes.",
-      "image": "https://facellojoyeros.com.uy/facello/2702-large_default/muestra-n-20.jpg"
+      "image": "https://caketheme.com/html/mojuri/media/product/2.jpg"
     },
     {
       "id": 2,
       "name": "Anillo de Plata con Zafiro",
-      "category": "anillos",
+      "category_id": 1,
       "price": 150.0,
       "description": "Anillo de plata con una piedra preciosa de zafiro azul.",
-      "image": "https://facellojoyeros.com.uy/facello/28198-home_default/anillo-en-platino-zafiro-oval-y-brillantes-.jpg"
+      "image": "https://caketheme.com/html/mojuri/media/product/7.jpg"
     },
     {
       "id": 3,
       "name": "Anillo de Compromiso de Diamante",
-      "category": "anillos",
+      "category_id": 1,
       "price": 1000.0,
       "description": "Anillo de compromiso clásico con un diamante brillante en el centro.",
-      "image": "https://ejemplo.com/anillo_compromiso_diamante.jpg"
+      "image": "https://caketheme.com/html/mojuri/media/product/5.jpg"
     },
     {
       "id": 4,
       "name": "Pendientes de Perlas",
-      "category": "pendientes",
+      "category_id": 2,
       "price": 200.0,
       "description": "Elegantes pendientes de perlas cultivadas en oro amarillo.",
-      "image": "https://ejemplo.com/pendientes_perlas.jpg"
+      "image": "https://caketheme.com/html/mojuri/media/product/4.jpg"
     },
     {
       "id": 5,
       "name": "Pendientes de Diamantes",
-      "category": "pendientes",
+      "category_id": 2,
       "price": 800.0,
       "description": "Pendientes colgantes con diamantes brillantes en montura de platino.",
-      "image": "https://ejemplo.com/pendientes_diamantes.jpg"
+      "image": "https://caketheme.com/html/mojuri/media/product/9.jpg"
     },
     {
       "id": 6,
-      "name": "Pendientes de Aro de Plata",
-      "category": "pendientes",
+      "name": "Pendientes de Aro de Oro",
+      "category_id": 2,
       "price": 80.0,
       "description": "Pendientes de aro clásicos hechos de plata esterlina.",
-      "image": "https://ejemplo.com/pendientes_aro_plata.jpg"
+      "image": "https://caketheme.com/html/mojuri/media/product/2-2.jpg"
     },
     {
       "id": 7,
       "name": "Dije de Corazón",
-      "category": "dijes",
+      "category_id": 3,
       "price": 30.0,
       "description": "Dije delicado con forma de corazón, perfecto para expresar amor.",
-      "image": "https://ejemplo.com/dije_corazon.jpg"
+      "image": "https://caketheme.com/html/mojuri/media/product/6.jpg"
     },
     {
       "id": 8,
       "name": "Dije de Estrella",
-      "category": "dijes",
+      "category_id": 3,
       "price": 25.0,
       "description": "Dije encantador en forma de estrella para un toque celestial.",
-      "image": "https://ejemplo.com/dije_estrella.jpg"
+      "image": "https://caketheme.com/html/mojuri/media/product/6-2.jpg"
     },
     {
       "id": 9,
       "name": "Dije de Llave",
-      "category": "dijes",
+      "category_id": 3,
       "price": 40.0,
       "description": "Dije elegante con forma de llave, simbolizando secretos y posibilidades.",
-      "image": "https://ejemplo.com/dije_llave.jpg"
+      "image": "https://caketheme.com/html/mojuri/media/product/8.jpg"
     }
   ]
 }
