@@ -10,9 +10,7 @@ function ItemListContainer() {
       try {
         const response = await fetch("/filedata.json");
         const data = await response.json();
-        setProducts(data.productos);
-        console.log("ACA");
-        console.log(data.productos);
+        setProducts(data.products);
       } catch (error) {
         console.error("Error call or parsing of products:", error);
       }

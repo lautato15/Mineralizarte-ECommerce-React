@@ -1,52 +1,76 @@
 {
-  "productos": [
+  "products": [
     {
       "id": 1,
-      "nombre": "Anillo de Oro Blanco",
-      "categoria": "anillos",
-      "precio": 500.00,
-      "descripcion": "Anillo elegante de oro blanco con incrustaciones de diamantes.",
-      "imagen": "https://facellojoyeros.com.uy/facello/2702-large_default/muestra-n-20.jpg"
+      "name": "Anillo de Oro Blanco",
+      "category": "anillos",
+      "price": 500.0,
+      "description": "Anillo elegante de oro blanco con incrustaciones de diamantes.",
+      "image": "https://facellojoyeros.com.uy/facello/2702-large_default/muestra-n-20.jpg"
     },
     {
       "id": 2,
-      "nombre": "Anillo de Plata con Zafiro",
-      "categoria": "anillos",
-      "precio": 150.00,
-      "descripcion": "Anillo de plata con una piedra preciosa de zafiro azul.",
-      "imagen": "https://facellojoyeros.com.uy/facello/28198-home_default/anillo-en-platino-zafiro-oval-y-brillantes-.jpg"
+      "name": "Anillo de Plata con Zafiro",
+      "category": "anillos",
+      "price": 150.0,
+      "description": "Anillo de plata con una piedra preciosa de zafiro azul.",
+      "image": "https://facellojoyeros.com.uy/facello/28198-home_default/anillo-en-platino-zafiro-oval-y-brillantes-.jpg"
     },
     {
       "id": 3,
-      "nombre": "Anillo de Compromiso de Diamante",
-      "categoria": "anillos",
-      "precio": 1000.00,
-      "descripcion": "Anillo de compromiso clásico con un diamante brillante en el centro.",
-      "imagen": "https://ejemplo.com/anillo_compromiso_diamante.jpg"
+      "name": "Anillo de Compromiso de Diamante",
+      "category": "anillos",
+      "price": 1000.0,
+      "description": "Anillo de compromiso clásico con un diamante brillante en el centro.",
+      "image": "https://ejemplo.com/anillo_compromiso_diamante.jpg"
     },
     {
       "id": 4,
-      "nombre": "Pendientes de Perlas",
-      "categoria": "pendientes",
-      "precio": 200.00,
-      "descripcion": "Elegantes pendientes de perlas cultivadas en oro amarillo.",
-      "imagen": "https://ejemplo.com/pendientes_perlas.jpg"
+      "name": "Pendientes de Perlas",
+      "category": "pendientes",
+      "price": 200.0,
+      "description": "Elegantes pendientes de perlas cultivadas en oro amarillo.",
+      "image": "https://ejemplo.com/pendientes_perlas.jpg"
     },
     {
       "id": 5,
-      "nombre": "Pendientes de Diamantes",
-      "categoria": "pendientes",
-      "precio": 800.00,
-      "descripcion": "Pendientes colgantes con diamantes brillantes en montura de platino.",
-      "imagen": "https://ejemplo.com/pendientes_diamantes.jpg"
+      "name": "Pendientes de Diamantes",
+      "category": "pendientes",
+      "price": 800.0,
+      "description": "Pendientes colgantes con diamantes brillantes en montura de platino.",
+      "image": "https://ejemplo.com/pendientes_diamantes.jpg"
     },
     {
       "id": 6,
-      "nombre": "Pendientes de Aro de Plata",
-      "categoria": "pendientes",
-      "precio": 80.00,
-      "descripcion": "Pendientes de aro clásicos hechos de plata esterlina.",
-      "imagen": "https://ejemplo.com/pendientes_aro_plata.jpg"
+      "name": "Pendientes de Aro de Plata",
+      "category": "pendientes",
+      "price": 80.0,
+      "description": "Pendientes de aro clásicos hechos de plata esterlina.",
+      "image": "https://ejemplo.com/pendientes_aro_plata.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Dije de Corazón",
+      "category": "dijes",
+      "price": 30.0,
+      "description": "Dije delicado con forma de corazón, perfecto para expresar amor.",
+      "image": "https://ejemplo.com/dije_corazon.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Dije de Estrella",
+      "category": "dijes",
+      "price": 25.0,
+      "description": "Dije encantador en forma de estrella para un toque celestial.",
+      "image": "https://ejemplo.com/dije_estrella.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Dije de Llave",
+      "category": "dijes",
+      "price": 40.0,
+      "description": "Dije elegante con forma de llave, simbolizando secretos y posibilidades.",
+      "image": "https://ejemplo.com/dije_llave.jpg"
     }
   ]
 }

@@ -7,13 +7,13 @@ function Item({ product }) {
       <Card style={{ width: "18rem", height: "12rem" }}>
         <img
           className="img-fluid"
-          src={product.imagen}
+          src={product.image}
           style={{ height: "auto", maxWidth: "100%" }}
         />
         <Card.Body className="align-items-start flex-column d-flex">
-          <Card.Title>{product.nombre}</Card.Title>
+          <Card.Title>{product.name}</Card.Title>
           <Card.Text className="mb-auto mt-auto">
-            {product.descripcion}
+            {product.description}
           </Card.Text>
           <Button className="" variant="primary">
             Ver detalles

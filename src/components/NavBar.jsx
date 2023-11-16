@@ -39,8 +39,8 @@ function NavBar() {
               id="collasible-nav-dropdown"
               className="text-white"
             >
-              <NavDropdown.Item href="#Rings">Anillos</NavDropdown.Item>
-              <NavDropdown.Item href="#Hoops">Aros</NavDropdown.Item>
+              <NavDropdown.Item href="">Anillos</NavDropdown.Item>
+              <NavDropdown.Item href=" #Hoops">Aros</NavDropdown.Item>
               <NavDropdown.Item href="#Pendants">Colgantes</NavDropdown.Item>
 
               <NavDropdown.Item href="#Bracelets">Brazaletes</NavDropdown.Item>
