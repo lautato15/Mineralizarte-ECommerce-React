@@ -21,7 +21,9 @@ function Item({ product }) {
             className=""
             variant="primary"
             type="button"
-            onClick={() => navigate(`/item/${product.id}`, { p: { product } })}
+            onClick={() =>
+              navigate(`/item/${product.id}`, { state: { product } })
+            }
           >
             Ver detalles
           </Button>
