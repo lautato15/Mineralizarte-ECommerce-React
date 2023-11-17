@@ -23,7 +23,11 @@ function NavBar() {
     // ACLARACION, YO NO HARIA ESTE USEEFFECT ACA, LO COLOCARIA EN EL HOME Y TRAERIA LOS DATOS UNA SOLA VES, Y NO DOBLE COMO EN ESTE CASO, PERO SI HAGO ESO DEJO SIN NINGUN TIPO DE UTILIDAD EL ITEMLISTCONTAINER, ENTONCES PARA CUMPLIR CON LA LETRA ESTRICTAMENTE LO HAGO REDUNDANTE
   }, []);
   return (
-    <Navbar collapseOnSelect expand="lg" className="bg-dark">
+    <Navbar
+      collapseOnSelect
+      expand="lg"
+      className="bg-dark Navbar-Text FontLato"
+    >
       <Container className="position-relative">
         <Navbar.Brand className="text-white">
           <Link to="/" className="text-decoration-none text-white">

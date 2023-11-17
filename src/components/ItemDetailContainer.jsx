@@ -8,7 +8,7 @@ function ItemDetailContainer() {
   console.log(product);
 
   return (
-    <div className="d-flex justify-content-center align-items-center text-black fs-2">
+    <div className="d-flex justify-content-center align-items-center text-black fs-2 p-5">
       <ItemDetail product={product} />
     </div>
   );

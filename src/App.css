@@ -1,0 +1,15 @@
+@font-face{
+    font-family: 'FontGaramond';
+    src:url("/src/assets/fonts/Cormorant_Garamond/CormorantGaramond-Light.ttf")  format(truetype);
+}
+@font-face{
+    font-family: 'FontLato';
+    src:url("/src/assets/fonts/Lato/Lato-Light.ttf")  format(truetype);
+}
+.FontLato{
+    font-family: FontLato;
+}
+.FontGaramond{
+    font-family: FontGaramond!important;
+
+}
