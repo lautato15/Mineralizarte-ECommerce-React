@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 function Item({ product }) {
   const navigate = useNavigate();
   return (
@@ -17,16 +17,13 @@ function Item({ product }) {
           <Card.Text className="mb-auto mt-auto fs-6">
             {product.description}
           </Card.Text>
-          <Button
-            className=""
-            variant="primary"
-            type="button"
-            onClick={() =>
-              navigate(`/item/${product.id}`, { state: { product } })
-            }
+
+          <Link
+            className="text-decoration-none text-black btn border-black border-2 "
+            to={`/item/${product.id}`}
           >
             Ver detalles
-          </Button>
+          </Link>
         </Card.Body>
       </Card>
     </div>

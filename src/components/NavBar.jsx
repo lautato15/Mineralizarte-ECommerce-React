@@ -7,6 +7,9 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link, NavLink } from "react-router-dom";
 function NavBar() {
+  const ClassActive = "navActive text-decoration-none text-white nav-link";
+  const ClassInActive = "text-decoration-none text-white nav-link";
+
   const [categories, setCategories] = useState(false);
   useEffect(() => {
     const callData = async () => {
@@ -50,9 +53,7 @@ function NavBar() {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                isActive
-                  ? "navActive text-decoration-none text-white nav-link"
-                  : "text-decoration-none text-white nav-link"
+                isActive ? ClassActive : ClassInActive
               }
             >
               Tienda
@@ -60,9 +61,7 @@ function NavBar() {
             <NavLink
               to="/about"
               className={({ isActive }) =>
-                isActive
-                  ? "navActive text-decoration-none text-white nav-link"
-                  : "text-decoration-none text-white nav-link"
+                isActive ? ClassActive : ClassInActive
               }
             >
               Sobre Nosotros
@@ -70,9 +69,7 @@ function NavBar() {
             <NavLink
               to="/contact"
               className={({ isActive }) =>
-                isActive
-                  ? "navActive text-decoration-none text-white nav-link"
-                  : "text-decoration-none text-white nav-link"
+                isActive ? ClassActive : ClassInActive
               }
             >
               Contact
@@ -81,7 +78,7 @@ function NavBar() {
             <NavDropdown
               title="Categorias"
               id="collasible-nav-dropdown"
-              className="text-white"
+              className=""
             >
               {categories.length > 0 &&
                 categories.map((c) => {
@@ -91,8 +88,8 @@ function NavBar() {
                       to={`/category/${c.id}`}
                       className={({ isActive }) =>
                         isActive
-                          ? "navActive text-decoration-none text-black mx-2 nav-link"
-                          : "text-decoration-none text-black mx-2 nav-link"
+                          ? ClassActive
+                          : "text-decoration-none text-black nav-link"
                       }
                     >
                       {c.name}

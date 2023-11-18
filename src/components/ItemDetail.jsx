@@ -1,7 +1,6 @@
 import React from "react";
 import ItemCount from "./ItemCount";
 function ItemDetail({ product }) {
-  console.log(product);
   return (
     <div className="container">
       <div className="row">
