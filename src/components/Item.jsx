@@ -19,7 +19,7 @@ function Item({ product }) {
           </Card.Text>
 
           <Link
-            className="text-decoration-none text-black btn border-black border-2 "
+            className="text-decoration-none text-white bg-black btn border-black border-2 "
             to={`/item/${product.id}`}
           >
             Ver detalles
