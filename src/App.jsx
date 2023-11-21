@@ -1,13 +1,13 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Home from "./Home";
+import Home from "./components/Home";
 import NavBar from "./components/NavBar";
-import AboutThisPj from "./components/AboutThisPj";
-import Contact from "./components/Contact";
+import AboutThisPj from "./components/pages/AboutThisPj";
+import Contact from "./components/pages/Contact";
 import Cart from "./components/Cart";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
-import NotFound from "./components/NotFound";
+import NotFound from "./components/pages/NotFound";
 function App() {
   return (
     <>
