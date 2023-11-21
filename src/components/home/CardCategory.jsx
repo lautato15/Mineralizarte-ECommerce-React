@@ -18,7 +18,7 @@ function CardCategory({ category }) {
         <div className="position-absolute top-100 start-50 translate-middle ">
           <Link
             href="#"
-            className="w-100	bg-white text-decoration-none text-black	fs-5  px-4 py-2 FontLato "
+            className="w-100	bg-white text-decoration-none text-black	fs-6  px-4 py-2 FontLato "
           >
             {category}
           </Link>
