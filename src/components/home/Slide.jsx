@@ -14,7 +14,7 @@ function Slide() {
         <Carousel.Caption className="CaptionSlidePosition">
           <h3 className="SlideText">Ahorra un 70%!</h3>
           <p className="SlideSubText"> VENTA DE MEDIO AÑO</p>
-          <Button color="white" radius="none" variant="ghost">
+          <Button bsPrefix="BtnSlide" variant="outline-light" radius="none">
             MÁS VENDIDOS
           </Button>
         </Carousel.Caption>
@@ -24,7 +24,7 @@ function Slide() {
         <Carousel.Caption className="CaptionSlidePosition">
           <h3 className="SlideText">Lo mejor de lo mejor!</h3>
           <p className="SlideSubText"> VENTA DE MEDIO AÑO</p>
-          <Button color="white" radius="none" variant="ghost">
+          <Button bsPrefix="BtnSlide" variant="outline-light">
             MÁS VENDIDOS
           </Button>
         </Carousel.Caption>
@@ -34,7 +34,7 @@ function Slide() {
         <Carousel.Caption className="CaptionSlidePosition">
           <h3 className="SlideText">¡Decile hola a la Novedad!</h3>
           <p className="SlideSubText"> VENTA DE MEDIO AÑO</p>
-          <Button color="white" radius="none" variant="ghost">
+          <Button bsPrefix="BtnSlide" variant="outline-light">
             MÁS VENDIDOS
           </Button>
         </Carousel.Caption>

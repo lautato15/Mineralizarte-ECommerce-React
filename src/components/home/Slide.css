@@ -1,25 +1,49 @@
-.CaptionSlidePosition{
-    bottom: 30%!important;
+.CaptionSlidePosition {
+  bottom: 30% !important;
 }
 
-.SlideText{
-    font-family: FontGaramond!important;
-    font-size: 4.5rem;
+.SlideText {
+  font-family: FontGaramond !important;
+  font-size: 4.5rem;
+  letter-spacing: 3px;
+  text-align: center;
+}
+.SlideSubText {
+  font-family: FontGaramond !important;
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.BtnSlide{
+    border-radius: 0%;
+    border:  2px solid white;
+    font-size: 1rem;
+    font-family: FontLato;
+    padding: 1rem;
     letter-spacing: 3px;
-    text-align: center;
+    color: white;
+    background-color: transparent;
 }
-.SlideSubText{
-    font-family: FontGaramond!important;
-    font-size: 3rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-    text-align: center;
-    margin-bottom: 1rem;
+@media (max-width: 1166px) {
+  .SlideText {
+    font-size: 2.5rem;
+  }
+  .SlideSubText {
+    font-size: 2rem;
+    width: 100%;
+  }
 }
-/* 
-.carousel-control-next-icon {
-    border-radius: 25px;
-    border: 1px white solid ;
-    padding: 20px;
-    
-} */
+@media (max-width: 746px) {
+  .SlideText {
+    font-size: 1.2rem;
+  }
+  .SlideSubText {
+    font-size: 1rem;
+    width: 100%;
+  }
+  .BtnSlide{
+    font-size: 0.6rem;
+}
+}
