@@ -6,9 +6,7 @@ function CardCategory({ category }) {
     <>
       <div
         className="NotInvert static shake-horizontal"
-        style={{
-          width: "auto",
-        }}
+        style={{ width: "auto" }}
       >
         <img
           src={`./src/assets/img/cardsCat/${category}.jpeg`}
