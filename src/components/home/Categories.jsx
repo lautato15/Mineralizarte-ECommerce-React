@@ -11,7 +11,7 @@ function Categories() {
   ];
   return (
     <>
-      <div className="CategoriesDiv">
+      <div className="CategoriesDiv ">
         <div className="text-center ">
           <p className="text-black FontLato fw-bold fs-5 tracking-wide mb-3">
             TE TENEMOS CUBIERTO
@@ -20,7 +20,7 @@ function Categories() {
             Explora la Gama
           </h5>
         </div>
-        <div className="row mt-5">
+        <div className="row mt-3">
           {ListCategories.map((category, index) => (
             <CardCategory category={category} key={index} />
           ))}

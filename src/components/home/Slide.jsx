@@ -8,7 +8,7 @@ import slide3 from "../../assets/img/slide/slide3.jpg";
 
 function Slide() {
   return (
-    <Carousel className="w-full	">
+    <Carousel className="w-100	">
       <Carousel.Item>
         <img src={slide1} text="First slide" className="w-100" />
         <Carousel.Caption className="CaptionSlidePosition">

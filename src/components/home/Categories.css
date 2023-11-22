@@ -6,13 +6,11 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    filter: invert(100%);
+    filter: invert(96%);
     padding: 3rem;
     width: 100%;
 }
 
-.NotInvert{
-    filter: invert(100%)
-}
+
 
   
