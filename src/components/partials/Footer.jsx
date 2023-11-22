@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Footer.css";
+import Payments from "../../assets/img/payments.png";
 
 function Footer() {
   const LinkClass =
@@ -9,7 +10,7 @@ function Footer() {
       <div className=" bg-dark text-white my-5">
         <div className="container">
           <div className="row">
-            <div className="col-12 col-md-6 col-lg-3">
+            <div className="col-12 col-md-6 col-lg-3 mt-5">
               <div className=" d-flex flex-column ">
                 <p
                   className="FontGaramond fw-bold"
@@ -38,7 +39,7 @@ function Footer() {
               </div>
             </div>
 
-            <div className="col-12 col-md-6 col-lg-3">
+            <div className="col-12 col-md-6 col-lg-3 mt-5">
               <div className=" d-flex flex-column ">
                 <p
                   className="FontGaramond fw-bold"
@@ -64,7 +65,7 @@ function Footer() {
               </div>
             </div>
 
-            <div className="col-12 col-md-6 col-lg-3">
+            <div className="col-12 col-md-6 col-lg-3 mt-5">
               <div className=" d-flex flex-column ">
                 <p
                   className="FontGaramond fw-bold"
@@ -90,7 +91,7 @@ function Footer() {
               </div>
             </div>
 
-            <div className="col-12 col-md-6 col-lg-3">
+            <div className="col-12 col-md-6 col-lg-3 mt-5">
               <div className=" d-flex flex-column ">
                 <p
                   className="FontGaramond fw-bold"
@@ -102,22 +103,72 @@ function Footer() {
                   Regístrese para recibir las últimas ofertas y exclusivas de
                   Ice.
                 </p>
-                <div className="d-flex">
+                <div className="d-flex my-3">
                   <input
                     type="email"
                     className="p-2 border-0"
                     placeholder="Correo Electrónico"
                   />
-                  <button className="bg-white border-0 rounded-0">
+                  <button className="bg-white  rounded-0 border-0 border-start border-black">
                     <i
                       className="fa-solid fa-envelope"
                       style={{ color: "#000000" }}
                     ></i>
                   </button>
                 </div>
-                <br />
-                <p>HOla</p>
+                <div className="d-flex">
+                  <a
+                    href="https://twitter.com/"
+                    className="border border-light-subtle py-1 px-2 rounded-5 me-1"
+                  >
+                    <i
+                      className="fa-brands fa-twitter"
+                      style={{ color: "#ffffff" }}
+                    ></i>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/"
+                    className="border border-light-subtle py-1 px-2 rounded-5 mx-1"
+                  >
+                    <i
+                      class="fa-brands fa-instagram"
+                      style={{ color: "#ffffff" }}
+                    ></i>
+                  </a>
+                  <a
+                    href="https://www.facebook.com/"
+                    className="border border-light-subtle py-1 px-2 rounded-5 mx-1"
+                  >
+                    <i
+                      class="fa-brands fa-facebook"
+                      style={{ filter: "invert(100%)", color: "#000000" }}
+                    ></i>
+                  </a>
+                  <a
+                    href="https://web.whatsapp.com/"
+                    className="border border-light-subtle py-1 px-2 rounded-5 mx-1"
+                  >
+                    <i
+                      class="fa-brands fa-whatsapp"
+                      style={{ color: "#ffffff" }}
+                    ></i>
+                  </a>
+                </div>
               </div>
+            </div>
+          </div>
+          <div className="row border-0 border-top border-white mt-4 pt-3">
+            <div className="col-12 col-md-8">
+              <p className="text-center text-md-start">
+                Copyright © 2023.Todos los derechos reservados.
+              </p>
+            </div>
+            <div className="col-12 col-md-4 mb-4">
+              <img
+                src={Payments}
+                alt="Imagen de Metodos de Pago"
+                className="img-fluid"
+              />
             </div>
           </div>
         </div>
