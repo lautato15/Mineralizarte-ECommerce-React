@@ -11,6 +11,7 @@ function NavBar() {
   const ClassInActive = "text-decoration-none text-white nav-link";
 
   const [categories, setCategories] = useState(false);
+  
   useEffect(() => {
     const callData = async () => {
       try {
@@ -23,8 +24,8 @@ function NavBar() {
       }
     };
     callData();
-    // ACLARACION, YO NO HARIA ESTE USEEFFECT ACA, LO COLOCARIA EN EL HOME Y TRAERIA LOS DATOS UNA SOLA VES, Y NO DOBLE COMO EN ESTE CASO, PERO SI HAGO ESO DEJO SIN NINGUN TIPO DE UTILIDAD EL ITEMLISTCONTAINER, ENTONCES PARA CUMPLIR CON LA LETRA ESTRICTAMENTE LO HAGO REDUNDANTE
   }, []);
+
   return (
     <Navbar
       collapseOnSelect
@@ -56,16 +57,24 @@ function NavBar() {
                 isActive ? ClassActive : ClassInActive
               }
             >
-              Tienda
+              Home
             </NavLink>
             <NavLink
+              to="/shop"
+              className={({ isActive }) =>
+                isActive ? ClassActive : ClassInActive
+              }
+            >
+              Shop
+            </NavLink>
+            {/* <NavLink
               to="/about"
               className={({ isActive }) =>
                 isActive ? ClassActive : ClassInActive
               }
             >
               Sobre Nosotros
-            </NavLink>
+            </NavLink> */}
             <NavLink
               to="/contact"
               className={({ isActive }) =>

@@ -2,18 +2,28 @@
   "categories": [
     {
       "id": 1,
-      "name": "Anillos",
-      "image": "https://ejemplo.com/categoria_anillos.jpg"
+      "name": "Brazaletes",
+      "image": "https://caketheme.com/html/mojuri/media/product/cat-4-1.jpg"
     },
     {
       "id": 2,
-      "name": "Pendientes",
-      "image": "https://ejemplo.com/categoria_pendientes.jpg"
+      "name": "Dijes",
+      "image": "https://caketheme.com/html/mojuri/media/product/cat-4-2.jpg"
     },
     {
       "id": 3,
-      "name": "Dijes",
-      "image": "https://ejemplo.com/categoria_dijes.jpg"
+      "name": "Pendientes",
+      "image": "https://caketheme.com/html/mojuri/media/product/cat-4-3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Colgantes",
+      "image": "https://caketheme.com/html/mojuri/media/product/cat-4-4.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Annillos",
+      "image": "https://caketheme.com/html/mojuri/media/product/cat-4-5.jpg"
     }
   ],
   "products": [

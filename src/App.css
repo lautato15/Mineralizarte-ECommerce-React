@@ -18,3 +18,9 @@
 .NotInvert{
     filter: invert(100%)
 }
+
+.Father{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

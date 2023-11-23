@@ -7,8 +7,8 @@ function Footer() {
     "text-decoration-none text-white FontLato my-1 text-white-50  ";
   return (
     <>
-      <div className=" bg-dark text-white my-5">
-        <div className="container">
+      <div className=" bg-dark text-white footer ">
+        <div className="container  my-3">
           <div className="row">
             <div className="col-12 col-md-6 col-lg-3 mt-5">
               <div className=" d-flex flex-column ">
@@ -131,7 +131,7 @@ function Footer() {
                     className="border border-light-subtle py-1 px-2 rounded-5 mx-1"
                   >
                     <i
-                      class="fa-brands fa-instagram"
+                      className="fa-brands fa-instagram"
                       style={{ color: "#ffffff" }}
                     ></i>
                   </a>
@@ -140,7 +140,7 @@ function Footer() {
                     className="border border-light-subtle py-1 px-2 rounded-5 mx-1"
                   >
                     <i
-                      class="fa-brands fa-facebook"
+                      className="fa-brands fa-facebook"
                       style={{ filter: "invert(100%)", color: "#000000" }}
                     ></i>
                   </a>
@@ -149,7 +149,7 @@ function Footer() {
                     className="border border-light-subtle py-1 px-2 rounded-5 mx-1"
                   >
                     <i
-                      class="fa-brands fa-whatsapp"
+                      className="fa-brands fa-whatsapp"
                       style={{ color: "#ffffff" }}
                     ></i>
                   </a>

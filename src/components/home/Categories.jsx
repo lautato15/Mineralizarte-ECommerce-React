@@ -12,7 +12,7 @@ function Categories() {
   return (
     <>
       <div className="CategoriesDiv ">
-        <div className="text-center ">
+        <div className="text-center mt-4">
           <p className="text-black FontLato fw-bold fs-5 tracking-wide mb-3">
             TE TENEMOS CUBIERTO
           </p>
@@ -20,7 +20,7 @@ function Categories() {
             Explora la Gama
           </h5>
         </div>
-        <div className="row mt-3">
+        <div className="row mt-3 d-flex justify-content-center py-5">
           {ListCategories.map((category, index) => (
             <CardCategory category={category} key={index} />
           ))}
