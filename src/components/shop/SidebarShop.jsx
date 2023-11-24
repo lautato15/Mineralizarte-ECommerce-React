@@ -20,7 +20,7 @@ function SidebarShop() {
     <>
       <div>
         <h3
-          className="text-white FontGaramond fs-4 fw-bold"
+          className="text-white FontGaramond fs-4 fw-bold mb-4"
           style={{ letterSpacing: "1.5px" }}
         >
           Categorías

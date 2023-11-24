@@ -22,7 +22,7 @@
     },
     {
       "id": 5,
-      "name": "Annillos",
+      "name": "Anillos",
       "image": "https://caketheme.com/html/mojuri/media/product/cat-4-5.jpg"
     }
   ],
@@ -35,7 +35,8 @@
       "description": "Anillo elegante de oro blanco con incrustaciones de diamantes.",
       "image": "https://caketheme.com/html/mojuri/media/product/2.jpg",
       "stock": 18,
-      "favorite": true
+      "favorite": true,
+      "stars": 4
     },
     {
       "id": 2,
@@ -45,7 +46,8 @@
       "description": "Anillo de plata con una piedra preciosa de zafiro azul.",
       "image": "https://caketheme.com/html/mojuri/media/product/7.jpg",
       "stock": 30,
-      "favorite": false
+      "favorite": false,
+      "stars": 2
     },
     {
       "id": 3,
@@ -55,7 +57,8 @@
       "description": "Anillo de compromiso clásico con un diamante brillante en el centro.",
       "image": "https://caketheme.com/html/mojuri/media/product/5.jpg",
       "stock": 9,
-      "favorite": true
+      "favorite": true,
+      "stars": 5
     },
     {
       "id": 4,
@@ -65,7 +68,8 @@
       "description": "Elegantes pendientes de perlas cultivadas en oro amarillo.",
       "image": "https://caketheme.com/html/mojuri/media/product/4.jpg",
       "stock": 23,
-      "favorite": false
+      "favorite": false,
+      "stars": 3
     },
     {
       "id": 5,
@@ -75,7 +79,8 @@
       "description": "Pendientes colgantes con diamantes brillantes en montura de platino.",
       "image": "https://caketheme.com/html/mojuri/media/product/9.jpg",
       "stock": 5,
-      "favorite": true
+      "favorite": true,
+      "stars": 1
     },
     {
       "id": 6,
@@ -85,7 +90,8 @@
       "description": "Pendientes de aro clásicos hechos de plata esterlina.",
       "image": "https://caketheme.com/html/mojuri/media/product/2-2.jpg",
       "stock": 12,
-      "favorite": false
+      "favorite": false,
+      "stars": 4
     },
     {
       "id": 7,
@@ -95,7 +101,8 @@
       "description": "Dije delicado con forma de corazón, perfecto para expresar amor.",
       "image": "https://caketheme.com/html/mojuri/media/product/6.jpg",
       "stock": 36,
-      "favorite": true
+      "favorite": true,
+      "stars": 2
     },
     {
       "id": 8,
@@ -105,7 +112,8 @@
       "description": "Dije encantador en forma de estrella para un toque celestial.",
       "image": "https://caketheme.com/html/mojuri/media/product/6-2.jpg",
       "stock": 15,
-      "favorite": false
+      "favorite": false,
+      "stars": 3
     },
     {
       "id": 9,
@@ -115,7 +123,8 @@
       "description": "Dije elegante con forma de llave, simbolizando secretos y posibilidades.",
       "image": "https://caketheme.com/html/mojuri/media/product/8.jpg",
       "stock": 8,
-      "favorite": true
+      "favorite": true,
+      "stars": 5
     }
   ]
 }

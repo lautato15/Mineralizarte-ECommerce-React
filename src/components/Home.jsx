@@ -1,4 +1,4 @@
-import ItemListContainer from "./ItemListContainer";
+import ItemListContainer from "./shop/ItemListContainer";
 import Categories from "./home/Categories";
 import Favourites from "./home/Favourites";
 import IconIdeas from "./home/IconIdeas";

@@ -5,7 +5,7 @@ import NavBar from "./components/partials/NavBar";
 import AboutThisPj from "./components/pages/AboutThisPj";
 import Contact from "./components/pages/Contact";
 import Cart from "./components/Cart";
-import ItemListContainer from "./components/ItemListContainer";
+import ItemListContainer from "./components/shop/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import NotFound from "./components/pages/NotFound";
 import Footer from "./components/partials/Footer";

@@ -1,5 +1,5 @@
 import React from "react";
-import Item from "./Item.jsx";
+import Item from "../partials/Item";
 function ItemList({ products }) {
   return (
     <>
