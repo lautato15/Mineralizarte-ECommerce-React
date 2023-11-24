@@ -11,7 +11,7 @@ function SidebarShop() {
 
         setCategories(data.categories);
       } catch (error) {
-        console.error("Error call or parsing of products:", error);
+        console.error("Error call or parsing of categories:", error);
       }
     };
     callData();

@@ -2,7 +2,6 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { Link, useNavigate } from "react-router-dom";
 function Item({ product }) {
-  const navigate = useNavigate();
   return (
     <div className="col-12 col-md-3 d-flex justify-content-center align-items-center my-5">
       <Card style={{ width: "18rem", height: "100%" }}>
