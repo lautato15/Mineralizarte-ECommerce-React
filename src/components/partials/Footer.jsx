@@ -7,7 +7,7 @@ function Footer() {
     "text-decoration-none text-white FontLato my-1 text-white-50  ";
   return (
     <>
-      <div className=" bg-dark text-white footer ">
+      <div className=" bg-black text-white footer ">
         <div className="container  my-3">
           <div className="row">
             <div className="col-12 col-md-6 col-lg-3 mt-5">

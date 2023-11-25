@@ -30,7 +30,7 @@
     {
       "id": 1,
       "name": "Anillo de Oro Blanco",
-      "category_id": 1,
+      "category_id": 5,
       "price": 500.0,
       "description": "Anillo elegante de oro blanco con incrustaciones de diamantes.",
       "image": "https://caketheme.com/html/mojuri/media/product/2.jpg",
@@ -41,7 +41,7 @@
     {
       "id": 2,
       "name": "Anillo de Plata con Zafiro",
-      "category_id": 1,
+      "category_id": 5,
       "price": 150.0,
       "description": "Anillo de plata con una piedra preciosa de zafiro azul.",
       "image": "https://caketheme.com/html/mojuri/media/product/7.jpg",
@@ -52,7 +52,7 @@
     {
       "id": 3,
       "name": "Anillo de Compromiso de Diamante",
-      "category_id": 1,
+      "category_id": 5,
       "price": 1000.0,
       "description": "Anillo de compromiso clásico con un diamante brillante en el centro.",
       "image": "https://caketheme.com/html/mojuri/media/product/5.jpg",

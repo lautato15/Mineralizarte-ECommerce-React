@@ -1,15 +1,17 @@
 import { Link } from "react-router-dom";
 import "./Item.css";
+import IconStar from "../../assets/img/star.png";
 function Item({ product }) {
   const stars = [];
 
   for (let i = 0; i < product.stars; i++) {
     stars.push(
-      <i
+      <img
         key={i}
-        className="fa-solid fa-star mx-1"
-        style={{ color: "#e6c419" }}
-      ></i>
+        src={IconStar}
+        alt="Imagen de estrella"
+        style={{ width: "30px", height: "30px" }}
+      />
     );
   }
 
@@ -23,7 +25,7 @@ function Item({ product }) {
             className="img-fluid w-100"
           />
         </Link>
-        <div className="mt-4">
+        <div className="mt-4  ">
           <p className="fs-6 text-center">
             {stars.length > 0 &&
               stars.map((s) => {

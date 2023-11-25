@@ -30,7 +30,7 @@ function NavBar() {
     <Navbar
       collapseOnSelect
       expand="lg"
-      className="bg-dark Navbar-Text FontLato"
+      className="bg-black Navbar-Text FontLato"
     >
       <Container className="position-relative">
         <Navbar.Brand className="text-white">

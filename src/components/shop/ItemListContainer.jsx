@@ -28,7 +28,7 @@ function ItemListContainer() {
   return (
     products.length > 0 && (
       <>
-        <div className="d-flex w-100 h-100  align-items-center flex-column text-white">
+        <div className="d-flex w-100 h-100  align-items-center flex-column text-white ">
           <p className="me-auto">Mostrando los {products.length} resultados</p>
           {category && <h2>{category.name}</h2>}
           <ItemList products={products} />

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Contact() {
   const ContactClass = "text-center fs-6  ";
   return (
-    <div className="d-flex justify-content-center align-items-center flex-column fs-2 bg-black text-white  ">
+    <div className="d-flex justify-content-center align-items-center flex-column fs-2 bg-dark text-white  ">
       <HeadBoard BG={"BgContact"} Text={"Contactanos"} />
       <div className="d-flex  justify-content-center align-items-center flex-column  w-100 my-5">
         <p className="">
