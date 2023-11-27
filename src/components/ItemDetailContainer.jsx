@@ -17,7 +17,7 @@ function ItemDetailContainer() {
     callData();
   }, [id]);
   return (
-    <div className="d-flex justify-content-center align-items-center text-black fs-2 p-5">
+    <div className="d-flex justify-content-center align-items-center text-black fs-2 p-5 bg-dark">
       <ItemDetail product={product} />
     </div>
   );

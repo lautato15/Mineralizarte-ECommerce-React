@@ -24,3 +24,12 @@
     display: flex;
     flex-direction: column;
 }
+
+
+.ColorYellow{
+    color: rgb(217, 182, 23);
+}
+.BgYellow{
+    background-color: rgb(217, 182, 23);
+
+}
