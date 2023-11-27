@@ -14,7 +14,6 @@ function Favourites() {
         method: "GET",
         url: `/filedata.json`,
       });
-      console.log(response.data.products);
       let randomNumbers = [];
       while (randomNumbers.length < AMOUNT_OF_PRODUCTS) {
         let randomNumber = Math.floor(

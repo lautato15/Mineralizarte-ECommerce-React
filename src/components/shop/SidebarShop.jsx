@@ -1,20 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-function SidebarShop() {
-  const [categories, setCategories] = useState(false);
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    const getData = async () => {
-      const response = await axios({
-        method: "GET",
-        url: `/filedata.json`,
-      });
-      setCategories(response.data.categories);
-      setProducts(response.data.products);
-    };
-    getData();
-  }, []);
+function SidebarShop({ products, categorySelected, categories }) {
   function countProductsByCategory(categoryId) {
     return products.filter((product) => product.category_id === categoryId)
       .length;
