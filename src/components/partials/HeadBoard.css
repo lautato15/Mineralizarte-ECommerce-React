@@ -1,5 +1,5 @@
 .BgHeadBoard{ 
-    background-image: url("./src/assets/img/bg-3.jpg");
+    background-image: url("../src/assets/img/bg-3.jpg");
     background-position-y: 60%;
     background-position-x: 50%;
     object-fit:cover;
