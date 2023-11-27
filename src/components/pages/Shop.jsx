@@ -1,4 +1,3 @@
-import "./Shop.css";
 import HeadBoard from "../partials/HeadBoard";
 import SidebarShop from "../shop/SidebarShop";
 import ItemListContainer from "../shop/ItemListContainer";
