@@ -22,3 +22,9 @@
 .navActive{
     background-color: rgb(217, 182, 23);
 }
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+    border-radius: 0;
+    background-color: black;
+    position: absolute;
+}

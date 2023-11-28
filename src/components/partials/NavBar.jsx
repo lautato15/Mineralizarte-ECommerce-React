@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./NavBar.css";
-import CartWidget from "../CartWidget";
+import CartWidget from "./CartWidget";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -11,7 +11,7 @@ function NavBar() {
   const ClassInActive = "text-decoration-none text-white nav-link";
 
   const [categories, setCategories] = useState(false);
-  
+
   useEffect(() => {
     const callData = async () => {
       try {
@@ -65,7 +65,7 @@ function NavBar() {
                 isActive ? ClassActive : ClassInActive
               }
             >
-              Shop
+              Tienda
             </NavLink>
             {/* <NavLink
               to="/about"
@@ -81,13 +81,13 @@ function NavBar() {
                 isActive ? ClassActive : ClassInActive
               }
             >
-              Contact
+              Contacto
             </NavLink>
 
             <NavDropdown
               title="Categorias"
               id="collasible-nav-dropdown"
-              className=""
+              className="rounded-0 bg-black"
             >
               {categories.length > 0 &&
                 categories.map((c) => {
@@ -98,7 +98,7 @@ function NavBar() {
                       className={({ isActive }) =>
                         isActive
                           ? ClassActive
-                          : "text-decoration-none text-black nav-link"
+                          : "text-decoration-none text-white nav-link"
                       }
                     >
                       {c.name}

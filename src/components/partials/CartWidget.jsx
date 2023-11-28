@@ -3,6 +3,7 @@ import "./CartWidget.css";
 import { useState } from "react";
 import { Offcanvas, Button } from "react-bootstrap";
 import { useSelector } from "react-redux";
+import MainCartCanvas from "./CartWidget/MainCartCanvas";
 
 function CartWidget() {
   const [show, setShow] = useState(false);
@@ -24,11 +25,11 @@ function CartWidget() {
       </Button>
 
       <Offcanvas show={show} placement="end" onHide={handleClose}>
-        <Offcanvas.Header className="bg-body-secondary" closeButton>
+        <Offcanvas.Header className="bg-secondary text-white" closeButton>
           <Offcanvas.Title>CARRITO de COMPRAS</Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body className="d-flex h-100 align-items-center justify-content-center fw-bold">
-          DATA CART
+        <Offcanvas.Body className="d-flex h-100  justify-content-center fw-bold bg-dark">
+          <MainCartCanvas handleClose={handleClose} />
         </Offcanvas.Body>
       </Offcanvas>
     </>
