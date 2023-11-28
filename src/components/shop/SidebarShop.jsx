@@ -1,7 +1,14 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 function SidebarShop({ products, categorySelected, categories }) {
+  const ClassActive =
+    "text-success FontLato d-flex me-5 fs-4 text-decoration-none ";
+  const ClassInActive =
+    "text-white FontLato d-flex me-5 fs-4 text-decoration-none";
+
+  const isCategorySelected = (categoryId, categorySelected) => {
+    return categorySelected.id === categoryId;
+  };
+
   return (
     <>
       <div>
@@ -15,16 +22,25 @@ function SidebarShop({ products, categorySelected, categories }) {
           categories.map((c) => {
             return (
               c.CountProducts > 0 && (
-                <Link
+                <NavLink
                   to={`/category/${c.id}`}
                   key={c.id}
-                  className="text-white FontLato d-flex me-5 fs-4 text-decoration-none"
+                  className={({ isActive }) =>
+                    isActive ? ClassActive : ClassInActive
+                  }
                 >
                   {c.name}
-                  <span className="ms-auto bg-success  px-3 py-1 my-1 fs-5 rounded-5">
-                    {c.CountProducts}
-                  </span>
-                </Link>
+
+                  {isCategorySelected(c.id, categorySelected) ? (
+                    <span className="ms-auto bg-danger text-white  px-3 py-1 my-1 fs-5 rounded-5">
+                      {c.CountProducts}
+                    </span>
+                  ) : (
+                    <span className="ms-auto bg-success  px-3 py-1 my-1 fs-5 rounded-5">
+                      {c.CountProducts}
+                    </span>
+                  )}
+                </NavLink>
               )
             );
           })}
