@@ -6,7 +6,6 @@ import { addItem, updateCounterProduct } from "../../redux/cartSlice";
 function ItemCount({ product }) {
   const dispatch = useDispatch();
   const [count, setCount] = useState(1);
-  // const [existProductOnCart, setExistProductOnCart] = useState(false);
   const cart = useSelector((state) => state.cart);
 
   function handleSub() {
@@ -22,10 +21,8 @@ function ItemCount({ product }) {
         );
   }
   function handleAddCart(count) {
-    // setExistProductOnCart(cart.find((p) => p.id === product.id));
     let existProductOnCart = cart.find((p) => p.id === product.id);
     if (existProductOnCart) {
-      console.log("EXISTE PRODUCTO");
       if (
         count >= 1 &&
         count <= Number(product.stock) - existProductOnCart.counter
@@ -37,7 +34,9 @@ function ItemCount({ product }) {
           })
         );
       } else
-        toast.error(product.stock + " Error de Stock vuelva a intentarlo.");
+        toast.error(
+          product.stock + " es el Stock con el que contamos por el momento."
+        );
     } else {
       console.log("No existe producto");
       if (count >= 1 && count <= Number(product.stock)) {
