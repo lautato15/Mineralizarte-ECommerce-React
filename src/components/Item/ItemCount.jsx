@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
+import { useDispatch } from "react-redux";
+import { addItem } from "../../redux/cartSlice";
 
-function ItemCount({ stock }) {
+function ItemCount({ product }) {
+  const dispatch = useDispatch();
   const [count, setCount] = useState(1);
 
   function handleSub() {
@@ -10,12 +13,17 @@ function ItemCount({ stock }) {
       : toast.error("Debes tener al menos un producto.");
   }
   function handleAdd() {
-    count < Number(stock)
+    count < Number(product.stock)
       ? setCount(count + 1)
-      : toast.error(stock + " es el Stock con el que contamos por el momento.");
+      : toast.error(
+          product.stock + " es el Stock con el que contamos por el momento."
+        );
   }
   function handleAddCart() {
-    console.log("HOLU");
+    if (count >= 1 && count < Number(product.stock)) {
+      product.counter = count;
+      dispatch(addItem(product));
+    } else toast.error(product.stock + " Error de Stock vuelva a intentarlo.");
   }
   return (
     <div>
@@ -34,6 +42,8 @@ function ItemCount({ stock }) {
             value={count}
             size={3}
             className="text-center border-0"
+            id="counterInput"
+            name="counterInput"
           />
           <button
             onClick={() => handleAdd()}

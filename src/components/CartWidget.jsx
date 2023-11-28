@@ -2,9 +2,11 @@ import React from "react";
 import "./CartWidget.css";
 import { useState } from "react";
 import { Offcanvas, Button } from "react-bootstrap";
+import { useSelector } from "react-redux";
 
 function CartWidget() {
   const [show, setShow] = useState(false);
+  const cart = useSelector((state) => state.cart);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -17,7 +19,7 @@ function CartWidget() {
       >
         <i className="bi bi-cart"></i>
         <span className="position-absolute   start-75 translate-middle badge rounded-pill bg-danger badge-Cart-Canvas">
-          8
+          {cart.reduce((total, item) => total + item.counter, 0)}
         </span>
       </Button>
 

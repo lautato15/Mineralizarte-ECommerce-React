@@ -9,11 +9,11 @@ const cartSlice = createSlice({
         if (index == -1) {
           const newItem = {
             ...action.payload,
-            count: action.payload.count ? action.payload.count : 1,
+            counter: action.payload.counter ? action.payload.counter : 1,
           };
           state.push(newItem);
         } else {
-          state[index].count = state[index].count + 1;
+          state[index].counter = action.payload.counter + state[index].counter ;
         }
         return state;
     }

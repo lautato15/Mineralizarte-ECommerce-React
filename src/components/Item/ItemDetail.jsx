@@ -2,6 +2,7 @@ import ItemCount from "./ItemCount";
 import IconStar from "../../assets/img/star.png";
 
 function ItemDetail({ product }) {
+  
   const stars = [];
 
   for (let i = 0; i < product.stars; i++) {
@@ -51,7 +52,7 @@ function ItemDetail({ product }) {
               <p className="fs-6  border border-white rounded-5 px-1 ms-2">M</p>
               <p className="fs-6  border border-white rounded-5 px-2 ms-2">L</p>
             </div>
-            <ItemCount stock={product.stock} />
+            <ItemCount product={product} />
           </div>
         </div>
       </div>
