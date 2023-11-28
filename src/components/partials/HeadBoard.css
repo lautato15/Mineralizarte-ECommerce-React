@@ -1,12 +1,14 @@
 .BgHeadBoard{ 
     background-image: url("../src/assets/img/bg-3.jpg");
     background-position-y: 60%;
-    background-position-x: 50%;
+    background-position-x: 70%;
     object-fit:cover;
     box-sizing: border-box; 
 }
 .BadgeHeadBoard{
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.7);
+        padding: 12px;
+        color: white;
 }
 @media (max-width: 746px) {
     .BgHeadBoard{
@@ -24,5 +26,6 @@
     .BadgeHeadBoard{
         background-color: rgba(0, 0, 0, 0.7);
         padding: 12px;
+        color: white;
     }
   }

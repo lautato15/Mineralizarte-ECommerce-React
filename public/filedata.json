@@ -125,6 +125,28 @@
       "stock": 8,
       "favorite": true,
       "stars": 5
+    },
+    {
+      "id": 10,
+      "name": "Colgante de Oro",
+      "category_id": 4,
+      "price": 350.0,
+      "description": "Colgante elegante de oro con diseño único.",
+      "image": "https://cindykleist.com/wp-content/uploads/2021/04/gala1.jpeg",
+      "stock": 15,
+      "favorite": false,
+      "stars": 4
+    },
+    {
+      "id": 11,
+      "name": "Brazalete de Plata",
+      "category_id": 1,
+      "price": 120.0,
+      "description": "Brazalete de plata con detalles grabados.",
+      "image": "https://cindykleist.com/wp-content/uploads/2018/07/Brazalete-trenzado-hombre.jpg",
+      "stock": 25,
+      "favorite": true,
+      "stars": 3
     }
   ]
 }

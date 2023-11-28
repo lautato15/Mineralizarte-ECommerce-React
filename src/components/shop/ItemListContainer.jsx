@@ -9,6 +9,10 @@ function ItemListContainer() {
   const [categorySelected, setCategorySelected] = useState(false);
   const [categories, setCategories] = useState([]);
 
+  function countProductsByCategory(categoryId, products) {
+    return products.filter((product) => product.category_id === categoryId)
+      .length;
+  }
   const { catid } = useParams();
   useEffect(() => {
     const callData = async () => {
@@ -23,10 +27,15 @@ function ItemListContainer() {
           setProducts(
             data.products.filter((p) => p.category_id === Number(catid))
           );
-        } else setProducts(data.products);
-        // console.log("ACA");
-        // console.log(data.products);
-        // console.log(catid);
+        } else {
+          setCategorySelected(false);
+          setProducts(data.products);
+        }
+
+        for (let cate of data.categories) {
+          cate.CountProducts = countProductsByCategory(cate.id, data.products);
+        }
+
         setCategories(data.categories);
       } catch (error) {
         console.error("Error call or parsing of products:", error);
@@ -38,7 +47,6 @@ function ItemListContainer() {
     products.length > 0 && (
       <>
         <div className="bg-dark">
-          {categorySelected && <h2>{categorySelected.name}</h2>}
           <ItemList
             products={products}
             categorySelected={categorySelected}

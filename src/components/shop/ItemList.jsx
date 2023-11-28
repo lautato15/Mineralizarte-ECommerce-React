@@ -7,7 +7,12 @@ import SidebarShop from "../shop/SidebarShop";
 function ItemList({ products, categorySelected, categories }) {
   return (
     <>
-      <HeadBoard Text={"Tienda"} />
+      {categorySelected ? (
+        <HeadBoard Text={`Tienda / ${categorySelected.name}`} />
+      ) : (
+        <HeadBoard Text={`Tienda`} />
+      )}
+
       <div className="container">
         <div className="row py-5">
           <div className="col-12 col-md-3">
