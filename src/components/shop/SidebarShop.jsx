@@ -33,14 +33,14 @@ function SidebarShop({ products, categorySelected, categories }) {
 
                   {isCategorySelected(c.id, categorySelected) ? (
                     <span
-                      className="ms-auto text-white  px-3 py-2 my-1 fs-6 rounded-5"
+                      className="ms-auto text-white  px-3 py-2 my-1 fs-6 rounded-5 fw-bold"
                       style={{ backgroundColor: " rgb(1, 1, 1)" }}
                     >
                       {c.CountProducts}
                     </span>
                   ) : (
                     <span
-                      className="ms-auto text-black  px-3 py-2 my-1 fs-6 rounded-5"
+                      className="ms-auto text-black  px-3 py-2 my-1 fs-6 rounded-5 fw-bold"
                       style={{ backgroundColor: " rgb(240, 220, 129)" }}
                     >
                       {c.CountProducts}

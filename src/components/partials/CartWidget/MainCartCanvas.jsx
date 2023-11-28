@@ -1,7 +1,7 @@
 import { Button, ButtonGroup } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { removeItem } from "../../../redux/cartSlice";
+import { removeItem, addItem, subItem } from "../../../redux/cartSlice";
 function MainCartCanvas({ handleClose }) {
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
@@ -38,12 +38,17 @@ function MainCartCanvas({ handleClose }) {
 
             <div className="col-8 p-3">
               <div className="d-flex flex-column">
-                <h5 className="SmallText text-white">{item.name}</h5>
+                <h5
+                  className="fs-6 text-white FontGaramond text-center"
+                  style={{ letterSpacing: "0.5px" }}
+                >
+                  {item.name}
+                </h5>
                 <div className="d-flex">
-                  <ButtonGroup className="SmallText text-white">
+                  <ButtonGroup className="SmallText text-white FontLato">
                     <Button
                       variant=""
-                      className="rounded-0 fw-bold py-0 px-2 text-white"
+                      className="rounded-0 fw-bold py-0 px-2 text-white border border-white"
                       id="quantityBtn"
                       onClick={() => handleSubBtn(item)}
                     >
@@ -52,7 +57,7 @@ function MainCartCanvas({ handleClose }) {
                     <input
                       type="text"
                       inputMode="numeric"
-                      className="text-center fw-bold py-0 px-2"
+                      className="text-center fw-bold py-0 px-2  border border-white"
                       id="quantityBtn"
                       size="3"
                       onChange={(e) => handleChangeCountItem(e.target.value)}
@@ -60,7 +65,7 @@ function MainCartCanvas({ handleClose }) {
                     />
                     <Button
                       variant=""
-                      className="rounded-0 SmallText text-white fw-bold py-0 px-2"
+                      className="rounded-0 SmallText text-white fw-bold py-0 px-2 border border-white"
                       id="quantityBtn"
                       onClick={() => handleAddBtn(item)}
                     >
@@ -68,7 +73,7 @@ function MainCartCanvas({ handleClose }) {
                     </Button>
                   </ButtonGroup>
                   <div className="d-flex alig-items-center">
-                    <p className="fw-bolder m-0 ms-2 SmallText text-white pt-1">
+                    <p className="fw-bolder m-0 ms-2 SmallText text-white pt-1 FontLato">
                       $ {item.price * item.counter}
                     </p>
                   </div>

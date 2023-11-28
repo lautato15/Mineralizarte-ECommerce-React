@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
-import { useDispatch } from "react-redux";
-import { addItem } from "../../redux/cartSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { addItem, updateCounterProduct } from "../../redux/cartSlice";
 
 function ItemCount({ product }) {
   const dispatch = useDispatch();
   const [count, setCount] = useState(1);
+  // const [existProductOnCart, setExistProductOnCart] = useState(false);
+  const cart = useSelector((state) => state.cart);
 
   function handleSub() {
     count > 1
@@ -19,11 +21,33 @@ function ItemCount({ product }) {
           product.stock + " es el Stock con el que contamos por el momento."
         );
   }
-  function handleAddCart() {
-    if (count >= 1 && count <= Number(product.stock)) {
-      product.counter = count;
-      dispatch(addItem(product));
-    } else toast.error(product.stock + " Error de Stock vuelva a intentarlo.");
+  function handleAddCart(count) {
+    // setExistProductOnCart(cart.find((p) => p.id === product.id));
+    let existProductOnCart = cart.find((p) => p.id === product.id);
+    if (existProductOnCart) {
+      console.log("EXISTE PRODUCTO");
+      if (
+        count >= 1 &&
+        count <= Number(product.stock) - existProductOnCart.counter
+      ) {
+        dispatch(
+          updateCounterProduct({
+            newCounter: existProductOnCart.counter + count,
+            id: product.id,
+          })
+        );
+      } else
+        toast.error(product.stock + " Error de Stock vuelva a intentarlo.");
+    } else {
+      console.log("No existe producto");
+      if (count >= 1 && count <= Number(product.stock)) {
+        console.log("ACA TENES TU COUNT " + count);
+        product.counter = count;
+        dispatch(addItem(product));
+      } else
+        toast.error(product.stock + " Error de Stock vuelva a intentarlo.");
+    }
+    //
   }
   return (
     <div>
@@ -55,7 +79,7 @@ function ItemCount({ product }) {
         </div>
         <div>
           <button
-            onClick={() => handleAddCart()}
+            onClick={() => handleAddCart(count)}
             className="bg-black border-0 text-white ms-4 px-3 h-100"
           >
             AGREGAR AL CARRO
