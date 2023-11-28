@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom";
 function SidebarShop({ products, categorySelected, categories }) {
   const ClassActive =
-    "text-success FontLato d-flex me-5 fs-4 text-decoration-none ";
+    "text-warning FontLato d-flex me-5 fs-4 text-decoration-none my-2 ";
   const ClassInActive =
-    "text-white FontLato d-flex me-5 fs-4 text-decoration-none";
+    "text-white FontLato d-flex me-5 fs-4 text-decoration-none my-2";
 
   const isCategorySelected = (categoryId, categorySelected) => {
     return categorySelected.id === categoryId;
@@ -32,11 +32,17 @@ function SidebarShop({ products, categorySelected, categories }) {
                   {c.name}
 
                   {isCategorySelected(c.id, categorySelected) ? (
-                    <span className="ms-auto bg-danger text-white  px-3 py-1 my-1 fs-5 rounded-5">
+                    <span
+                      className="ms-auto text-white  px-3 py-2 my-1 fs-6 rounded-5"
+                      style={{ backgroundColor: " rgb(1, 1, 1)" }}
+                    >
                       {c.CountProducts}
                     </span>
                   ) : (
-                    <span className="ms-auto bg-success  px-3 py-1 my-1 fs-5 rounded-5">
+                    <span
+                      className="ms-auto text-black  px-3 py-2 my-1 fs-6 rounded-5"
+                      style={{ backgroundColor: " rgb(240, 220, 129)" }}
+                    >
                       {c.CountProducts}
                     </span>
                   )}
