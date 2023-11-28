@@ -16,10 +16,15 @@ const cartSlice = createSlice({
           state[index].counter = action.payload.counter + state[index].counter ;
         }
         return state;
-    }
+    },
+    removeItem(state, action) {
+        const index = state.findIndex((item) => item.id === action.payload.id);
+        state.splice(index, 1);
+        return state;
+      }
   },
 });
 const { actions, reducer } = cartSlice;
-export const { addItem } = actions;
+export const { addItem, removeItem } = actions;
 
 export default reducer;

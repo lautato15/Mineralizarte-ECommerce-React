@@ -20,7 +20,7 @@ function CartWidget() {
       >
         <i className="bi bi-cart"></i>
         <span className="position-absolute   start-75 translate-middle badge rounded-pill bg-danger badge-Cart-Canvas">
-          {cart.reduce((total, item) => total + item.counter, 0)}
+          {Number(cart.reduce((total, item) => total + item.counter, 0))}
         </span>
       </Button>
 

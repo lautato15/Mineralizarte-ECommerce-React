@@ -20,7 +20,7 @@ function ItemCount({ product }) {
         );
   }
   function handleAddCart() {
-    if (count >= 1 && count < Number(product.stock)) {
+    if (count >= 1 && count <= Number(product.stock)) {
       product.counter = count;
       dispatch(addItem(product));
     } else toast.error(product.stock + " Error de Stock vuelva a intentarlo.");

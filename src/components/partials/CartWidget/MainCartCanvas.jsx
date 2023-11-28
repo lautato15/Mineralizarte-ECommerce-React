@@ -1,7 +1,7 @@
 import { Button, ButtonGroup } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-
+import { removeItem } from "../../../redux/cartSlice";
 function MainCartCanvas({ handleClose }) {
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
@@ -87,8 +87,8 @@ function MainCartCanvas({ handleClose }) {
     </div>
   ) : (
     <div className=" flex-grow-1 p-4">
-      <div className="container">
-        <p>Tu carrito está vacío</p>
+      <div className="container d-flex- flex-column text-center">
+        <p className="text-white text-center">Tu carrito está vacío</p>
         <Link to="/shop" onClick={handleClose}>
           Ve por algunos productos!
         </Link>
