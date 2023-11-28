@@ -1,5 +1,5 @@
 import ItemCount from "./ItemCount";
-import IconStar from "../assets/img/star.png";
+import IconStar from "../../assets/img/star.png";
 
 function ItemDetail({ product }) {
   const stars = [];
@@ -20,13 +20,23 @@ function ItemDetail({ product }) {
       <div className="row">
         <div className="col-12 col-md-6">
           <div className="d-flex justify-content-center align-items-center">
-            <img src={product.image} alt={"Foto de " + product.name} />
+            <img
+              src={product.image}
+              alt={"Foto de " + product.name}
+              className="img-fluid"
+              style={{ width: "600px" }}
+            />
           </div>
         </div>
         <div className="col-12 col-md-6">
           <div className="d-flex justify-content-start align-items-start flex-column fs-4  px-4 h-100 text-white ">
-            <h2 className="my-5 FontGaramond">{product.name}</h2>
-            <p className="FontLato">${product.price}</p>
+            <h2
+              className="my-5 FontGaramond fw-bold"
+              style={{ letterSpacing: "1.5px" }}
+            >
+              {product.name}
+            </h2>
+            <p className="FontLato fw-bold">${product.price}</p>
             <p className="fs-6 text-center FontLato">
               {stars.length > 0 &&
                 stars.map((s) => {

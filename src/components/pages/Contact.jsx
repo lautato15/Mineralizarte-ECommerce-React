@@ -72,6 +72,9 @@ function Contact() {
               </label>
               <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
             </div>
+            <button className="btn btn-dark bg-black rounded-0 w-25 ms-auto me-auto mt-4">
+              ENVIAR
+            </button>
           </form>
         </div>
       </div>

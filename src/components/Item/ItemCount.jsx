@@ -14,6 +14,9 @@ function ItemCount({ stock }) {
       ? setCount(count + 1)
       : toast.error(stock + " es el Stock con el que contamos por el momento.");
   }
+  function handleAddCart() {
+    console.log("HOLU");
+  }
   return (
     <div>
       <div className="d-flex ">
@@ -41,7 +44,10 @@ function ItemCount({ stock }) {
           </button>
         </div>
         <div>
-          <button className="bg-black border-0 text-white ms-4 px-3 h-100">
+          <button
+            onClick={() => handleAddCart()}
+            className="bg-black border-0 text-white ms-4 px-3 h-100"
+          >
             AGREGAR AL CARRO
           </button>
         </div>

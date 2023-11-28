@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
-import ItemDetail from "./ItemDetail";
+import ItemDetail from "../Item/ItemDetail";
 function ItemDetailContainer() {
   const [product, setProduct] = useState({});
   const { id } = useParams();
@@ -11,7 +11,10 @@ function ItemDetailContainer() {
         const data = await response.json();
         setProduct(data.products.find((p) => p.id === Number(id)));
       } catch (error) {
-        console.error("Error call or parsing of product:", error);
+        console.error(
+          "Error call or parsing of product in ItemDetailContainer:",
+          error
+        );
       }
     };
     callData();
