@@ -2,8 +2,11 @@ import { Button, ButtonGroup } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { removeItem, addItem, subItem } from "../../../redux/cartSlice";
+import InputCart from "./InputCart";
+import { useState } from "react";
 function MainCartCanvas({ handleClose }) {
   const cart = useSelector((state) => state.cart);
+
   const dispatch = useDispatch();
   const handleAddBtn = (item) => {
     dispatch(addItem(item));
@@ -16,11 +19,6 @@ function MainCartCanvas({ handleClose }) {
   const handleDelItem = (item) => {
     dispatch(removeItem(item));
   };
-
-  function handleChangeCountItem(value) {
-    // setCountState(value);
-    dispatch(inputChange({ value, id }));
-  }
 
   return cart.length > 0 ? (
     <div className="flex-grow-1 p-4">
@@ -54,15 +52,7 @@ function MainCartCanvas({ handleClose }) {
                     >
                       -
                     </Button>
-                    <input
-                      type="text"
-                      inputMode="numeric"
-                      className="text-center fw-bold py-0 px-2  border border-white"
-                      id="quantityBtn"
-                      size="3"
-                      onChange={(e) => handleChangeCountItem(e.target.value)}
-                      value={item.counter}
-                    />
+                    <InputCart id={item.id} counter={item.counter} />
                     <Button
                       variant=""
                       className="rounded-0 SmallText text-white fw-bold py-0 px-2 border border-white"
@@ -94,7 +84,7 @@ function MainCartCanvas({ handleClose }) {
     <div className=" flex-grow-1 p-4">
       <div className="container d-flex- flex-column text-center">
         <p className="text-white text-center">Tu carrito está vacío</p>
-        <Link to="/shop" onClick={handleClose}>
+        <Link to="/shop" onClick={handleClose()}>
           Ve por algunos productos!
         </Link>
       </div>
