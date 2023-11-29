@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
+
 import ItemDetail from "../Item/ItemDetail";
 function ItemDetailContainer() {
   const [product, setProduct] = useState({});
@@ -7,9 +9,17 @@ function ItemDetailContainer() {
   useEffect(() => {
     const callData = async () => {
       try {
-        const response = await fetch("/filedata.json");
-        const data = await response.json();
-        setProduct(data.products.find((p) => p.id === Number(id)));
+        const db = getFirestore();
+
+        let dataProduct;
+        const oneItem = doc(db, "items", "2");
+
+        await getDoc(oneItem).then((snapshot) => {
+          if (snapshot.exists()) {
+            dataProduct = snapshot.data();
+            setProduct(dataProduct);
+          } else console.error(error, "No se encontro el producto");
+        });
       } catch (error) {
         console.error(
           "Error call or parsing of product in ItemDetailContainer:",

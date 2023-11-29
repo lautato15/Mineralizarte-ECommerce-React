@@ -9,14 +9,12 @@ function ItemListContainer() {
   const [products, setProducts] = useState([]);
   const [categorySelected, setCategorySelected] = useState(false);
   const [categories, setCategories] = useState([]);
-  const [test, setTest] = useState();
-  const [test2, setTest2] = useState();
+  const { catid } = useParams();
 
   function countProductsByCategory(categoryId, products) {
     return products.filter((product) => product.category_id === categoryId)
       .length;
   }
-  const { catid } = useParams();
   useEffect(() => {
     const callData = async () => {
       try {
@@ -34,7 +32,6 @@ function ItemListContainer() {
             };
             return product;
           });
-          setTest(dataProducts);
 
           console.log("Products");
           console.log(dataProducts);
@@ -48,7 +45,6 @@ function ItemListContainer() {
             };
             return category;
           });
-          setTest2(dataCategories);
 
           console.log("Categories");
           console.log(dataCategories);
