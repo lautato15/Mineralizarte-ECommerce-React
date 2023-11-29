@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import "./ItemListContainer.css";
 import ItemList from "../shop/ItemList";
 import { useParams } from "react-router-dom";
-import axios from "axios";
+
+import { collection, getDocs, getFirestore } from "firebase/firestore";
 
 function ItemListContainer() {
   const [products, setProducts] = useState([]);
@@ -43,6 +44,20 @@ function ItemListContainer() {
     };
     callData();
   }, [catid]);
+
+  const [test, setTest] = useState();
+
+  useEffect(() => {
+    const db = getFirestore();
+    const itemsCollection = collection(db, "items");
+    getDocs(itemsCollection).then((snapshot) => {
+      const docs = snapshot.docs.map((doc) => doc.data());
+      setTest(docs);
+      console.log("docs");
+      console.log(docs);
+    });
+  }, []);
+
   return (
     products.length > 0 && (
       <>
