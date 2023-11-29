@@ -9,6 +9,8 @@ function ItemListContainer() {
   const [products, setProducts] = useState([]);
   const [categorySelected, setCategorySelected] = useState(false);
   const [categories, setCategories] = useState([]);
+  const [test, setTest] = useState();
+  const [test2, setTest2] = useState();
 
   function countProductsByCategory(categoryId, products) {
     return products.filter((product) => product.category_id === categoryId)
@@ -18,45 +20,63 @@ function ItemListContainer() {
   useEffect(() => {
     const callData = async () => {
       try {
-        const response = await fetch("/filedata.json");
-        const data = await response.json();
+        const db = getFirestore();
+        const itemsCollection = collection(db, "items");
+        const categoriesCollection = collection(db, "categories");
+        let dataProducts;
+        let dataCategories;
+        // Products
+        await getDocs(itemsCollection).then((snapshot) => {
+          dataProducts = snapshot.docs.map((doc) => {
+            let product = {
+              ...doc.data(),
+              id: doc.id,
+            };
+            return product;
+          });
+          setTest(dataProducts);
+
+          console.log("Products");
+          console.log(dataProducts);
+        });
+        // Categories
+        await getDocs(categoriesCollection).then((snapshot) => {
+          dataCategories = snapshot.docs.map((doc) => {
+            let category = {
+              ...doc.data(),
+              id: doc.id,
+            };
+            return category;
+          });
+          setTest2(dataCategories);
+
+          console.log("Categories");
+          console.log(dataCategories);
+        });
 
         if (catid !== undefined) {
           setCategorySelected(
-            data.categories.find((cat) => cat.id === Number(catid))
+            dataCategories.find((cat) => cat.id === Number(catid))
           );
           setProducts(
-            data.products.filter((p) => p.category_id === Number(catid))
+            dataProducts.filter((p) => p.category_id === Number(catid))
           );
         } else {
           setCategorySelected(false);
-          setProducts(data.products);
+          setProducts(dataProducts);
         }
 
-        for (let cate of data.categories) {
+        for (let cate of dataCategories) {
           cate.CountProducts = countProductsByCategory(cate.id, data.products);
         }
 
-        setCategories(data.categories);
+        setCategories(dataCategories);
       } catch (error) {
         console.error("Error call or parsing of products:", error);
       }
     };
     callData();
   }, [catid]);
-
-  const [test, setTest] = useState();
-
-  useEffect(() => {
-    const db = getFirestore();
-    const itemsCollection = collection(db, "items");
-    getDocs(itemsCollection).then((snapshot) => {
-      const docs = snapshot.docs.map((doc) => doc.data());
-      setTest(docs);
-      console.log("docs");
-      console.log(docs);
-    });
-  }, []);
 
   return (
     products.length > 0 && (
