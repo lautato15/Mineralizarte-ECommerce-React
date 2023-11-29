@@ -38,15 +38,12 @@ function ItemCount({ product }) {
           product.stock + " es el Stock con el que contamos por el momento."
         );
     } else {
-      console.log("No existe producto");
       if (count >= 1 && count <= Number(product.stock)) {
-        console.log("ACA TENES TU COUNT " + count);
         product.counter = count;
         dispatch(addItem(product));
       } else
         toast.error(product.stock + " Error de Stock vuelva a intentarlo.");
     }
-    //
   }
   return (
     <div>

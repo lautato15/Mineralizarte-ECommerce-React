@@ -1,2 +1,9 @@
--Maketar la URL /:Item
--Botones de las Cards
+-Maketar la URL /:Item [LISTO]
+-Botones de las Cards [LISTO]
+
+-Maquetar ViewCart
+-Maquetar OrderList
+-Reparar Cards
+-Agregar Boton Todas las categorias en SideBarShop.jsx
+-Funcion que acorte texto con ...
+

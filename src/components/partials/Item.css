@@ -1,14 +1,32 @@
 .ProductName{
     font-size: 0.8rem;
-    text-transform: uppercase;
-    font-family: Lato,sans-serif;
+    /* text-transform: uppercase; */
+    /* font-family: Lato,sans-serif; */
     margin-top: 2px;
     margin-bottom: 6px;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.8px;
     font-weight: 400;
     line-height: 16px;
     text-decoration: none;
     color: white;
     text-align: center;
     display: block;
+    line-height: 1rem; /* Ajusta este valor según sea necesario */
+    max-height: 2rem; /* 2 líneas * line-height */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Agrega puntos suspensivos (...) para indicar texto truncado */
+    white-space: nowrap; 
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.BorderCard{
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.721);
+    height: 100%;
+    background-color: rgba(32, 32, 27, 0.565);
+}
+.BtnAddToCart:hover{
+      background-color: rgb(217, 182, 23)!important;
+      color: black!important;
+
 }

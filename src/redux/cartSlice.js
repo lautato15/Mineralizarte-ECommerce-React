@@ -5,8 +5,7 @@ const cartSlice = createSlice({
   initialState: [],
   reducers: {
     addItem(state, action) {
-      console.log("PAYLOAD");
-      console.log(action.payload);
+      
       const index = state.findIndex((item) => item.id === action.payload.id);
       if (index == -1) {
         const newItem = {
