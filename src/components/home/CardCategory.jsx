@@ -10,7 +10,7 @@ function CardCategory({ category }) {
           style={{ width: "auto" }}
         >
           <img
-            src={`./src/assets/img/cardsCat/${category}.jpeg`}
+            src={`./src/assets/img/cardsCat/${category}.png`}
             alt=""
             className="img-fluid"
           />
