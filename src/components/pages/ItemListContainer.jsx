@@ -28,7 +28,7 @@ function ItemListContainer() {
           dataProducts = snapshot.docs.map((doc) => {
             let product = {
               ...doc.data(),
-              id: doc.id,
+              id: Number(doc.id),
             };
             return product;
           });
@@ -38,10 +38,16 @@ function ItemListContainer() {
           dataCategories = snapshot.docs.map((doc) => {
             let category = {
               ...doc.data(),
-              id: doc.id,
+              id: Number(doc.id),
             };
             return category;
           });
+          for (let cate of dataCategories) {
+            cate.CountProducts = countProductsByCategory(
+              Number(cate.id),
+              dataProducts
+            );
+          }
           setCategories(dataCategories);
         });
 
@@ -55,12 +61,6 @@ function ItemListContainer() {
         } else {
           setCategorySelected(false);
           setProducts(dataProducts);
-        }
-        console.log("DataCategories");
-        console.log(dataCategories);
-
-        for (let cate of dataCategories) {
-          cate.CountProducts = countProductsByCategory(cate.id, dataProducts);
         }
       } catch (error) {
         console.error("Error call or parsing of products:", error);
