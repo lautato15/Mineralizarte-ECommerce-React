@@ -6,9 +6,9 @@ function SidebarShop({
   totalProducts,
 }) {
   const ClassActive =
-    "text-warning FontLato d-flex me-5 fs-4 text-decoration-none  items-align-center  py-2 ";
+    "text-warning FontLato d-flex me-5 fs-5 text-decoration-none  items-align-center  py-2 ";
   const ClassInActive =
-    "text-white FontLato d-flex me-5 fs-4 text-decoration-none  content-align-center    py-2";
+    "text-white FontLato d-flex me-5 fs-5 text-decoration-none  content-align-center    py-2";
 
   const isCategorySelected = (categoryId, categorySelected) => {
     return categorySelected.id === categoryId;
@@ -18,7 +18,7 @@ function SidebarShop({
     <>
       <div>
         <h3
-          className="text-white FontGaramond fs-1 fw-bold mb-4"
+          className="text-white FontGaramond fs-3 fw-bold mb-4"
           style={{ letterSpacing: "1.5px" }}
         >
           Categorías
@@ -31,15 +31,23 @@ function SidebarShop({
           Todos
           {!categorySelected ? (
             <span
-              className="ms-auto text-black  fs-6 rounded-5 fw-bold px-3 py-2"
-              style={{ backgroundColor: "  rgb(217, 182, 23)" }}
+              className="ms-auto text-black  fs-6 rounded-5 fw-bold d-flex justify-content-center "
+              style={{
+                backgroundColor: "  rgb(217, 182, 23)",
+                height: "25px",
+                width: "25px",
+              }}
             >
               {totalProducts}
             </span>
           ) : (
             <span
-              className="ms-auto text-black  fs-6 rounded-5 fw-bold  px-3 py-2 "
-              style={{ backgroundColor: " rgb(240, 220, 129)" }}
+              className="ms-auto text-black  fs-6 rounded-5 fw-bold  d-flex justify-content-center  "
+              style={{
+                backgroundColor: " rgb(240, 220, 129)",
+                height: "25px",
+                width: "25px",
+              }}
             >
               {totalProducts}
             </span>
@@ -60,15 +68,23 @@ function SidebarShop({
 
                   {isCategorySelected(c.id, categorySelected) ? (
                     <span
-                      className="ms-auto text-black  fs-6 rounded-5 fw-bold px-3 py-2"
-                      style={{ backgroundColor: "  rgb(217, 182, 23)" }}
+                      className="ms-auto text-black  fs-6  fw-bold rounded-5 d-flex justify-content-center"
+                      style={{
+                        backgroundColor: "  rgb(217, 182, 23)",
+                        height: "25px",
+                        width: "25px",
+                      }}
                     >
                       {c.CountProducts}
                     </span>
                   ) : (
                     <span
-                      className="ms-auto text-black  fs-6 rounded-5 fw-bold  px-3 py-2 "
-                      style={{ backgroundColor: " rgb(240, 220, 129)" }}
+                      className="ms-auto text-black  fs-6 rounded-5 fw-bold  d-flex justify-content-center "
+                      style={{
+                        backgroundColor: " rgb(240, 220, 129)",
+                        height: "25px",
+                        width: "25px",
+                      }}
                     >
                       {c.CountProducts}
                     </span>

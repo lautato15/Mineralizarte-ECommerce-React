@@ -2,8 +2,8 @@
 -Botones de las Cards [LISTO]
 -Reparar Cards [LISTO]
 -Funcion que acorte texto con ... [LISTO]
+-Agregar Boton Todas las categorias en SideBarShop.jsx  [LISTO]
 
 -Maquetar ViewCart
 -Maquetar OrderList
--Agregar Boton Todas las categorias en SideBarShop.jsx
 -Empezar con Responsive

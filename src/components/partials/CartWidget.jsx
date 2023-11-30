@@ -15,7 +15,7 @@ function CartWidget() {
   return (
     <>
       <Button
-        className="bg-dark border-0 text-white fs-5 btn btn-dark"
+        className="bg-dark border-0 text-white fs-5 btn btn-dark p-1 px-2"
         onClick={handleShow}
       >
         <i className="bi bi-cart"></i>
