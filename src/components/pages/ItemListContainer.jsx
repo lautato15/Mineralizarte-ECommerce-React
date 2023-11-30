@@ -10,6 +10,7 @@ function ItemListContainer() {
   const [categorySelected, setCategorySelected] = useState(false);
   const [categories, setCategories] = useState([]);
   const { catid } = useParams();
+  const [totalProducts, setTotalProducts] = useState(0);
 
   function countProductsByCategory(categoryId, products) {
     return products.filter((product) => product.category_id === categoryId)
@@ -32,6 +33,7 @@ function ItemListContainer() {
             };
             return product;
           });
+          setTotalProducts(dataProducts.length + 1);
         });
         // Categories
         await getDocs(categoriesCollection).then((snapshot) => {
@@ -69,7 +71,6 @@ function ItemListContainer() {
     callData();
   }, [catid]);
 
-
   return (
     products.length > 0 && (
       <>
@@ -78,6 +79,7 @@ function ItemListContainer() {
             products={products}
             categorySelected={categorySelected}
             categories={categories}
+            totalProducts={totalProducts}
           />
         </div>
       </>

@@ -1,5 +1,10 @@
 import { NavLink } from "react-router-dom";
-function SidebarShop({ products, categorySelected, categories }) {
+function SidebarShop({
+  products,
+  categorySelected,
+  categories,
+  totalProducts,
+}) {
   const ClassActive =
     "text-warning FontLato d-flex me-5 fs-4 text-decoration-none  items-align-center  py-2 ";
   const ClassInActive =
@@ -8,7 +13,7 @@ function SidebarShop({ products, categorySelected, categories }) {
   const isCategorySelected = (categoryId, categorySelected) => {
     return categorySelected.id === categoryId;
   };
-
+  console.log(categorySelected);
   return (
     <>
       <div>
@@ -18,6 +23,28 @@ function SidebarShop({ products, categorySelected, categories }) {
         >
           Categorías
         </h3>
+        <NavLink
+          to={`/shop`}
+          key={"shop"}
+          className={({ isActive }) => (isActive ? ClassActive : ClassInActive)}
+        >
+          Todos
+          {!categorySelected ? (
+            <span
+              className="ms-auto text-black  fs-6 rounded-5 fw-bold px-3 py-2"
+              style={{ backgroundColor: "  rgb(217, 182, 23)" }}
+            >
+              {totalProducts}
+            </span>
+          ) : (
+            <span
+              className="ms-auto text-black  fs-6 rounded-5 fw-bold  px-3 py-2 "
+              style={{ backgroundColor: " rgb(240, 220, 129)" }}
+            >
+              {totalProducts}
+            </span>
+          )}
+        </NavLink>
         {categories.length > 0 &&
           categories.map((c) => {
             return (

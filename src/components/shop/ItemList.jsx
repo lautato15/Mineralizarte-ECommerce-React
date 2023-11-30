@@ -4,7 +4,7 @@ import Item from "../partials/Item";
 import HeadBoard from "../partials/HeadBoard";
 import SidebarShop from "../shop/SidebarShop";
 
-function ItemList({ products, categorySelected, categories }) {
+function ItemList({ products, categorySelected, categories, totalProducts }) {
   return (
     <>
       {categorySelected ? (
@@ -20,6 +20,7 @@ function ItemList({ products, categorySelected, categories }) {
               categorySelected={categorySelected}
               categories={categories}
               products={products}
+              totalProducts={totalProducts}
             />
           </div>
           <div className="col-12 col-md-9">
