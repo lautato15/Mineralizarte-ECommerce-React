@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function CardCategory({ category }) {
   return (
     <>
-      <div className="col-2">
+      <div className="col-4 col-lg-2 my-4">
         <div
           className="NotInvert static shake-horizontal"
           style={{ width: "auto" }}

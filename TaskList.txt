@@ -3,8 +3,8 @@
 -Reparar Cards [LISTO]
 -Funcion que acorte texto con ... [LISTO]
 -Agregar Boton Todas las categorias en SideBarShop.jsx  [LISTO]
+-Icono [LISTO]
 
 -Maquetar ViewCart
 -Maquetar OrderList
 -Empezar con Responsive
--Icono

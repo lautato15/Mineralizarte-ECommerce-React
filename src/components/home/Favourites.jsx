@@ -40,11 +40,13 @@ function Favourites() {
             DESCUBRE LO DE ESTA SEMANA
           </h5>
           <h2 className="FontGaramond text-center">Nuestros Favoritos</h2>
-          <div className="row mt-5">
-            {products.length > 0 &&
-              products.map((p) => {
-                return <Item key={p.id} product={p} />;
-              })}
+          <div className="container">
+            <div className="row mt-5">
+              {products.length > 0 &&
+                products.map((p) => {
+                  return <Item key={p.id} product={p} />;
+                })}
+            </div>
           </div>
         </div>
       </div>
