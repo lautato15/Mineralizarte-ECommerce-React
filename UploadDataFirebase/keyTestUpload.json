@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "mineralizarte-ecommerce",
+  "private_key_id": "4f23d23725e81a4ff5e60dfc1af27244d1232260",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDXrZQ4rv1NcVoz\nLMrKKVuFEhz5JbbEOhkS/ENtkVMjezzTOjG7yAogaub3FDcNP5uOYmYz9pLsJe5y\nw+StV5sewqLWSvEEAmEHLEWr0vAQFTzL0FtoHexZbGcuy51mG8+3/49YFAQt2DDO\nI8sdvlOEb9rWBSXMkWQZWuRpzStxEdbFHXxmAxSBtanxxWySXtVcC/cmyU2nMMjk\ntlvjdtehGDTPdrGaHBYpTMnup3maT8JEl1c+wTInu7OKs7/lLMjsLaYo78eYurjb\nH0y0W2vY5RGNXqQTn7S2pfHpArm8ehcUfUoPZLvvE31JU8HX2Gb/CafHls1x5Cxv\nHoEmUl4VAgMBAAECggEAI2A7vx5outKcXmd67bTh545EhVM7yqzS3wvUjXy4O8oj\nfGv/q1LQ4mdWcfF1ZC1qOO0H4X8Qsz43gciC0jHb5iw7pFWPeb5gJtqKpPfI24J4\nQd/vlkDOOw6uT/0i2JQ4OnBnFSXXV6OtwaoaT0sgDMmCBfe7LvYsCoKfk4ENHpLm\nqOkFddtzZke0dOUZRcZXYGfcjFFcLF5NLOtqovBT/gJc7ZWd1vQU3a0EutIZUU/K\nuYuXmsfZvsqNO0e94RgmdF5JXBVkrmntvrfE+8xhzVqVJVXkeQhb2u3kN9DIURm0\nUgSlo9dQk+l7u08dSS14M9Ha0bfKfrNagoxtq9jkwwKBgQD+cjiOWZEkaqbvIMF0\nGZ9i0zp+UVx/A/dMxgekCTREheIjesJKcn56mNw4LeOwoLPIO9HJAsZLpdv1aQcZ\n8FI60RX0WyMsNgd1r20fZanrZpN2FY2mhc5hX+XCzAwYpN9IRC4lkYWGVaQHP12K\nCbo0imvkUFCg5/lwSH11Ot8rMwKBgQDY/sBXU3OoiD9/UvYI6DYmZE3Y5j2bHsQK\nMft/IOiFBgf5otpOceibCL6Huw2h3GXCxnmU/SgyMC5nPw0JMp4NQQYya5R0565R\nJYoadMbflQUjG9FgROlw4vGxKYmpCY2m5PUkRAa1ZcFYg1/oLzfA5f+XriEl/WNL\nL71kpeiRlwKBgEvt/+yS09o/LWOsra4cu1B9YjYxx11r7I9vhPYxfPR503rs9i/L\nLO0e0pC9OPYLbrrxBvBqMIyAiTwZxHG8In3EyT1rOPrHgMBgwjqdVvCVYqnZUrT/\ntw+d022nAHEWOj9RgUfavjLROaqkASDhODzXlczDHtx1fR1BtJaYI+K7AoGATQ0Q\ncTGxxOs0WNq1gG4sJC/DsLv4ricbh18+JWMjDXEZzdu01tv9s2dEeF/ENHBVNfdR\n3sSRzFhtcb3ivBxcIOqw76Bho61MqYXB5ykGIQgCPfg3vY5asfnzxmuwdPRudw+f\nuFPraegK4ooruP9jNby1qD9th9bUtjLqdl2vGlsCgYEAuT7+57e6XWZuhqoZL9wz\ngs3feyBHvjUvOQG2t5W1BV/nxRFzPR17+4mAhwfRKQ+HsV25CVp/4Ej22WdBydF7\nRXqccXxtjnFhn8swGM6nUGEuTNAkhRnOS5nNEClWlimjsdyyQSnn0PETjinBXoLM\n7CTJGrJR1IucZfggJJgNdn4=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-vym4g@mineralizarte-ecommerce.iam.gserviceaccount.com",
+  "client_id": "103333393524324061286",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-vym4g%40mineralizarte-ecommerce.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

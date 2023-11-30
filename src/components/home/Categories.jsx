@@ -4,13 +4,6 @@ import CardCategory from "./CardCategory.jsx";
 import { collection, getDocs, getFirestore } from "firebase/firestore";
 
 function Categories() {
-  const ListCategories = [
-    "Brasaletes",
-    "Dijes",
-    "Pendientes",
-    "Colgantes",
-    "Anillos",
-  ];
   const [categories, setCategories] = useState([]);
   useEffect(() => {
     const callCategories = async () => {
