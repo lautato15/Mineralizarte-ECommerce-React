@@ -32,6 +32,7 @@ function NavBar() {
       collapseOnSelect
       expand="lg"
       className="bg-black Navbar-Text FontLato"
+      style={{ height: "75px" }}
     >
       <Container className="position-relative">
         <Navbar.Brand className="text-white">
@@ -45,7 +46,7 @@ function NavBar() {
             Mineralizarte
           </Link>
         </Navbar.Brand>
-        <div className=" position-absolute end-0 top-0 d-flex">
+        <div className=" position-absolute end-0 top-0 d-flex h-100 align-items-center">
           <Navbar.Toggle
             aria-controls="responsive-navbar-nav"
             style={{ scale: "0.7" }}
