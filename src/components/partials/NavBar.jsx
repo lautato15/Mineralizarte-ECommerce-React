@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./NavBar.css";
 import CartWidget from "./CartWidget";
 import Container from "react-bootstrap/Container";
@@ -6,6 +6,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link, NavLink } from "react-router-dom";
+import Logo from "../../assets/img/logo.png";
 function NavBar() {
   const ClassActive = "navActive text-decoration-none text-white nav-link";
   const ClassInActive = "text-decoration-none text-white nav-link";
@@ -35,7 +36,12 @@ function NavBar() {
       <Container className="position-relative">
         <Navbar.Brand className="text-white">
           <Link to="/" className="text-decoration-none text-white">
-            <i className="fa-solid fa-gem  me-3"></i>
+            <img
+              src={Logo}
+              alt=""
+              className="me-2 pb-1"
+              style={{ width: "45px", height: "45px" }}
+            />
             Mineralizarte
           </Link>
         </Navbar.Brand>
