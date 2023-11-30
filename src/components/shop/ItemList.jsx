@@ -5,6 +5,8 @@ import HeadBoard from "../partials/HeadBoard";
 import SidebarShop from "../shop/SidebarShop";
 
 function ItemList({ products, categorySelected, categories }) {
+  console.log("Hola");
+
   return (
     <>
       {categorySelected ? (

@@ -12,7 +12,7 @@ function ItemDetailContainer() {
         const db = getFirestore();
 
         let dataProduct;
-        const oneItem = doc(db, "items", "2");
+        const oneItem = doc(db, "products", String(id));
 
         await getDoc(oneItem).then((snapshot) => {
           if (snapshot.exists()) {

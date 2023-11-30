@@ -1,0 +1,123 @@
+{
+  "1": {
+    "id": 1,
+    "name": "Anillo de Oro Blanco",
+    "category_id": 5,
+    "price": 500.0,
+    "description": "Anillo elegante de oro blanco con incrustaciones de diamantes.",
+    "image": "https://caketheme.com/html/mojuri/media/product/2.jpg",
+    "stock": 18,
+    "favorite": true,
+    "stars": 4
+  },
+  "2": {
+    "id": 2,
+    "name": "Anillo de Plata con Zafiro",
+    "category_id": 5,
+    "price": 150.0,
+    "description": "Anillo de plata con una piedra preciosa de zafiro azul.",
+    "image": "https://caketheme.com/html/mojuri/media/product/7.jpg",
+    "stock": 30,
+    "favorite": false,
+    "stars": 2
+  },
+  "3": {
+    "id": 3,
+    "name": "Anillo de Compromiso de Diamante",
+    "category_id": 5,
+    "price": 1000.0,
+    "description": "Anillo de compromiso clásico con un diamante brillante en el centro.",
+    "image": "https://caketheme.com/html/mojuri/media/product/5.jpg",
+    "stock": 9,
+    "favorite": true,
+    "stars": 5
+  },
+  "4": {
+    "id": 4,
+    "name": "Pendientes de Perlas",
+    "category_id": 2,
+    "price": 200.0,
+    "description": "Elegantes pendientes de perlas cultivadas en oro amarillo.",
+    "image": "https://caketheme.com/html/mojuri/media/product/4.jpg",
+    "stock": 23,
+    "favorite": false,
+    "stars": 3
+  },
+  "5": {
+    "id": 5,
+    "name": "Pendientes de Diamantes",
+    "category_id": 2,
+    "price": 800.0,
+    "description": "Pendientes colgantes con diamantes brillantes en montura de platino.",
+    "image": "https://caketheme.com/html/mojuri/media/product/9.jpg",
+    "stock": 5,
+    "favorite": true,
+    "stars": 1
+  },
+  "6": {
+    "id": 6,
+    "name": "Pendientes de Aro de Oro",
+    "category_id": 2,
+    "price": 80.0,
+    "description": "Pendientes de aro clásicos hechos de plata esterlina.",
+    "image": "https://caketheme.com/html/mojuri/media/product/2-2.jpg",
+    "stock": 12,
+    "favorite": false,
+    "stars": 4
+  },
+  "7": {
+    "id": 7,
+    "name": "Dije de Corazón",
+    "category_id": 3,
+    "price": 30.0,
+    "description": "Dije delicado con forma de corazón, perfecto para expresar amor.",
+    "image": "https://caketheme.com/html/mojuri/media/product/6.jpg",
+    "stock": 36,
+    "favorite": true,
+    "stars": 2
+  },
+  "8": {
+    "id": 8,
+    "name": "Dije de Estrella",
+    "category_id": 3,
+    "price": 25.0,
+    "description": "Dije encantador en forma de estrella para un toque celestial.",
+    "image": "https://caketheme.com/html/mojuri/media/product/6-2.jpg",
+    "stock": 15,
+    "favorite": false,
+    "stars": 3
+  },
+  "9": {
+    "id": 9,
+    "name": "Dije de Llave",
+    "category_id": 3,
+    "price": 40.0,
+    "description": "Dije elegante con forma de llave, simbolizando secretos y posibilidades.",
+    "image": "https://caketheme.com/html/mojuri/media/product/8.jpg",
+    "stock": 8,
+    "favorite": true,
+    "stars": 5
+  },
+  "10": {
+    "id": 10,
+    "name": "Colgante de Oro",
+    "category_id": 4,
+    "price": 350.0,
+    "description": "Colgante elegante de oro con diseño único.",
+    "image": "https://cindykleist.com/wp-content/uploads/2021/04/gala1.jpeg",
+    "stock": 15,
+    "favorite": false,
+    "stars": 4
+  },
+  "11": {
+    "id": 11,
+    "name": "Brazalete de Plata",
+    "category_id": 1,
+    "price": 120.0,
+    "description": "Brazalete de plata con detalles grabados.",
+    "image": "https://cindykleist.com/wp-content/uploads/2018/07/Brazalete-trenzado-hombre.jpg",
+    "stock": 25,
+    "favorite": true,
+    "stars": 3
+  }
+}

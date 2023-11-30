@@ -19,7 +19,7 @@ function ItemListContainer() {
     const callData = async () => {
       try {
         const db = getFirestore();
-        const itemsCollection = collection(db, "items");
+        const itemsCollection = collection(db, "products");
         const categoriesCollection = collection(db, "categories");
         let dataProducts;
         let dataCategories;
@@ -32,9 +32,6 @@ function ItemListContainer() {
             };
             return product;
           });
-
-          console.log("Products");
-          console.log(dataProducts);
         });
         // Categories
         await getDocs(categoriesCollection).then((snapshot) => {
@@ -45,9 +42,7 @@ function ItemListContainer() {
             };
             return category;
           });
-
-          console.log("Categories");
-          console.log(dataCategories);
+          setCategories(dataCategories);
         });
 
         if (catid !== undefined) {
@@ -61,18 +56,19 @@ function ItemListContainer() {
           setCategorySelected(false);
           setProducts(dataProducts);
         }
+        console.log("DataCategories");
+        console.log(dataCategories);
 
         for (let cate of dataCategories) {
-          cate.CountProducts = countProductsByCategory(cate.id, data.products);
+          cate.CountProducts = countProductsByCategory(cate.id, dataProducts);
         }
-
-        setCategories(dataCategories);
       } catch (error) {
         console.error("Error call or parsing of products:", error);
       }
     };
     callData();
   }, [catid]);
+
 
   return (
     products.length > 0 && (
