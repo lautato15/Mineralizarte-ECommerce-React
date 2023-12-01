@@ -43,7 +43,7 @@ function NavBar() {
               className="me-2 pb-1"
               style={{ width: "45px", height: "45px" }}
             />
-            Mineralizarte
+            MineralizArte
           </Link>
         </Navbar.Brand>
         <div className=" position-absolute end-0 top-0 d-flex h-100 align-items-center">
