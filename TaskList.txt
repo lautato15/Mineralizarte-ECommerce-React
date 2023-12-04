@@ -12,3 +12,4 @@
 -Si el carrito esta en 0 largar tostify de aviso q no abre por eso
 -Cambiar llamadas HTTPS restantes
 -Hacer fixed el Navbar
+-Toast para el cart vacio
