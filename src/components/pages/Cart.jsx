@@ -67,7 +67,10 @@ function Cart() {
                       <span className="">$300.00</span>
                     </td>
                     <td className="align-middle bg-secondary">
-                      <a href="#" class="text-decoration-none text-black">
+                      <a
+                        href="#"
+                        class="text-decoration-none text-black border border-black rounded-5 p-1 px-2 border-2"
+                      >
                         ×
                       </a>
                     </td>
