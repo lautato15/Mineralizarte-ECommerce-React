@@ -3,9 +3,16 @@
     top: 12px !important;
 
 }
+.HeaderCartCanvas{
+    height: 75px;
+}
 .BodyCartCanvas{
-        height: calc(100vh - 75px);     
+        height: calc(100vh - 75px) ;     
         display: flex;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
         flex-direction: column;
 }
 

@@ -4,13 +4,15 @@
 -Funcion que acorte texto con ... [LISTO]
 -Agregar Boton Todas las categorias en SideBarShop.jsx  [LISTO]
 -Icono [LISTO]
+-Maquetar ViewCart [LISTO]
+-Maquetar OrderList [LISTO]
+-Carcanvas [LISTO]
 
--Maquetar ViewCart
--Maquetar OrderList
 -Empezar con Responsive
--Carcanvas
 -Si el carrito esta en 0 largar tostify de aviso q no abre por eso
 -Cambiar llamadas HTTPS restantes
 -Hacer fixed el Navbar
 -Toast para el cart vacio
 -Hacer la funcionalidad en Ticket de que se muestren los <p> de explicacion o no
+-Si esta en la pagina Cart no deberia abrir el canvas
+-Arreglar Navbar Responsive

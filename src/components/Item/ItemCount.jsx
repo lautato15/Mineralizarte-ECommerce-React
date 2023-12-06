@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Toaster, toast } from "react-hot-toast";
+import { toast } from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import { addItem, updateCounterProduct } from "../../redux/cartSlice";
 
@@ -88,7 +88,6 @@ function ItemCount({ product }) {
       >
         COMPRAR AHORA
       </button>
-      <Toaster />
     </div>
   );
 }

@@ -1,6 +1,17 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-function FooterCartCanvas() {
+function FooterCartCanvas({ handleClose, cartLength }) {
+  const navigate = useNavigate();
+  function handleGo(to) {
+    if (cartLength > 0) {
+      handleClose();
+      window.scrollTo(0, 0);
+      navigate(`${to}`);
+    } else {
+      toast.error(" Ah ocurrido un error.");
+      navigate("/");
+    }
+  }
   return (
     <>
       <div>
@@ -9,23 +20,21 @@ function FooterCartCanvas() {
             <p>SubTotal: </p> <p className="ms-auto">US$ subTotal</p>
           </div>
           <button
-            // onClick={() => {
-            //   handleProceedToCheckoutCanva();
-            // }}
+            onClick={() => {
+              handleGo("/checkout");
+            }}
             className="btn w-100 rounded-0  bg-black text-white"
           >
             Ir a Pagar !
           </button>
-          <Link
-            to="/cart"
-            // onClick={() => {
-            //   handleClose();
-            //   window.scrollTo(0, 0);
-            // }}
+          <button
+            onClick={() => {
+              handleGo("/cart");
+            }}
             className="btn w-100 rounded-0  mt-2 bg-dark-subtle"
           >
             Ver Carrito
-          </Link>
+          </button>
         </div>
       </div>
     </>

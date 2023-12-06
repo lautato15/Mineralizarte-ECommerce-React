@@ -3,7 +3,7 @@ import "./Item.css";
 import IconStar from "../../assets/img/star.png";
 import { useDispatch, useSelector } from "react-redux";
 import { addItem, updateCounterProduct } from "../../redux/cartSlice";
-import { Toaster, toast } from "react-hot-toast";
+import { toast } from "react-hot-toast";
 
 function Item({ product }) {
   const stars = [];
@@ -80,7 +80,6 @@ function Item({ product }) {
             {/* <p className="fs-6 text-center">${product.price}</p> */}
           </div>
         </div>
-        <Toaster />
       </div>
     </>
   );

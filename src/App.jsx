@@ -13,6 +13,7 @@ import Checkout from "./components/pages/Checkout";
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import { Toaster } from "react-hot-toast";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -32,7 +33,7 @@ function App() {
   return (
     <div className="bg-dark Father">
       <NavBar />
-      <div className="flex-grow-1 bg-black">
+      <div className="flex-grow-1 bg-black RestNavbar">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<ItemListContainer />} />
@@ -46,6 +47,7 @@ function App() {
         </Routes>
       </div>
       <Footer />
+      <Toaster />
     </div>
   );
 }

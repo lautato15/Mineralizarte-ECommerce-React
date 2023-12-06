@@ -1,7 +1,7 @@
 .BgHeadBoard{ 
     background-image: url("../img/bg-3.jpg");
-    background-position-y: 60%;
-    background-position-x: 70%;
+    background-position-y: 50%;
+    background-position-x: 60%;
     object-fit:cover;
     box-sizing: border-box; 
 }

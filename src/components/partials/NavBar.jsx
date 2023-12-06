@@ -31,8 +31,7 @@ function NavBar() {
     <Navbar
       collapseOnSelect
       expand="lg"
-      className="bg-black Navbar-Text FontLato"
-      style={{ height: "75px" }}
+      className="bg-black Navbar-Text FontLato FixedNavbar"
     >
       <Container className="position-relative">
         <Navbar.Brand className="text-white">

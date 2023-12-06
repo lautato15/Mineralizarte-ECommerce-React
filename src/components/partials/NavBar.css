@@ -28,3 +28,12 @@
     background-color: black;
     position: absolute;
 }
+
+
+.FixedNavbar{
+    position: fixed;
+    top: 0;
+    height: 75px;
+    width: 100%;
+    z-index: 1000;
+}

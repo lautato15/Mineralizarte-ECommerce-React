@@ -12,7 +12,7 @@ function Cart() {
         <div className="container">
           <div className="row py-5">
             <div className="col-12 col-md-8 ">
-              <table className="table" cellspacing="0">
+              <table className="table">
                 <thead className="">
                   <tr>
                     <th className={classTd}>Producto</th>
@@ -79,7 +79,7 @@ function Cart() {
 
                   <tr>
                     <td
-                      colspan="6"
+                      colSpan="6"
                       className="bg-secondary align-middle border-0"
                     >
                       <div className="d-flex align-middle">
