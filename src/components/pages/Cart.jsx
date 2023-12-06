@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import HeadBoard from "../partials/HeadBoard";
 import InputCart from "../partials/CartWidget/InputCart";
+import GlobalPrice from "../partials/GlobalPrice";
 
 function Cart() {
   const classTd = "y";
@@ -11,7 +12,7 @@ function Cart() {
         <div className="container">
           <div className="row py-5">
             <div className="col-12 col-md-8 ">
-              <table class="table" cellspacing="0">
+              <table className="table" cellspacing="0">
                 <thead className="">
                   <tr>
                     <th className={classTd}>Producto</th>
@@ -27,7 +28,7 @@ function Cart() {
                       <a href="shop-details.html">
                         <img
                           src="https://caketheme.com/html/mojuri/media/product/6.jpg"
-                          class="border border-black border-2"
+                          className="border border-black border-2"
                           alt=""
                           style={{
                             width: "70px",
@@ -69,7 +70,7 @@ function Cart() {
                     <td className="align-middle bg-secondary">
                       <a
                         href="#"
-                        class="text-decoration-none text-black border border-black rounded-5 p-1 px-2 border-2"
+                        className="text-decoration-none text-black border border-black rounded-5 p-1 px-2 border-2"
                       >
                         ×
                       </a>
@@ -77,13 +78,16 @@ function Cart() {
                   </tr>
 
                   <tr>
-                    <td colspan="6" class="bg-secondary align-middle border-0">
-                      <div class="d-flex align-middle">
-                        <div class="cupon me-auto d-flex align-items-center">
+                    <td
+                      colspan="6"
+                      className="bg-secondary align-middle border-0"
+                    >
+                      <div className="d-flex align-middle">
+                        <div className="cupon me-auto d-flex align-items-center">
                           <input
                             type="text"
                             name="coupon_code"
-                            class="h-75 border-0 h-100 ps-2"
+                            className="h-75 border-0 h-100 ps-2"
                             id="coupon-code"
                             value=""
                             placeholder="Codigo de Cupon"
@@ -92,7 +96,7 @@ function Cart() {
                           <button
                             type="submit"
                             name="apply_coupon"
-                            class="btn rounded-0 bg-black text-white ms-2 my-0 border-0 h-100"
+                            className="btn rounded-0 bg-black text-white ms-2 my-0 border-0 h-100"
                             value="Apply coupon"
                           >
                             Aplicar Cupon
@@ -102,7 +106,7 @@ function Cart() {
                         <button
                           type="submit"
                           name="update_cart"
-                          class="btn rounded-0 bg-black text-white ms-2"
+                          className="btn rounded-0 bg-black text-white ms-2"
                           value="Update cart"
                         >
                           Continuar Comprando
@@ -119,42 +123,8 @@ function Cart() {
               <h2 className="fs-5 p-4 fw-bold bg-secondary">
                 Total del Carrito
               </h2>
-              <div className="bg-secondary p-4">
-                <div className="d-flex pt-3">
-                  <p className="w-50 fw-bold">SubTotal</p>
-                  <p className="w-50">$ 480.00</p>
-                </div>
-                {/* ENVIO */}
-                <div className="d-flex my-4">
-                  <p className="w-50 fw-bold">Envío</p>
-                  <div className="w-50">
-                    <div>
-                      <input
-                        type="radio"
-                        id="freeshipping"
-                        name="freeshipping"
-                        value="freeshipping"
-                        className="me-2"
-                      />
-                      <label htmlFor="freeshipping"> Envío gratuito</label>
-                    </div>
-                    <div>
-                      <input
-                        type="radio"
-                        id="flatrate"
-                        name="flatrate"
-                        value="flatrate"
-                        className="me-2"
-                      />
-                      <label htmlFor="freeshipping"> Tarifa Plana</label>
-                    </div>
-                  </div>
-                </div>
-                {/* TOTAL */}
-                <div className="d-flex">
-                  <p className="w-50 fw-bold">Total</p>
-                  <p className="w-50">$ 480.00</p>
-                </div>
+              <GlobalPrice />
+              <div className="py-3">
                 <Link
                   to="/checkout"
                   className="text-decoration-none text-black BgYellow d-block w-100 ms-auto me-auto text-center py-2 fw-bold"

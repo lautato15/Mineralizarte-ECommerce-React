@@ -13,3 +13,4 @@
 -Cambiar llamadas HTTPS restantes
 -Hacer fixed el Navbar
 -Toast para el cart vacio
+-Hacer la funcionalidad en Ticket de que se muestren los <p> de explicacion o no

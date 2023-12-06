@@ -8,11 +8,11 @@ import ItemListContainer from "./components/pages/ItemListContainer";
 import ItemDetailContainer from "./components/pages/ItemDetailContainer";
 import NotFound from "./components/pages/NotFound";
 import Footer from "./components/partials/Footer";
-
+import Cart from "./components/pages/Cart";
+import Checkout from "./components/pages/Checkout";
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import Cart from "./components/pages/Cart";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -41,7 +41,7 @@ function App() {
           <Route path="/category/:catid" element={<ItemListContainer />} />
           <Route path="/item/:id" element={<ItemDetailContainer />} />
           <Route path="/cart" element={<Cart />} />
-
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
