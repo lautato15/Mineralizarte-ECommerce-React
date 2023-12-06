@@ -7,12 +7,12 @@
 -Maquetar ViewCart [LISTO]
 -Maquetar OrderList [LISTO]
 -Carcanvas [LISTO]
+-Si el carrito esta en 0 largar tostify de aviso q no abre por eso [LISTO]
+-Hacer fixed el Navbar [LISTO]
+-Toast para el cart vacio [LISTO]
 
 -Empezar con Responsive
--Si el carrito esta en 0 largar tostify de aviso q no abre por eso
 -Cambiar llamadas HTTPS restantes
--Hacer fixed el Navbar
--Toast para el cart vacio
 -Hacer la funcionalidad en Ticket de que se muestren los <p> de explicacion o no
 -Si esta en la pagina Cart no deberia abrir el canvas
 -Arreglar Navbar Responsive

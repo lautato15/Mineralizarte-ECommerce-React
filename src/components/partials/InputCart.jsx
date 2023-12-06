@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { inputChange } from "../../../redux/cartSlice";
+import { inputChange } from "../../redux/cartSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 

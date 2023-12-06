@@ -83,7 +83,7 @@ function ItemCount({ product }) {
         </div>
       </div>
       <button
-        className="BgYellow border-0  px-3 mt-2 w-100 text-black"
+        className="BgGold border-0  px-3 mt-2 w-100 text-black"
         style={{ height: "38.8px" }}
       >
         COMPRAR AHORA

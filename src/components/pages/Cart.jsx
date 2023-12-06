@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 import HeadBoard from "../partials/HeadBoard";
-import InputCart from "../partials/CartWidget/InputCart";
+import InputCart from "../partials/InputCart";
 import GlobalPrice from "../partials/GlobalPrice";
+import { useSelector } from "react-redux";
+import CartRow from "../cart/CartRow";
 
 function Cart() {
-  const classTd = "y";
+  const cart = useSelector((state) => state.cart);
+  const BgTable = "bg-secondary";
   return (
     <>
       <div className="bg-dark FontLato">
@@ -15,67 +18,18 @@ function Cart() {
               <table className="table">
                 <thead className="">
                   <tr>
-                    <th className={classTd}>Producto</th>
-                    <th className={classTd}>Precio</th>
-                    <th className={classTd}>Cantidad</th>
-                    <th className={classTd}>Subtotal</th>
-                    <th className={classTd}>&nbsp;</th>
+                    <th className={BgTable}>Producto</th>
+                    <th className={BgTable}>Precio</th>
+                    <th className={BgTable}>Cantidad</th>
+                    <th className={BgTable}>Subtotal</th>
+                    <th className={BgTable}>&nbsp;</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td className="align-middle bg-secondary">
-                      <a href="shop-details.html">
-                        <img
-                          src="https://caketheme.com/html/mojuri/media/product/6.jpg"
-                          className="border border-black border-2"
-                          alt=""
-                          style={{
-                            width: "70px",
-                            height: "70px",
-                          }}
-                        />
-                      </a>
-
-                      <a
-                        href="shop-details.html"
-                        className="text-decoration-none text-black fw-bold ms-3"
-                      >
-                        Twin Hoops
-                      </a>
-                    </td>
-                    <td className="align-middle bg-secondary">
-                      <span className="m-0 ">$150.00</span>
-                    </td>
-                    <td className="align-middle bg-secondary">
-                      <div>
-                        <button
-                          type="button"
-                          className="bg-black border-0 text-white  px-2 h-100"
-                        >
-                          -
-                        </button>
-                        <InputCart id="{}" counter="{}" />
-                        <button
-                          type="button"
-                          className="bg-black border-0 text-white  px-2 h-100"
-                        >
-                          +
-                        </button>
-                      </div>
-                    </td>
-                    <td className="align-middle bg-secondary">
-                      <span className="">$300.00</span>
-                    </td>
-                    <td className="align-middle bg-secondary">
-                      <a
-                        href="#"
-                        className="text-decoration-none text-black border border-black rounded-5 p-1 px-2 border-2"
-                      >
-                        ×
-                      </a>
-                    </td>
-                  </tr>
+                  {cart.length > 0 &&
+                    cart.map((p) => {
+                      return <CartRow key={p.id} product={p} />;
+                    })}
 
                   <tr>
                     <td
@@ -119,7 +73,6 @@ function Cart() {
             </div>
 
             <div className="col-12 col-md-4 ">
-              {/* SUBTOTAL */}
               <h2 className="fs-5 p-4 fw-bold bg-secondary">
                 Total del Carrito
               </h2>
@@ -127,7 +80,7 @@ function Cart() {
               <div className="py-3">
                 <Link
                   to="/checkout"
-                  className="text-decoration-none text-black BgYellow d-block w-100 ms-auto me-auto text-center py-2 fw-bold"
+                  className="text-decoration-none text-black BgGold d-block w-100 ms-auto me-auto text-center py-2 fw-bold"
                 >
                   Ir a Pagar!
                 </Link>

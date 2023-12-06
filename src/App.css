@@ -30,12 +30,21 @@
 .ColorYellow{
     color: rgb(217, 182, 23);
 }
-.BgYellow{
+ .BgGold{
     background-color: rgb(217, 182, 23);
 
+}  
+ .BgYellow{
+    background-color:  rgb(255, 255, 173)!important ;
 }
+/* .BgYellow{
+    background-color:  rgb(212, 175, 55) ;
+
+} */
 
 .SmallText{
     font-size: 0.8rem;
     letter-spacing: 1px;
 }
+
+

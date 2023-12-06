@@ -98,7 +98,7 @@ function Ticket() {
         </div>
         <Link
           to="/checkout"
-          className="text-decoration-none text-black BgYellow d-block w-100 ms-auto me-auto text-center py-2 fw-bold mt-4"
+          className="text-decoration-none text-black BgGold d-block w-100 ms-auto me-auto text-center py-2 fw-bold mt-4"
         >
           Realizar Pedido!
         </Link>
