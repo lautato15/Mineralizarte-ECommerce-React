@@ -16,3 +16,6 @@
 -Hacer la funcionalidad en Ticket de que se muestren los <p> de explicacion o no
 -Si esta en la pagina Cart no deberia abrir el canvas
 -Arreglar Navbar Responsive
+-Reparar semiresponsive de Shop
+-Pasar el Envio de cart a checkout
+-No cierra el dropdown de categorias

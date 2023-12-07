@@ -37,9 +37,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<ItemListContainer />} />
+          <Route path="/category/:catid" element={<ItemListContainer />} />
           <Route path="/about" element={<AboutThisPj />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/category/:catid" element={<ItemListContainer />} />
           <Route path="/item/:id" element={<ItemDetailContainer />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />

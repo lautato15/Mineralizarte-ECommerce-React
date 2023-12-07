@@ -4,10 +4,16 @@ import InputCart from "../partials/InputCart";
 import GlobalPrice from "../partials/GlobalPrice";
 import { useSelector } from "react-redux";
 import CartRow from "../cart/CartRow";
+import { useState } from "react";
 
 function Cart() {
   const cart = useSelector((state) => state.cart);
-  const BgTable = "bg-secondary";
+  let subtotal = 0;
+  cart.forEach((i) => {
+    subtotal += i.price * i.counter;
+  });
+  const [cupon, setCupon] = useState("");
+  const BgTable = "bg-secondary text-white";
   return (
     <>
       <div className="bg-dark FontLato">
@@ -43,8 +49,9 @@ function Cart() {
                             name="coupon_code"
                             className="h-75 border-0 h-100 ps-2"
                             id="coupon-code"
-                            value=""
                             placeholder="Codigo de Cupon"
+                            value={cupon}
+                            onChange={() => setCupon}
                           />
 
                           <button
@@ -57,14 +64,12 @@ function Cart() {
                           </button>
                         </div>
 
-                        <button
-                          type="submit"
-                          name="update_cart"
+                        <Link
+                          to="/shop"
                           className="btn rounded-0 bg-black text-white ms-2"
-                          value="Update cart"
                         >
                           Continuar Comprando
-                        </button>
+                        </Link>
                       </div>
                     </td>
                   </tr>
@@ -73,10 +78,10 @@ function Cart() {
             </div>
 
             <div className="col-12 col-md-4 ">
-              <h2 className="fs-5 p-4 fw-bold bg-secondary">
+              <h2 className="fs-5 p-4 fw-bold bg-secondary text-white">
                 Total del Carrito
               </h2>
-              <GlobalPrice />
+              <GlobalPrice subtotal={subtotal} />
               <div className="py-3">
                 <Link
                   to="/checkout"

@@ -2,9 +2,7 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import CounterCart from "../CounterCart";
 
-function MainCartCanvas({ handleClose }) {
-  const cart = useSelector((state) => state.cart);
-
+function MainCartCanvas({ handleClose, cart }) {
   return cart.length > 0 ? (
     <div className="flex-grow-1 p-4">
       <div className="container">

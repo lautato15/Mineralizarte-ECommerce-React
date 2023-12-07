@@ -1,15 +1,21 @@
 import React, { useState } from "react";
 import GlobalPrice from "../partials/GlobalPrice";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function Ticket() {
+  const cart = useSelector((state) => state.cart);
+  let subtotal = 0;
+  cart.forEach((i) => {
+    subtotal += i.price * i.counter;
+  });
   const [paymentDetails, setPaymentDetails] = useState("");
   function handleChangePayment() {
     setPaymentDetails(e.target.value);
   }
   return (
     <>
-      <div className="border border-black p-4">
+      <div className="border border-black p-4 bg-white text-black">
         <h4 className="mb-5 FontGaramond fw-bold fs-3">Productos</h4>
 
         <div className="d-flex justify-content-between pb-3 border-bottom">
@@ -30,7 +36,7 @@ function Ticket() {
           <p className="me-2">$10000</p>
         </div>
 
-        <GlobalPrice />
+        <GlobalPrice subtotal={subtotal} />
 
         <div className="border ">
           <ul className="payment-methods methods custom-radio">

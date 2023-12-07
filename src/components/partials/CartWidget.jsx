@@ -38,7 +38,7 @@ function CartWidget() {
           <Offcanvas.Title>CARRITO de COMPRAS</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body className="bg-dark BodyCartCanvas">
-          <MainCartCanvas handleClose={handleClose} />
+          <MainCartCanvas handleClose={handleClose} cart={cart} />
           <FooterCartCanvas
             handleClose={handleClose}
             cartLength={cart.length}

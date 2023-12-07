@@ -32,7 +32,7 @@ function BillingDetails() {
           <input
             type="text"
             name="firstname"
-            className="form-control-plaintext border-bottom mb-4 text-Form"
+            className="form-control-plaintext border-bottom mb-4 text-Form bg-dark text-white"
             onChange={handleChange}
             value={billingDetails.firstname}
           />
@@ -42,7 +42,7 @@ function BillingDetails() {
           <input
             type="text"
             name="lastname"
-            className="form-control-plaintext border-bottom mb-4 text-Form"
+            className="form-control-plaintext border-bottom mb-4 text-Form bg-dark text-white"
             onChange={handleChange}
             value={billingDetails.lastname}
           />
@@ -52,7 +52,7 @@ function BillingDetails() {
           <input
             type="text"
             name="phone"
-            className="form-control-plaintext border-bottom mb-4 text-Form"
+            className="form-control-plaintext border-bottom mb-4 text-Form bg-dark text-white"
             onChange={handleChange}
             value={billingDetails.phone}
           />
@@ -62,7 +62,7 @@ function BillingDetails() {
           <input
             type="text"
             name="email"
-            className="form-control-plaintext border-bottom mb-4 text-Form"
+            className="form-control-plaintext border-bottom mb-4 text-Form bg-dark text-white"
             onChange={handleChange}
             value={billingDetails.email}
           />
@@ -70,7 +70,7 @@ function BillingDetails() {
           <input
             type="text"
             name="company"
-            className="form-control-plaintext border-bottom mb-4 text-Form"
+            className="form-control-plaintext border-bottom mb-4 text-Form bg-dark text-white"
             onChange={handleChange}
             value={billingDetails.company}
           />
@@ -80,7 +80,7 @@ function BillingDetails() {
           <input
             type="text"
             name="address"
-            className="form-control-plaintext border-bottom mb-4 text-Form"
+            className="form-control-plaintext border-bottom mb-4 text-Form bg-dark text-white"
             onChange={handleChange}
             value={billingDetails.address}
           />
@@ -88,7 +88,7 @@ function BillingDetails() {
           <input
             type="text"
             name="ap"
-            className="form-control-plaintext border-bottom mb-4 text-Form"
+            className="form-control-plaintext border-bottom mb-4 text-Form bg-dark text-white"
             onChange={handleChange}
             value={billingDetails.ap}
           />
@@ -98,7 +98,7 @@ function BillingDetails() {
           <input
             type="text"
             name="city"
-            className="form-control-plaintext border-bottom mb-4 text-Form"
+            className="form-control-plaintext border-bottom mb-4 text-Form bg-dark text-white"
             onChange={handleChange}
             value={billingDetails.city}
           />
@@ -108,7 +108,7 @@ function BillingDetails() {
           <input
             type="text"
             name="zip"
-            className="form-control-plaintext border-bottom mb-4 text-Form"
+            className="form-control-plaintext border-bottom mb-4 text-Form bg-dark text-white"
             onChange={handleChange}
             value={billingDetails.zip}
           />
@@ -141,10 +141,11 @@ function BillingDetails() {
             <textarea
               type="text"
               name="note"
-              className="form-control-plaintext border-bottom mb-4 text-Form"
+              className="form-control-plaintext border-bottom mb-4 text-Form bg-dark text-white w-75"
               onChange={handleChange}
               value={billingDetails.note}
               placeholder="Notas sobre su pedido o especiales para la entrega."
+              rows={4}
             />
           </div>
         </form>

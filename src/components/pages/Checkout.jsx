@@ -5,7 +5,7 @@ import Ticket from "../checkout/Ticket";
 function Checkout() {
   return (
     <>
-      <div className="bg-white FontLato">
+      <div className="bg-dark text-white FontLato">
         <HeadBoard Text={"Confirma tu orden!"} />
         <div className="container">
           <div className="row py-5">

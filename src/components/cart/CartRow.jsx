@@ -2,8 +2,11 @@ import { Link } from "react-router-dom";
 import { removeItem } from "../../redux/cartSlice";
 
 import CounterCart from "../partials/CounterCart";
+import { useDispatch } from "react-redux";
 
 function CartRow({ product }) {
+  const dispatch = useDispatch();
+
   const handleDelproduct = (product) => {
     dispatch(removeItem(product));
   };
@@ -41,7 +44,7 @@ function CartRow({ product }) {
         </td>
         <td className="align-middle bg-white">
           <button
-            onClick={handleDelproduct(product)}
+            onClick={() => handleDelproduct(product)}
             className="text-decoration-none text-black border border-black rounded-5 p-1 px-2 border-2"
           >
             ×

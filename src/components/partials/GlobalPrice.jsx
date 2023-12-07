@@ -1,11 +1,11 @@
 import React from "react";
 
-function GlobalPrice() {
+function GlobalPrice({ subtotal }) {
   return (
     <div className="bg-white  p-4">
       <div className="d-flex pt-3">
         <p className="w-50 fw-bold FontGaramond fs-5">SubTotal</p>
-        <p className="w-50 pt-1">$ 480.00</p>
+        <p className="w-50 pt-1">$ {subtotal}</p>
       </div>
       {/* ENVIO */}
       <div className="d-flex my-4">
@@ -36,7 +36,7 @@ function GlobalPrice() {
       {/* TOTAL */}
       <div className="d-flex">
         <p className="w-50 fw-bold FontGaramond fs-5">Total</p>
-        <p className="w-50 pt-1">$ 480.00</p>
+        <p className="w-50 pt-1">$ {subtotal}</p>
       </div>
     </div>
   );
