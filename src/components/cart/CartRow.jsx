@@ -13,11 +13,11 @@ function CartRow({ product }) {
   return (
     <>
       <tr>
-        <td className="align-middle bg-white">
+        <td className=" bg-white d-flex">
           <Link to={`/item/${product.id}`}>
             <img
               src={product.image}
-              className="border border-black border-2"
+              className="border border-black border-1"
               alt={`Imagen de ${product.name}`}
               style={{
                 width: "70px",
@@ -26,12 +26,14 @@ function CartRow({ product }) {
             />
           </Link>
 
-          <Link
-            to={`/item/${product.id}`}
-            className="text-decoration-none text-black fw-bold ms-3"
-          >
-            Twin Hoops
-          </Link>
+          <div className="d-flex align-items-center">
+            <Link
+              to={`/item/${product.id}`}
+              className="text-decoration-none text-black fw-bold ms-3 d-block"
+            >
+              {product.name}
+            </Link>
+          </div>
         </td>
         <td className="align-middle bg-white">
           <span className="m-0 ">${product.price}</span>

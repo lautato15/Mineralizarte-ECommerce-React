@@ -49,7 +49,7 @@ function MainCartCanvas({ handleClose, cart }) {
     <div className=" flex-grow-1 p-4">
       <div className="container d-flex- flex-column text-center">
         <p className="text-white text-center">Tu carrito está vacío</p>
-        <Link to="/shop" onClick={handleClose()}>
+        <Link to="/shop" onClick={() => handleClose()}>
           Ve por algunos productos!
         </Link>
       </div>

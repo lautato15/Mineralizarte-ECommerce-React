@@ -36,7 +36,7 @@ function GlobalPrice({ subtotal }) {
       {/* TOTAL */}
       <div className="d-flex">
         <p className="w-50 fw-bold FontGaramond fs-5">Total</p>
-        <p className="w-50 pt-1">$ {subtotal}</p>
+        <p className="w-50 pt-1 fw-bold">$ {subtotal}</p>
       </div>
     </div>
   );

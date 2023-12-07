@@ -9,10 +9,10 @@ function Checkout() {
         <HeadBoard Text={"Confirma tu orden!"} />
         <div className="container">
           <div className="row py-5">
-            <div className="col-12 col-md-7 ">
+            <div className="col-12 col-lg-7 ">
               <BillingDetails />
             </div>
-            <div className="col-12 col-md-5 ">
+            <div className="col-12 col-lg-5 ">
               <Ticket />
             </div>
           </div>

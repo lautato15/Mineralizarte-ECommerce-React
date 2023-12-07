@@ -1,26 +1,31 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import HeadBoard from "../partials/HeadBoard";
 import InputCart from "../partials/InputCart";
 import GlobalPrice from "../partials/GlobalPrice";
 import { useSelector } from "react-redux";
 import CartRow from "../cart/CartRow";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Cart() {
+  const navigate = useNavigate();
   const cart = useSelector((state) => state.cart);
   let subtotal = 0;
   cart.forEach((i) => {
     subtotal += i.price * i.counter;
   });
   const [cupon, setCupon] = useState("");
-  const BgTable = "bg-secondary text-white";
+  const BgTable = "bg-secondary text-white LetterSpacing";
+
+  useEffect(() => {
+    cart.length === 0 && navigate("/shop");
+  }, [cart]);
   return (
     <>
       <div className="bg-dark FontLato">
         <HeadBoard Text={"Carrito"} />
         <div className="container">
           <div className="row py-5">
-            <div className="col-12 col-md-8 ">
+            <div className="col-12 col-lg-8 ">
               <table className="table">
                 <thead className="">
                   <tr>
@@ -77,8 +82,8 @@ function Cart() {
               </table>
             </div>
 
-            <div className="col-12 col-md-4 ">
-              <h2 className="fs-5 p-4 fw-bold bg-secondary text-white">
+            <div className="col-12 col-lg-4 ">
+              <h2 className="fs-5 p-4 fw-bold bg-secondary text-white LetterSpacing">
                 Total del Carrito
               </h2>
               <GlobalPrice subtotal={subtotal} />

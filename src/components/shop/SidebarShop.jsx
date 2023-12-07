@@ -13,7 +13,6 @@ function SidebarShop({
   const isCategorySelected = (categoryId, categorySelected) => {
     return categorySelected.id === categoryId;
   };
-  console.log(categorySelected);
   return (
     <>
       <div>

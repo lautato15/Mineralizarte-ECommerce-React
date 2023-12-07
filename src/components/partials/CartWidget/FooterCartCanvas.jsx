@@ -3,14 +3,11 @@ import { Link, useNavigate } from "react-router-dom";
 function FooterCartCanvas({ handleClose, cartLength }) {
   const navigate = useNavigate();
   function handleGo(to) {
-    if (cartLength > 0) {
+    
       handleClose();
       window.scrollTo(0, 0);
       navigate(`${to}`);
-    } else {
-      toast.error(" Ah ocurrido un error.");
-      navigate("/");
-    }
+    
   }
   return (
     <>

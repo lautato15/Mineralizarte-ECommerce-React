@@ -1,104 +1,118 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import GlobalPrice from "../partials/GlobalPrice";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import ProductsTicket from "./ProductsTicket";
 
 function Ticket() {
+  const navigate = useNavigate();
   const cart = useSelector((state) => state.cart);
   let subtotal = 0;
   cart.forEach((i) => {
     subtotal += i.price * i.counter;
   });
   const [paymentDetails, setPaymentDetails] = useState("");
-  function handleChangePayment() {
+  function handleChangePayment(e) {
     setPaymentDetails(e.target.value);
   }
+  useEffect(() => {
+    cart.length === 0 && navigate("/shop");
+  }, [cart]);
   return (
     <>
       <div className="border border-black p-4 bg-white text-black">
         <h4 className="mb-5 FontGaramond fw-bold fs-3">Productos</h4>
 
-        <div className="d-flex justify-content-between pb-3 border-bottom">
-          <div className="d-flex">
-            <img
-              src="https://caketheme.com/html/mojuri/media/product/2-2.jpg"
-              alt="Ruby Rubber Tree Image Avatar"
-              style={{
-                width: "55px",
-                height: "55px",
-              }}
-            />
-            <div className="ps-3 ">
-              <p className="FontLato fs-6 mb-0">Las Papas</p>
-              <p className="FontLato SmallText">Cantidad: 3</p>
-            </div>
-          </div>
-          <p className="me-2">$10000</p>
-        </div>
+        {cart.length > 0 &&
+          cart.map((p) => {
+            return <ProductsTicket key={p.id} product={p} />;
+          })}
 
         <GlobalPrice subtotal={subtotal} />
 
         <div className="border ">
-          <ul className="payment-methods methods custom-radio">
-            <li className="payment-method my-3">
+          <ul>
+            <li className=" my-3">
               <input
+                checked={paymentDetails === "bank_transfer"}
                 onChange={handleChangePayment}
-                value={paymentDetails}
+                name="payment_method"
+                value="bank_transfer"
                 type="radio"
                 className=" me-2"
-                name="payment_method"
-                checked="checked"
               />
               <label htmlFor="payment_method_bacs">
                 Transferencia Bancaria
               </label>
-              <div className="payment-box">
-                <p className="text-secondary pe-4">
-                  Realice su pago directamente en nuestra cuenta bancaria.
-                  Utilice su ID de pedido como referencia de pago. Su pedido no
-                  será enviado hasta que los fondos se hayan liquidado en
-                  nuestra cuenta.
-                </p>
-              </div>
+              {paymentDetails === "bank_transfer" && (
+                <div className="payment-box">
+                  <p className="text-secondary pe-4">
+                    Realice su pago directamente en nuestra cuenta bancaria.
+                    Utilice su ID de pedido como referencia de pago. Su pedido
+                    no será enviado hasta que los fondos se hayan liquidado en
+                    nuestra cuenta.
+                  </p>
+                </div>
+              )}
             </li>
             <li className="payment-method my-3">
               <input
+                checked={paymentDetails === "collection_networks"}
                 onChange={handleChangePayment}
-                value={paymentDetails}
+                name="payment_method"
+                value="collection_networks"
                 type="radio"
-                className="input-radio me-2"
-                name="payment"
+                className=" me-2"
               />
               <label>Redes de Cobranzas</label>
-              <div className="payment-box">
-                <p className="text-secondary">Please send a</p>
-              </div>
+              {paymentDetails === "collection_networks" && (
+                <div className="payment-box">
+                  <p className="text-secondary">
+                    Realice su pago a traves de una red de cobranzas como Abitab
+                    o RedPagos. Utilice su ID de pedido como referencia de pago.
+                    Su pedido no será enviado hasta que los fondos se hayan
+                    liquidado en nuestra cuenta.
+                  </p>
+                </div>
+              )}
             </li>
-            <li className="payment-method my-3">
+            <li className=" my-3">
               <input
+                checked={paymentDetails === "cash"}
                 onChange={handleChangePayment}
-                value={paymentDetails}
-                type="radio"
-                className="input-radio me-2"
                 name="payment_method"
+                value="cash"
+                type="radio"
+                className=" me-2"
               />
               <label>Efectivo en la entrega</label>
-              <div className="payment-box">
-                <p className="text-secondary">Pay with cash upon delivery.</p>
-              </div>
+              {paymentDetails === "cash" && (
+                <div className="payment-box">
+                  <p className="text-secondary">
+                    Paga en efectivo al entregar el delivery.
+                  </p>
+                </div>
+              )}
             </li>
             <li className="payment-method my-3">
               <input
+                checked={paymentDetails === "paypal"}
                 onChange={handleChangePayment}
-                value={paymentDetails}
-                type="radio"
-                className="input-radio me-2"
                 name="payment_method"
-              />
+                value="paypal"
+                type="radio"
+                className=" me-2"
+              />{" "}
               <label>PayPal</label>
-              <div className="payment-box">
-                <p className="text-secondary">Pay via PayPal;</p>
-              </div>
+              {paymentDetails === "paypal" && (
+                <div className="payment-box">
+                  <p className="text-secondary">
+                    Paga mediante Paypal con su ID de pedido como referencia de
+                    pago. Su pedido no será enviado hasta que los fondos se
+                    hayan liquidado en nuestra cuenta.
+                  </p>
+                </div>
+              )}
             </li>
           </ul>
         </div>

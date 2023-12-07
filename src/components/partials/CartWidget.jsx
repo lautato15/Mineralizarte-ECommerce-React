@@ -12,11 +12,7 @@ function CartWidget() {
   const cart = useSelector((state) => state.cart);
 
   const handleClose = () => setShow(false);
-  const handleShow = () => {
-    cart.length > 0
-      ? setShow(true)
-      : toast.error(" Debes agregar al menos un producto  al carro.");
-  };
+  const handleShow = () => setShow(true);
 
   return (
     <>
