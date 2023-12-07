@@ -88,6 +88,8 @@ function Cart() {
               <h2 className="fs-5 p-4 fw-bold bg-secondary text-white LetterSpacing">
                 Total del Carrito
               </h2>
+              <h3 className="mt-5">HELLOW BABY</h3>
+              <pre>{JSON.stringify(checkboxValues, null, 2)}</pre> 
               <GlobalPrice
                 subtotal={subtotal}
                 handleShipping={handleShipping}
