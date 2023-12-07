@@ -6,7 +6,11 @@ import ProductsTicket from "./ProductsTicket";
 
 function Ticket() {
   const navigate = useNavigate();
+
   const cart = useSelector((state) => state.cart);
+
+  const [shippingDetails, setShippingDetails] = useState("");
+
   let subtotal = 0;
   cart.forEach((i) => {
     subtotal += i.price * i.counter;
@@ -28,7 +32,11 @@ function Ticket() {
             return <ProductsTicket key={p.id} product={p} />;
           })}
 
-        <GlobalPrice subtotal={subtotal} />
+        <GlobalPrice
+          subtotal={subtotal}
+          shippingDetails={shippingDetails}
+          setShippingDetails={setShippingDetails}
+        />
 
         <div className="border ">
           <ul>

@@ -42,7 +42,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/item/:id" element={<ItemDetailContainer />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/checkout/:shipping" element={<Checkout />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

@@ -9,13 +9,15 @@ import { useEffect, useState } from "react";
 function Cart() {
   const navigate = useNavigate();
   const cart = useSelector((state) => state.cart);
+  const [shippingDetails, setShippingDetails] = useState("");
+
   let subtotal = 0;
   cart.forEach((i) => {
     subtotal += i.price * i.counter;
   });
   const [cupon, setCupon] = useState("");
   const BgTable = "bg-secondary text-white LetterSpacing";
-
+  const handleShipping = (s) => setShippingDetails(s);
   useEffect(() => {
     cart.length === 0 && navigate("/shop");
   }, [cart]);
@@ -86,10 +88,18 @@ function Cart() {
               <h2 className="fs-5 p-4 fw-bold bg-secondary text-white LetterSpacing">
                 Total del Carrito
               </h2>
-              <GlobalPrice subtotal={subtotal} />
+              <GlobalPrice
+                subtotal={subtotal}
+                handleShipping={handleShipping}
+                shippingDetails={shippingDetails}
+              />
               <div className="py-3">
                 <Link
-                  to="/checkout"
+                  to={
+                    shippingDetails != ""
+                      ? `/checkout/:${shippingDetails} `
+                      : "/checkout"
+                  }
                   className="text-decoration-none text-black BgGold d-block w-100 ms-auto me-auto text-center py-2 fw-bold"
                 >
                   Ir a Pagar!

@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
+import { useParams } from "react-router-dom";
 
-function GlobalPrice({ subtotal }) {
+function GlobalPrice({ subtotal, handleShipping, shippingDetails }) {
+  console.log("shippingDetails");
+  console.log(shippingDetails);
+  function handleChangeShipping(e) {
+    handleShipping(e.target.value);
+  }
+  const { shipping } = useParams();
+  shipping != "" && handleShipping(shipping);
   return (
     <div className="bg-white  p-4">
       <div className="d-flex pt-3">
@@ -13,23 +21,27 @@ function GlobalPrice({ subtotal }) {
         <div className="w-50 pt-1">
           <div>
             <input
+              checked={shippingDetails === "free_shipping"}
+              onChange={handleChangeShipping}
+              name="shipping"
+              value="free_shipping"
               type="radio"
-              id="freeshipping"
-              name="freeshipping"
-              value="freeshipping"
-              className="me-2"
             />
-            <label htmlFor="freeshipping"> Envío gratuito</label>
+            <label htmlFor="shipping" className="ms-2">
+              Envío gratuito
+            </label>
           </div>
           <div>
             <input
+              checked={shippingDetails === "flat_rate"}
+              onChange={handleChangeShipping}
+              name="shipping"
+              value="flat_rate"
               type="radio"
-              id="flatrate"
-              name="flatrate"
-              value="flatrate"
-              className="me-2"
             />
-            <label htmlFor="freeshipping"> Tarifa Plana</label>
+            <label htmlFor="shipping" className="ms-2">
+              Tarifa Plana
+            </label>
           </div>
         </div>
       </div>
