@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 function Cart() {
   const navigate = useNavigate();
   const cart = useSelector((state) => state.cart);
-  const [shippingDetails, setShippingDetails] = useState("");
+  const [shippingDetails, setShippingDetails] = useState(null);
 
   let subtotal = 0;
   cart.forEach((i) => {
@@ -17,7 +17,7 @@ function Cart() {
   });
   const [cupon, setCupon] = useState("");
   const BgTable = "bg-secondary text-white LetterSpacing";
-  const handleShipping = (s) => setShippingDetails(s);
+  const handleShipping = (e) => setShippingDetails(e.target.value);
   useEffect(() => {
     cart.length === 0 && navigate("/shop");
   }, [cart]);
@@ -88,18 +88,59 @@ function Cart() {
               <h2 className="fs-5 p-4 fw-bold bg-secondary text-white LetterSpacing">
                 Total del Carrito
               </h2>
-              <h3 className="mt-5">HELLOW BABY</h3>
-              <pre>{JSON.stringify(checkboxValues, null, 2)}</pre> 
-              <GlobalPrice
+
+              <div className="bg-white  p-4">
+                <div className="d-flex pt-3">
+                  <p className="w-50 fw-bold FontGaramond fs-5">SubTotal</p>
+                  <p className="w-50 pt-1">$ {subtotal}</p>
+                </div>
+                {/* ENVIO */}
+                <div className="d-flex my-4">
+                  <p className="w-50 fw-bold FontGaramond fs-5">Envío</p>
+                  <div className="w-50 pt-1">
+                    <div>
+                      <input
+                        checked={shippingDetails === "free_shipping"}
+                        onChange={handleShipping}
+                        name="shipping"
+                        value="free_shipping"
+                        type="radio"
+                      />
+                      <label htmlFor="shipping" className="ms-2">
+                        Envío gratuito
+                      </label>
+                    </div>
+                    <div>
+                      <input
+                        checked={shippingDetails === "flat_rate"}
+                        onChange={handleShipping}
+                        name="shipping"
+                        value="flat_rate"
+                        type="radio"
+                      />
+                      <label htmlFor="shipping" className="ms-2">
+                        Tarifa Plana
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                {/* TOTAL */}
+                <div className="d-flex">
+                  <p className="w-50 fw-bold FontGaramond fs-5">Total</p>
+                  <p className="w-50 pt-1 fw-bold">$ {subtotal}</p>
+                </div>
+              </div>
+
+              {/* <GlobalPrice
                 subtotal={subtotal}
                 handleShipping={handleShipping}
                 shippingDetails={shippingDetails}
-              />
+              /> */}
               <div className="py-3">
                 <Link
                   to={
                     shippingDetails != ""
-                      ? `/checkout/:${shippingDetails} `
+                      ? `/checkout/${shippingDetails} `
                       : "/checkout"
                   }
                   className="text-decoration-none text-black BgGold d-block w-100 ms-auto me-auto text-center py-2 fw-bold"
