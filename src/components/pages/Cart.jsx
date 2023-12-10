@@ -139,7 +139,7 @@ function Cart() {
               <div className="py-3">
                 <Link
                   to={
-                    shippingDetails != ""
+                    shippingDetails != null
                       ? `/checkout/${shippingDetails} `
                       : "/checkout"
                   }
