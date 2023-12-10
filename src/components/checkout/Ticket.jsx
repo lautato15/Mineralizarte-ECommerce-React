@@ -84,6 +84,9 @@ function Ticket() {
         </div>
 
         <div className="border ">
+          <h5 className="FontGaramond text-center pt-4">
+            Metodo de Pago <span className="text-danger">*</span>
+          </h5>
           <ul>
             <li className=" my-3">
               <input
@@ -155,7 +158,7 @@ function Ticket() {
                 value="paypal"
                 type="radio"
                 className=" me-2"
-              />{" "}
+              />
               <label>PayPal</label>
               {paymentDetails === "paypal" && (
                 <div className="payment-box">

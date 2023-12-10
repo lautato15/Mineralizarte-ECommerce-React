@@ -41,10 +41,11 @@
   top: 12px;
   right: 12px;
   border-radius: 50%;
-  background: #24ecff;
-  box-shadow: 0 0 0 5px #24ecff33, 0 0 0 10px #24ecff33, 0 0 0 20px #24ecff33,
-    0 0 20px #24ecff33, 0 0 50px #24ecff33;
+  background: #d9b617;
+  box-shadow: 0 0 0 5px #d9b61744, 0 0 0 10px #d9b61733, 0 0 0 20px #d9b61733,
+    0 0 20px #d9b61722, 0 0 50px #d9b61711;
 }
+
 .Cont .Ring:nth-child(2) {
   animation: animate 4s linear infinite;
   animation-delay: -1s;
@@ -64,19 +65,19 @@
   height: 15px;
   border-radius: 50%;
   background: #d9b617;
-  box-shadow: 0 0 0 5px #d9b617, 0 0 0 10px #d9b61733, 0 0 0 20px #d9b61733,
+  box-shadow: 0 0 0 5px #d9b61744, 0 0 0 10px #d9b61733, 0 0 0 20px #d9b61733,
     0 0 20px #d9b61722, 0 0 50px #d9b61711;
 }
 
-
+/* DOWN */
 .Cont .Ring:nth-child(3) {
   animation-delay: -3s;
   position: absolute;
   bottom: -66.6px;
-  border-right: 4px solid #d9b617;
-  border-bottom: 4px solid #d9b617;
-  border-top: 4px solid #d9b617;
-  border-left: 4px solid #d9b617;
+  border-right: 4px solid #5eb345;
+  border-bottom: 4px solid #5eb345;
+  border-top: 4px solid #5eb345;
+  border-left: 4px solid #5eb345;
 }
 
 .Cont .Ring:nth-child(3)::before {
@@ -88,10 +89,13 @@
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background: #e41cf8;
-  box-shadow: 0 0 0 5px #e41cf833, 0 0 0 10px #e41cf822, 0 0 0 20px #e41cf811,
-    0 0 20px #e41cf8, 0 0 50px #e41cf8;
+  background: #d9b617;
+  box-shadow: 0 0 0 5px #d9b61744, 0 0 0 10px #d9b61733, 0 0 0 20px #d9b61733,
+    0 0 20px #d9b61722, 0 0 50px #d9b61711;
 }
+
+
+/* UP */
 .Cont .Ring:nth-child(4) {
     animation-delay: -1s;
     position: absolute;
@@ -112,7 +116,7 @@
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background: #d91717;
-    box-shadow: 0 0 0 5px #e41cf833, 0 0 0 10px #e41cf822, 0 0 0 20px #e41cf811,
-      0 0 20px #e41cf8, 0 0 50px #e41cf8;
+    background: #d9b617;
+    box-shadow: 0 0 0 5px #d9b61744, 0 0 0 10px #d9b61733, 0 0 0 20px #d9b61733,
+    0 0 20px #d9b61722, 0 0 50px #d9b61711;
   }

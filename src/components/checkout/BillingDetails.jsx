@@ -66,6 +66,17 @@ function BillingDetails() {
             onChange={handleChange}
             value={billingDetails.email}
           />
+          <label htmlFor="email">
+            Correo Electrónico (Confirme repitiendo el correo){" "}
+            <span className="text-danger">*</span>{" "}
+          </label>
+          <input
+            type="text"
+            name="email"
+            className="form-control-plaintext border-bottom mb-4 text-Form bg-dark text-white"
+            onChange={handleChange}
+            value={billingDetails.email}
+          />
           <label htmlFor="company">Companía (opcional)</label>
           <input
             type="text"
@@ -135,9 +146,7 @@ function BillingDetails() {
                 Enviar a otra dirección?
               </label>
             </div>
-            <label htmlFor="note">
-              Notas del pedido (opcional) <span className="text-danger">*</span>{" "}
-            </label>
+            <label htmlFor="note">Notas del pedido (opcional)</label>
             <textarea
               type="text"
               name="note"

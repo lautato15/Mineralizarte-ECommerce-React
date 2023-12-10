@@ -19,3 +19,4 @@
 -Reparar semiresponsive de Shop
 -Pasar el Envio de cart a checkout
 -No cierra el dropdown de categorias
+-Eliminar ruta de Load
