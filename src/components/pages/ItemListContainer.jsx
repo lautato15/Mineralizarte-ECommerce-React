@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 import { collection, getDocs, getFirestore } from "firebase/firestore";
 
 function ItemListContainer() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
   const [products, setProducts] = useState([]);
   const [categorySelected, setCategorySelected] = useState(false);
   const [categories, setCategories] = useState([]);
@@ -65,7 +66,7 @@ function ItemListContainer() {
           setProducts(dataProducts);
         }
       } catch (error) {
-        console.error("Error call or parsing of products:", error);
+        console.error("Error al llamar a los productos en Shop:", error);
       }
     };
     callData();

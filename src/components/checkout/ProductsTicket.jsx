@@ -8,6 +8,7 @@ function ProductsTicket({ product }) {
           <img
             src={product.image}
             alt={`Imagen de ${product.name}`}
+            className="border border-black"
             style={{
               width: "60px",
               height: "60px",

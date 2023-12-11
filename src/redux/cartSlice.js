@@ -5,7 +5,6 @@ const cartSlice = createSlice({
   initialState: [],
   reducers: {
     addItem(state, action) {
-      
       const index = state.findIndex((item) => item.id === action.payload.id);
       if (index == -1) {
         const newItem = {
@@ -47,6 +46,9 @@ const cartSlice = createSlice({
       }
       return state;
     },
+    cleanCart(state, action) {
+      return [];
+    },
   },
 });
 const { actions, reducer } = cartSlice;
@@ -56,6 +58,7 @@ export const {
   removeItem,
   updateCounterProduct,
   inputChange,
+  cleanCart,
 } = actions;
 
 export default reducer;

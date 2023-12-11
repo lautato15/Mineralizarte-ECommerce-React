@@ -1,18 +1,6 @@
 import { useState } from "react";
 
-function BillingDetails() {
-  const [billingDetails, setBillingDetails] = useState({
-    firstname: "",
-    lastname: "",
-    company: "",
-    address: "",
-    ap: "",
-    city: "",
-    zip: "",
-    phone: "",
-    email: "",
-    note: "",
-  });
+function BillingDetails({ setBillingDetails, billingDetails }) {
   const handleChange = (e) => {
     setBillingDetails({
       ...billingDetails,
@@ -32,7 +20,7 @@ function BillingDetails() {
           <input
             type="text"
             name="firstname"
-            className="form-control-plaintext border-bottom mb-4 text-Form bg-dark text-white"
+            className="form-control-plaintext border-bottom mb-4 text-Form bg-dark text-white "
             onChange={handleChange}
             value={billingDetails.firstname}
           />
@@ -60,22 +48,22 @@ function BillingDetails() {
             Correo Electrónico <span className="text-danger">*</span>{" "}
           </label>
           <input
-            type="text"
+            type="email"
             name="email"
             className="form-control-plaintext border-bottom mb-4 text-Form bg-dark text-white"
             onChange={handleChange}
             value={billingDetails.email}
           />
-          <label htmlFor="email">
+          <label htmlFor="email2">
             Correo Electrónico (Confirme repitiendo el correo){" "}
             <span className="text-danger">*</span>{" "}
           </label>
           <input
-            type="text"
-            name="email"
+            type="email"
+            name="email2"
             className="form-control-plaintext border-bottom mb-4 text-Form bg-dark text-white"
             onChange={handleChange}
-            value={billingDetails.email}
+            value={billingDetails.email2}
           />
           <label htmlFor="company">Companía (opcional)</label>
           <input

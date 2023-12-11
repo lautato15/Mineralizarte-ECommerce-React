@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./NavBar.css";
 import CartWidget from "./CartWidget";
 import Container from "react-bootstrap/Container";
@@ -7,30 +7,59 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link, NavLink } from "react-router-dom";
 import Logo from "../../assets/img/logo.png";
+import { collection, getDocs, getFirestore } from "firebase/firestore";
+
 function NavBar() {
-  const ClassActive = "navActive text-decoration-none text-white nav-link";
-  const ClassInActive = "text-decoration-none text-white nav-link";
+  const ClassActive = "navActive text-decoration-none text-white nav-link ps-3";
+  const ClassInActive = "text-decoration-none text-white nav-link ps-3";
+
+  const ref = useRef(null);
+  const [isOpen, setIsOpen] = useState(false);
 
   const [categories, setCategories] = useState(false);
 
   useEffect(() => {
-    const callData = async () => {
-      try {
-        const response = await fetch("/filedata.json");
-        const data = await response.json();
-
-        setCategories(data.categories);
-      } catch (error) {
-        console.error("Error call or parsing of categories:", error);
+    const handleClickOutside = (event) => {
+      if (ref.current && !ref.current.contains(event.target)) {
+        console.log("SE CIERRA");
+        setIsOpen(false);
       }
     };
-    callData();
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [ref]);
+
+  useEffect(() => {
+    const callCategories = async () => {
+      try {
+        const db = getFirestore();
+        const categoriesCollection = collection(db, "categories");
+        let dataCategories;
+        await getDocs(categoriesCollection).then((snapshot) => {
+          dataCategories = snapshot.docs.map((doc) => {
+            let category = {
+              ...doc.data(),
+              id: Number(doc.id),
+            };
+            return category;
+          });
+
+          setCategories(dataCategories);
+        });
+      } catch (error) {
+        console.error("Error al llamar a las categorias en el Navbar:", error);
+      }
+    };
+    callCategories();
   }, []);
 
   return (
     <Navbar
       collapseOnSelect
-      expand="lg"
+      expand={isOpen}
       className="bg-black Navbar-Text FontLato FixedNavbar"
     >
       <Container className="position-relative">
@@ -45,18 +74,20 @@ function NavBar() {
             MineralizArte
           </Link>
         </Navbar.Brand>
-        <div className=" position-absolute end-0 top-0 d-flex h-100 align-items-center">
+        <div className=" position-absolute end-0 top-0 d-flex  align-items-center">
           <Navbar.Toggle
             aria-controls="responsive-navbar-nav"
-            style={{ scale: "0.7" }}
+            style={{
+              scale: "0.7",
+            }}
           />
           <Nav className="ms-auto me-4">
             <CartWidget />
           </Nav>
         </div>
 
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
+        <Navbar.Collapse id="responsive-navbar-nav ">
+          <Nav className="me-auto bg-black p-2">
             <NavLink
               to="/"
               className={({ isActive }) =>
@@ -93,7 +124,7 @@ function NavBar() {
             <NavDropdown
               title="Categorias"
               id="collasible-nav-dropdown"
-              className="rounded-0 bg-black"
+              className="rounded-0 bg-black ps-3"
             >
               {categories.length > 0 &&
                 categories.map((c) => {
@@ -104,7 +135,7 @@ function NavBar() {
                       className={({ isActive }) =>
                         isActive
                           ? ClassActive
-                          : "text-decoration-none text-white nav-link"
+                          : "text-decoration-none text-white nav-link ps-3"
                       }
                     >
                       {c.name}

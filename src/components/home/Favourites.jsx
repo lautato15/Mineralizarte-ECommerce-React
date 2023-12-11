@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import Item from "../partials/Item";
 import "./Favourites.css";
+import { collection, getDocs, getFirestore } from "firebase/firestore";
 
 function Favourites() {
   const [products, setProducts] = useState([]);
@@ -10,26 +10,37 @@ function Favourites() {
 
   useEffect(() => {
     const getTrendingProducts = async () => {
-      const response = await axios({
-        method: "GET",
-        url: `/filedata.json`,
-      });
-      let randomNumbers = [];
-      while (randomNumbers.length < AMOUNT_OF_PRODUCTS) {
-        let randomNumber = Math.floor(
-          Math.random() * response.data.products.length
-        );
-        if (!randomNumbers.includes(randomNumber))
-          randomNumbers.push(randomNumber);
+      try {
+        const db = getFirestore();
+        const itemsCollection = collection(db, "products");
+        let dataProducts;
+        await getDocs(itemsCollection).then((snapshot) => {
+          dataProducts = snapshot.docs.map((doc) => {
+            let product = {
+              ...doc.data(),
+              id: Number(doc.id),
+            };
+            return product;
+          });
+
+          let randomNumbers = [];
+          while (randomNumbers.length < AMOUNT_OF_PRODUCTS) {
+            let randomNumber = Math.floor(Math.random() * dataProducts.length);
+            if (!randomNumbers.includes(randomNumber))
+              randomNumbers.push(randomNumber);
+          }
+
+          const randomTrendingProducts = randomNumbers.map(
+            (index) => dataProducts[index]
+          );
+
+          setProducts(randomTrendingProducts);
+        });
+      } catch (error) {
+        console.error("Errpr al llamar a los Productos Favoritos:", error);
       }
-
-      const randomTrendingProducts = randomNumbers.map(
-        (index) => response.data.products[index]
-      );
-
-      setProducts(randomTrendingProducts);
+      getTrendingProducts();
     };
-    getTrendingProducts();
   }, []);
 
   return (

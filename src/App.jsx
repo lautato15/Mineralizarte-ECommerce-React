@@ -10,12 +10,11 @@ import NotFound from "./components/pages/NotFound";
 import Footer from "./components/partials/Footer";
 import Cart from "./components/pages/Cart";
 import Checkout from "./components/pages/Checkout";
+import OrderDetail from "./components/pages/OrderDetail";
+import { Toaster } from "react-hot-toast";
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { Toaster } from "react-hot-toast";
-import LoadingOrder from "./components/partials/LoadingOrder";
-import OrderDetail from "./components/pages/OrderDetail";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -46,9 +45,8 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout/" element={<Checkout />} />
           <Route path="/checkout/:shipping" element={<Checkout />} />
+          <Route path="/order/:orderId" element={<OrderDetail />} />
           <Route path="*" element={<NotFound />} />
-          <Route path="/load" element={<LoadingOrder />} />
-          <Route path="/order" element={<OrderDetail />} />
         </Routes>
       </div>
       <Footer />

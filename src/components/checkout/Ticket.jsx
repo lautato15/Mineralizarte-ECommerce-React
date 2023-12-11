@@ -1,31 +1,16 @@
-import React, { useEffect, useState } from "react";
 import GlobalPrice from "../partials/GlobalPrice";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import ProductsTicket from "./ProductsTicket";
 
-function Ticket() {
-  const navigate = useNavigate();
-
-  const cart = useSelector((state) => state.cart);
-
-  let subtotal = 0;
-  cart.forEach((i) => {
-    subtotal += i.price * i.counter;
-  });
-  const [paymentDetails, setPaymentDetails] = useState("");
-  function handleChangePayment(e) {
-    setPaymentDetails(e.target.value);
-  }
-
-  const [shippingDetails, setShippingDetails] = useState(null);
-  const handleShipping = (e) => setShippingDetails(e.target.value);
-  const { shipping } = useParams();
-
-  useEffect(() => {
-    cart.length === 0 && navigate("/shop");
-    shipping != undefined && setShippingDetails(shipping);
-  }, [cart]);
+function Ticket({
+  paymentDetails,
+  shippingDetails,
+  subTotal,
+  cart,
+  handleShipping,
+  handleChangePayment,
+  handleSendOrder,
+}) {
   return (
     <>
       <div className="border border-black p-4 bg-white text-black">
@@ -44,7 +29,7 @@ function Ticket() {
         <div className="bg-white  p-4">
           <div className="d-flex pt-3">
             <p className="w-50 fw-bold FontGaramond fs-5">SubTotal</p>
-            <p className="w-50 pt-1">$ {subtotal}</p>
+            <p className="w-50 pt-1">$ {subTotal}</p>
           </div>
           {/* ENVIO */}
           <div className="d-flex my-4">
@@ -52,10 +37,10 @@ function Ticket() {
             <div className="w-50 pt-1">
               <div>
                 <input
-                  checked={shippingDetails === "free_shipping"}
+                  checked={shippingDetails === "envio_gratuito"}
                   onChange={handleShipping}
                   name="shipping"
-                  value="free_shipping"
+                  value="envio_gratuito"
                   type="radio"
                 />
                 <label htmlFor="shipping" className="ms-2">
@@ -64,10 +49,10 @@ function Ticket() {
               </div>
               <div>
                 <input
-                  checked={shippingDetails === "flat_rate"}
+                  checked={shippingDetails === "tarifa_plana"}
                   onChange={handleShipping}
                   name="shipping"
-                  value="flat_rate"
+                  value="tarifa_plana"
                   type="radio"
                 />
                 <label htmlFor="shipping" className="ms-2">
@@ -79,7 +64,7 @@ function Ticket() {
           {/* TOTAL */}
           <div className="d-flex">
             <p className="w-50 fw-bold FontGaramond fs-5">Total</p>
-            <p className="w-50 pt-1 fw-bold">$ {subtotal}</p>
+            <p className="w-50 pt-1 fw-bold">$ {subTotal}</p>
           </div>
         </div>
 
@@ -90,17 +75,17 @@ function Ticket() {
           <ul>
             <li className=" my-3">
               <input
-                checked={paymentDetails === "bank_transfer"}
+                checked={paymentDetails === "transferencia_bancaria"}
                 onChange={handleChangePayment}
                 name="payment_method"
-                value="bank_transfer"
+                value="transferencia_bancaria"
                 type="radio"
                 className=" me-2"
               />
               <label htmlFor="payment_method_bacs">
                 Transferencia Bancaria
               </label>
-              {paymentDetails === "bank_transfer" && (
+              {paymentDetails === "transferencia_bancaria" && (
                 <div className="payment-box">
                   <p className="text-secondary pe-4">
                     Realice su pago directamente en nuestra cuenta bancaria.
@@ -113,15 +98,15 @@ function Ticket() {
             </li>
             <li className="payment-method my-3">
               <input
-                checked={paymentDetails === "collection_networks"}
+                checked={paymentDetails === "redes_de_cobranza"}
                 onChange={handleChangePayment}
                 name="payment_method"
-                value="collection_networks"
+                value="redes_de_cobranza"
                 type="radio"
                 className=" me-2"
               />
               <label>Redes de Cobranzas</label>
-              {paymentDetails === "collection_networks" && (
+              {paymentDetails === "redes_de_cobranza" && (
                 <div className="payment-box">
                   <p className="text-secondary">
                     Realice su pago a traves de una red de cobranzas como Abitab
@@ -134,15 +119,15 @@ function Ticket() {
             </li>
             <li className=" my-3">
               <input
-                checked={paymentDetails === "cash"}
+                checked={paymentDetails === "efectivo"}
                 onChange={handleChangePayment}
                 name="payment_method"
-                value="cash"
+                value="efectivo"
                 type="radio"
                 className=" me-2"
               />
               <label>Efectivo en la entrega</label>
-              {paymentDetails === "cash" && (
+              {paymentDetails === "efectivo" && (
                 <div className="payment-box">
                   <p className="text-secondary">
                     Paga en efectivo al entregar el delivery.
@@ -172,12 +157,12 @@ function Ticket() {
             </li>
           </ul>
         </div>
-        <Link
-          to="/checkout"
-          className="text-decoration-none text-black BgGold d-block w-100 ms-auto me-auto text-center py-2 fw-bold mt-4"
+        <button
+          onClick={() => handleSendOrder()}
+          className="text-decoration-none text-black BgGold d-block w-100 ms-auto me-auto text-center py-3 fw-bold mt-4 border-0"
         >
           Realizar Pedido!
-        </Link>
+        </button>
       </div>
     </>
   );

@@ -21,6 +21,7 @@
 }
 .navActive{
     background-color: rgb(217, 182, 23);
+    padding: 10px;
 }
 
 .navbar-expand-lg .navbar-nav .dropdown-menu {

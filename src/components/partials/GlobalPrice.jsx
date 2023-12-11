@@ -1,9 +1,6 @@
-import { useState } from "react";
 import { useParams } from "react-router-dom";
 
 function GlobalPrice({ subtotal, handleShipping, shippingDetails }) {
-  console.log("shippingDetails");
-  console.log(shippingDetails);
   function handleChangeShipping(e) {
     handleShipping(e.target.value);
   }
