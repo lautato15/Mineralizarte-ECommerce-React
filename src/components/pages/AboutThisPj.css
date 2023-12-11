@@ -1,0 +1,12 @@
+.CienVH{
+    min-height: calc(100vh - 75px);
+    width: 100%;
+}
+
+.Bg-Mineralizarte {
+    background-image: url("./img/bg-about-2.jpg");
+    object-fit: fill;
+    background-size: auto;
+    background-position-y: 28%;
+    background-position-x: 55%;
+}

@@ -22,7 +22,6 @@ function Favourites() {
             };
             return product;
           });
-
           let randomNumbers = [];
           while (randomNumbers.length < AMOUNT_OF_PRODUCTS) {
             let randomNumber = Math.floor(Math.random() * dataProducts.length);
@@ -37,10 +36,10 @@ function Favourites() {
           setProducts(randomTrendingProducts);
         });
       } catch (error) {
-        console.error("Errpr al llamar a los Productos Favoritos:", error);
+        console.error("Error al llamar a los Productos Favoritos:", error);
       }
-      getTrendingProducts();
     };
+    getTrendingProducts();
   }, []);
 
   return (

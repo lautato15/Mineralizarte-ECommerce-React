@@ -59,7 +59,7 @@ function NavBar() {
   return (
     <Navbar
       collapseOnSelect
-      expand={isOpen}
+      expand="lg"
       className="bg-black Navbar-Text FontLato FixedNavbar"
     >
       <Container className="position-relative">
@@ -104,14 +104,14 @@ function NavBar() {
             >
               Tienda
             </NavLink>
-            {/* <NavLink
+            <NavLink
               to="/about"
               className={({ isActive }) =>
                 isActive ? ClassActive : ClassInActive
               }
             >
               Sobre Nosotros
-            </NavLink> */}
+            </NavLink>
             <NavLink
               to="/contact"
               className={({ isActive }) =>
