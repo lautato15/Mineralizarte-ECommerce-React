@@ -7,8 +7,8 @@
     background-image: url("./img/bg-about-2.jpg");
     object-fit: fill;
     background-size: auto;
-    background-position-y: 20%;
-    background-position-x: 55%;
+    background-position-y: 28%;
+    background-position-x: 50%;
 }
 .Invert{
     filter: invert(100%);
@@ -21,4 +21,22 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
+}
+.CardOfMe{
+    max-width: 290px;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 200px;
+}
+.CardOfMe > h6 {
+    letter-spacing: 1.3px;
+}
+.CardOfMe > h5 {
+    letter-spacing: 1.3px;
+}
+.LS{
+    letter-spacing: 1.2px;
 }
