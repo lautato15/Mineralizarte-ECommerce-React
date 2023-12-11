@@ -22,7 +22,7 @@ function ItemDetailContainer() {
         });
       } catch (error) {
         console.error(
-          "Error call or parsing of product in ItemDetailContainer:",
+          "Error al llamar o parsear producto en ItemDetailContainer:",
           error
         );
       }

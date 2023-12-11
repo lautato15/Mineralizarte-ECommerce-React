@@ -21,7 +21,6 @@ function NavBar() {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (ref.current && !ref.current.contains(event.target)) {
-        console.log("SE CIERRA");
         setIsOpen(false);
       }
     };
@@ -60,7 +59,10 @@ function NavBar() {
     <Navbar
       collapseOnSelect
       expand="lg"
+      expanded={isOpen}
+      onToggle={() => setIsOpen(!isOpen)}
       className="bg-black Navbar-Text FontLato FixedNavbar"
+      ref={ref}
     >
       <Container className="position-relative">
         <Navbar.Brand className="text-white">
@@ -74,14 +76,15 @@ function NavBar() {
             MineralizArte
           </Link>
         </Navbar.Brand>
-        <div className=" position-absolute end-0 top-0 d-flex  align-items-center">
+        <div className=" position-absolute end-0 top-0 d-flex  align-items-center mt-2">
           <Navbar.Toggle
             aria-controls="responsive-navbar-nav"
+            className="rounded-0"
             style={{
               scale: "0.7",
             }}
           />
-          <Nav className="ms-auto me-4">
+          <Nav className="ms-auto me-4 ">
             <CartWidget />
           </Nav>
         </div>
@@ -93,6 +96,7 @@ function NavBar() {
               className={({ isActive }) =>
                 isActive ? ClassActive : ClassInActive
               }
+              onClick={() => setIsOpen(false)}
             >
               Home
             </NavLink>
@@ -104,19 +108,13 @@ function NavBar() {
             >
               Tienda
             </NavLink>
-            <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                isActive ? ClassActive : ClassInActive
-              }
-            >
-              Sobre Nosotros
-            </NavLink>
+
             <NavLink
               to="/contact"
               className={({ isActive }) =>
                 isActive ? ClassActive : ClassInActive
               }
+              onClick={() => setIsOpen(false)}
             >
               Contacto
             </NavLink>
@@ -137,12 +135,22 @@ function NavBar() {
                           ? ClassActive
                           : "text-decoration-none text-white nav-link ps-3"
                       }
+                      onClick={() => setIsOpen(false)}
                     >
                       {c.name}
                     </NavLink>
                   );
                 })}
             </NavDropdown>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive ? ClassActive : ClassInActive
+              }
+              onClick={() => setIsOpen(false)}
+            >
+              Sobre Este Proyecto!
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>

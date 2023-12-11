@@ -11,7 +11,7 @@ function AboutThisPj() {
   // window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
-    <div className=" text-black fs-2 text-white bg-dark h-100  Bg-Mineralizarte">
+    <div className=" fs-2 text-white bg-black h-100  Bg-Mineralizarte">
       <div className="container ">
         <div className="row CienVH">
           <div className="col-1"></div>
@@ -149,13 +149,13 @@ function AboutThisPj() {
                   href="https://www.linkedin.com/in/lautaro-lopez-diaz/ "
                   className="text-decoration-none text-white"
                 >
-                  <i class="fa-brands fa-linkedin pe-2 fs-3"></i>
+                  <i className="fa-brands fa-linkedin pe-2 fs-3"></i>
                 </a>
                 <a
                   href="https://github.com/lautato15 "
                   className="text-decoration-none text-white"
                 >
-                  <i class="fa-brands fa-github pe-2 fs-3"></i>{" "}
+                  <i className="fa-brands fa-github pe-2 fs-3"></i>{" "}
                 </a>
               </div>
             </div>

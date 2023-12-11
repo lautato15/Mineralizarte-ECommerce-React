@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-hot-toast";
-import { collection, addDoc, getFirestore } from "firebase/firestore";
+import { collection, getDocs, addDoc, getFirestore } from "firebase/firestore";
 import { format } from "date-fns";
 import { es } from "date-fns/locale";
 import { cleanCart } from "../../redux/cartSlice";
@@ -69,6 +69,37 @@ function Checkout() {
       else return true;
     }
   }
+  async function validateStock() {
+    try {
+      const db = getFirestore();
+      const itemsCollection = collection(db, "products");
+      let dataProducts;
+      await getDocs(itemsCollection).then((snapshot) => {
+        dataProducts = snapshot.docs.map((doc) => {
+          let product = {
+            ...doc.data(),
+            id: Number(doc.id),
+          };
+          return product;
+        });
+        const outOfStock = dataProducts.filter((product, index) => {
+          console.log(cart[index].counter);
+          return product.stock < cart[index].counter;
+        });
+        if (outOfStock.length > 0) {
+          for (let i = 0; i < outOfStock.length; i++) {
+            toast.error(
+              `No hay stock suficiente para los productos seleccionados. Puedes comprar hasta ${outOfStock[i].stock} unidades de ${outOfStock[i].name}.`
+            );
+          }
+          return false;
+        }
+        return true;
+      });
+    } catch (error) {
+      console.error("Error al validar el stock Checkout:", error);
+    }
+  }
 
   async function handleSendOrder() {
     if (validateOrder()) {
@@ -85,6 +116,8 @@ function Checkout() {
 
       try {
         const db = getFirestore();
+        console.log(validateStock());
+
         const ordersCollection = collection(db, "orders");
         await addDoc(ordersCollection, Order).then((doc) => {
           setOrderId(doc.id);

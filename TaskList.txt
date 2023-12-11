@@ -15,10 +15,10 @@
 -Reparar semiresponsive de Shop [LISTO]
 -Pasar el Envio de cart a checkout [LISTO]
 -Eliminar ruta de Load  [LISTO]
+-Arreglar Navbar Responsive [LISTO]
+-Empezar con Responsive [LISTO]
+-No cierra el dropdown de categorias [LISTO]
 
--Empezar con Responsive
--Si esta en la pagina Cart no deberia abrir el canvas
--Arreglar Navbar Responsive
--No cierra el dropdown de categorias
 -Poner algun efecto al hover de los botones
 -Logica de control de Stock
+-Terminar About This PJ
