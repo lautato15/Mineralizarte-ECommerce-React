@@ -1,18 +1,26 @@
 import "./AboutThisPj.css";
+import Boostrap from "../../assets/img/boostrap-icon.png";
+import React from "../../assets/img/react-icon.png";
+import Redux from "../../assets/img/redux-icon.png";
+import GitHub from "../../assets/img/github-icon.png";
+import Firebase from "../../assets/img/firebase-icon.png";
+import Css from "../../assets/img/css-icon.png";
+import Yo from "../../assets/img/lautaroLopez.jpeg";
+import { Link } from "react-router-dom";
 function AboutThisPj() {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  // window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
     <div className=" text-black fs-2 text-white bg-dark h-100  Bg-Mineralizarte">
       <div className="container ">
         <div className="row CienVH">
           <div className="col-1"></div>
-          <div className="col-8">
+          <div className="col-11">
             <div className="d-flex justify-content-center align-items-start pt-5 flex-column ">
-              <p className="FontGaramond fs-2 w-75 text-start">
+              <p className="FontGaramond fs-2 w-100 text-start">
                 ¿Qué es Mineralizarte?{" "}
               </p>
-              <p className="FontGaramond fs-4 w-75 text-start">
+              <p className="FontGaramond fs-4 w-100 text-start">
                 Mineralizarte es una aplicación de comercio electrónico que
                 surgió como la culminación de un recorrido del Bootcamp en
                 Coderhouse, una institución educativa que se especializa en
@@ -21,13 +29,13 @@ function AboutThisPj() {
                 desarrolladores acercarse a la experiencia de trabajar en un
                 proyecto de mediana escala dentro de lo que es el Front End.
               </p>
-              <p className="FontGaramond fs-4 w-75 text-start">
+              <p className="FontGaramond fs-4 w-100 text-start">
                 Este trabajo final tiene como objetivo mostrar la aplicación de
                 las diversas tecnologías aprendidas a lo largo del Bootcamp mas
                 algunas otras que ya eran de mi conocimiento por estudios
                 anteriores.
               </p>
-              <p className="FontGaramond fs-4 w-75 text-start">
+              <p className="FontGaramond fs-4 w-100 text-start">
                 La aplicación web fue desarrollada durante el transcurso de los
                 dos meses de curso por mi persona, con un total de
                 aproximadamente 50 horas de trabajo. Mineralizarte se presenta
@@ -35,7 +43,7 @@ function AboutThisPj() {
                 diseñada para ofrecer una experiencia de usuario intuitiva y
                 fluida.
               </p>
-              <p className="FontGaramond fs-4 w-75 text-start">
+              <p className="FontGaramond fs-4 w-100 text-start">
                 En esta sección, puede explorar el proceso detrás de escena de
                 la creación de Mineralizarte y obtener una comprensión integral
                 del proceso de desarrollo detrás de nuestra aplicación de
@@ -43,7 +51,7 @@ function AboutThisPj() {
               </p>
             </div>
           </div>
-          <div className="col-3"></div>
+
           <div className="col-1"></div>
           <div className="col-8">
             <div className="d-flex justify-content-center align-items-start pt-5 flex-column ">
@@ -62,9 +70,96 @@ function AboutThisPj() {
                 Para optimizar la productividad de este proyecto, seleccione
                 cuidadosamente el siguiente conjunto de herramientas.
               </p>
+
+              <div className="d-flex py-5">
+                <div className="mx-2">
+                  <img
+                    src={Boostrap}
+                    alt="Imagen de Boostrap"
+                    className="Invert IconT"
+                  />
+                </div>
+                <div className="mx-2">
+                  <img
+                    src={React}
+                    alt="Imagen de React"
+                    className="Invert IconT"
+                  />
+                </div>
+                <div className="mx-2">
+                  <img
+                    src={Redux}
+                    alt="Imagen de React"
+                    className="Invert IconT"
+                  />
+                </div>
+                <div className="mx-2">
+                  <img
+                    src={GitHub}
+                    alt="Imagen de React"
+                    className="Invert IconT"
+                  />
+                </div>
+                <div className="mx-2">
+                  <img
+                    src={Firebase}
+                    alt="Imagen de React"
+                    className="Invert IconT"
+                  />
+                </div>
+                <div className="mx-2">
+                  <img
+                    src={Css}
+                    alt="Imagen de React"
+                    className="Invert IconT"
+                  />
+                </div>
+              </div>
             </div>
           </div>
           <div className="col-3"></div>
+          <div className="col-1"></div>
+          <div className="col-9">
+            <div className="d-flex justify-content-center align-items-start pt-5 flex-column ">
+              <p className="FontGaramond fs-2 w-75 text-start">SOBRE MI</p>
+              <p className="FontGaramond fs-4 w-75 text-start">
+                Soy Desarrollador Jr FullStack && Técnico en Informatica con
+                varios años de experiencia en el soporte de Infraestructuras y
+                me apasiona resolver problemas. Por esta misma razon decicdi
+                salir de mi zona de confort y pasarme al mundo del desarrollo.
+              </p>
+              <p className="FontGaramond fs-4 w-75 text-start">
+                Tambien soy bailarin de danzas urbanas y me apasiona el
+                movimiento y la música. Actualmente me encuentro radicado en
+                Montevideo - Uruguay Nomada Digital!
+              </p>
+            </div>
+          </div>
+          <div className="col-2">
+            <div className="d-flex justify-content-center align-items-center py-5 flex-column ">
+              <img
+                src={Yo}
+                className="Yo"
+                alt="Foto de Lautaro Lopez, desarrollador del proyecto."
+              />
+              <h5 className="mt-3 text-center">Lautaro López Diaz</h5>
+              <h6 className="text-center">Full Stack Developer</h6>
+              <div>
+                <a
+                  href="https://www.linkedin.com/in/lautaro-lopez-diaz/ "
+                  className="text-decoration-none text-white"
+                >
+                  <i class="fa-brands fa-linkedin pe-2 fs-3"></i>
+                </a>
+                <a
+                  href="https://github.com/lautato15 "
+                  className="text-decoration-none text-white"
+                >
+                  <i class="fa-brands fa-github pe-2 fs-3"></i>{" "}
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

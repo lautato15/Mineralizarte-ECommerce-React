@@ -7,6 +7,18 @@
     background-image: url("./img/bg-about-2.jpg");
     object-fit: fill;
     background-size: auto;
-    background-position-y: 28%;
+    background-position-y: 20%;
     background-position-x: 55%;
+}
+.Invert{
+    filter: invert(100%);
+}
+.IconT{
+    height: auto;
+    width: 75px;
+}
+.Yo{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
 }

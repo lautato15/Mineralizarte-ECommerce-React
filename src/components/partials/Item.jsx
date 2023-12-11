@@ -50,7 +50,7 @@ function Item({ product }) {
   return (
     <>
       <div className="col-12 col-md-6 col-lg-3 my-2">
-        <div className=" BorderCard">
+        <div className=" BorderCard MinCard">
           <Link to={`/item/${product.id}`} className="w-100">
             <img
               src={product.image}
@@ -73,11 +73,10 @@ function Item({ product }) {
               onClick={() => handleAddToCart(1)}
               className="mb-3 mt-2 py-2 px-2 ms-auto me-auto w-75 d-flex FontLato  text-white border-0 bg-black SmallText BtnAddToCart"
             >
-              Agregar al
+              Agregar
               <i className="bi bi-cart ms-1"></i>
               <span className="ms-auto fw-bold">${product.price}</span>
             </button>
-            {/* <p className="fs-6 text-center">${product.price}</p> */}
           </div>
         </div>
       </div>
