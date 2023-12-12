@@ -10,10 +10,10 @@ function CardCategory({ category }) {
           style={{ width: "auto" }}
         >
           <img src={category.image} alt="" className="img-fluid" />
-          <div className="position-absolute top-100 start-50 translate-middle ">
+          <div className="position-absolute top-100 start-50 translate-middle Scale">
             <Link
               href="#"
-              className="w-100	bg-white text-decoration-none text-black	fs-6  px-4 py-2 FontLato "
+              className="w-100	bg-white text-decoration-none text-black px-2 	  px-md-4 py-2 FontLato Scale"
             >
               {category.name}
             </Link>
