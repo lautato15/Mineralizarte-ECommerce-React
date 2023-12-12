@@ -1,13 +1,11 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-function FooterCartCanvas({ handleClose, cartLength }) {
+function FooterCartCanvas({ handleClose }) {
   const navigate = useNavigate();
   function handleGo(to) {
-    
-      handleClose();
-      window.scrollTo(0, 0);
-      navigate(`${to}`);
-    
+    handleClose();
+    window.scrollTo(0, 0);
+    navigate(`${to}`);
   }
   return (
     <>

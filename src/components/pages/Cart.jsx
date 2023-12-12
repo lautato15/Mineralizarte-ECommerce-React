@@ -28,7 +28,7 @@ function Cart() {
         <div className="container">
           <div className="row py-5">
             <div className="col-12 col-lg-8 ">
-              <table className="table">
+              <table className="table" style={{ maxWidth: "100%" }}>
                 <thead className="">
                   <tr>
                     <th className={BgTable}>Producto</th>
