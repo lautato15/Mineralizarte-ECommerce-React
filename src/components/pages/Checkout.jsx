@@ -70,7 +70,6 @@ function Checkout() {
       else return true;
     }
   }
-  async function validateStock() {}
 
   async function handleSendOrder() {
     if (validateOrder()) {

@@ -20,12 +20,6 @@ function Ticket({
           cart.map((p) => {
             return <ProductsTicket key={p.id} product={p} />;
           })}
-
-        {/* <GlobalPrice
-          subtotal={subtotal}
-          shippingDetails={shippingDetails}
-          setShippingDetails={setShippingDetails}
-        /> */}
         <div className="bg-white  p-4">
           <div className="d-flex pt-3">
             <p className="w-50 fw-bold FontGaramond fs-5">SubTotal</p>
@@ -72,7 +66,7 @@ function Ticket({
           <h5 className="FontGaramond text-center pt-4">
             Metodo de Pago <span className="text-danger">*</span>
           </h5>
-          <ul>
+          <ul className="list-unstyled">
             <li className=" my-3">
               <input
                 checked={paymentDetails === "transferencia_bancaria"}
