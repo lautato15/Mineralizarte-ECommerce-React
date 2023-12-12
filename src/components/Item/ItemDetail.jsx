@@ -1,8 +1,7 @@
 import ItemCount from "./ItemCount";
 import IconStar from "../../assets/img/star.png";
-
+import NotFound from "../pages/NotFound";
 function ItemDetail({ product }) {
-  
   const stars = [];
 
   for (let i = 0; i < product.stars; i++) {
@@ -16,7 +15,7 @@ function ItemDetail({ product }) {
     );
   }
 
-  return (
+  return product ? (
     <div className="container bg-dark">
       <div className="row">
         <div className="col-12 col-md-6">
@@ -57,6 +56,8 @@ function ItemDetail({ product }) {
         </div>
       </div>
     </div>
+  ) : (
+    <NotFound />
   );
 }
 

@@ -1,7 +1,5 @@
 import { Carousel, Button } from "react-bootstrap";
-
 import "./Slide.css";
-
 import slide1 from "../../assets/img/slide/slide1.jpg";
 import slide2 from "../../assets/img/slide/slide2.jpg";
 import slide3 from "../../assets/img/slide/slide3.jpg";

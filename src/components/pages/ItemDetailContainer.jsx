@@ -21,6 +21,7 @@ function ItemDetailContainer() {
           } else console.error(error, "No se encontro el producto");
         });
       } catch (error) {
+        setProduct(false);
         console.error(
           "Error al llamar o parsear producto en ItemDetailContainer:",
           error
