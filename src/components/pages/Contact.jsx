@@ -56,19 +56,19 @@ function Contact() {
           <div className="row">
             <div className="col-12 col-md-6 d-flex flex-column my-2">
               <label htmlFor="name" className="fs-6 my-2">
-                Nombre *
+                Nombre <span className="text-danger">*</span>
               </label>
-              <input type="text" id="name" name="name" />
+              <input type="text" id="name" name="name" className="w-100" />
             </div>
             <div className="col-12 col-md-6 d-flex flex-column my-2">
               <label htmlFor="mail" className="fs-6 my-2">
-                Correo Electrónico *
+                Correo Electrónico <span className="text-danger">*</span>
               </label>
               <input type="email" id="mail" name="mail" />
             </div>
             <div className="col-12 d-flex flex-column my-2">
               <label htmlFor="msg" className="fs-6 my-2">
-                Mensaje *
+                Mensaje <span className="text-danger">*</span>
               </label>
               <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
             </div>

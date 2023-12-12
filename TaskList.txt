@@ -20,6 +20,7 @@
 -No cierra el dropdown de categorias [LISTO]
 -Terminar About This PJ [LISTO]
 -Poner algun efecto al hover de los botones  [LISTO]
+-Arreglar Responsive de Card Category en Home [LISTO]
 
 -Logica de control de Stock
--Arreglar Responsive de Card Category en Home
+-Responsive del Slide
