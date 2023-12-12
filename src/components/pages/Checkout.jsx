@@ -18,6 +18,7 @@ function Checkout() {
   const navigate = useNavigate();
   const { shipping } = useParams();
   const [orderId, setOrderId] = useState(null);
+
   const cart = useSelector((state) => state.cart);
 
   let subTotal = 0;
@@ -69,37 +70,7 @@ function Checkout() {
       else return true;
     }
   }
-  async function validateStock() {
-    try {
-      const db = getFirestore();
-      const itemsCollection = collection(db, "products");
-      let dataProducts;
-      await getDocs(itemsCollection).then((snapshot) => {
-        dataProducts = snapshot.docs.map((doc) => {
-          let product = {
-            ...doc.data(),
-            id: Number(doc.id),
-          };
-          return product;
-        });
-        const outOfStock = dataProducts.filter((product, index) => {
-          console.log(cart[index].counter);
-          return product.stock < cart[index].counter;
-        });
-        if (outOfStock.length > 0) {
-          for (let i = 0; i < outOfStock.length; i++) {
-            toast.error(
-              `No hay stock suficiente para los productos seleccionados. Puedes comprar hasta ${outOfStock[i].stock} unidades de ${outOfStock[i].name}.`
-            );
-          }
-          return false;
-        }
-        return true;
-      });
-    } catch (error) {
-      console.error("Error al validar el stock Checkout:", error);
-    }
-  }
+  async function validateStock() {}
 
   async function handleSendOrder() {
     if (validateOrder()) {
@@ -116,11 +87,36 @@ function Checkout() {
 
       try {
         const db = getFirestore();
-        console.log(validateStock());
 
-        const ordersCollection = collection(db, "orders");
-        await addDoc(ordersCollection, Order).then((doc) => {
-          setOrderId(doc.id);
+        const itemsCollection = collection(db, "products");
+        let dataProducts;
+        await getDocs(itemsCollection).then((snapshot) => {
+          dataProducts = snapshot.docs.map((doc) => {
+            let product = {
+              ...doc.data(),
+              id: Number(doc.id),
+            };
+            return product;
+          });
+          const outOfStock = dataProducts
+            .filter((product) => cart.some((item) => item.id === product.id))
+            .filter((product, index) => {
+              return product.stock < cart[index].counter;
+            });
+
+          if (outOfStock.length > 0) {
+            for (let i = 0; i < outOfStock.length; i++) {
+              toast.error(
+                `No hay stock suficiente para los productos seleccionados. Puedes comprar hasta ${outOfStock[i].stock} unidades de ${outOfStock[i].name}.`
+              );
+            }
+            return;
+          }
+          const ordersCollection = collection(db, "orders");
+          addDoc(ordersCollection, Order).then((doc) => {
+            setOrderId(doc.id);
+            return;
+          });
         });
       } catch (error) {
         console.error("Error guardando la orden:", error);
@@ -133,7 +129,9 @@ function Checkout() {
       dispatch(cleanCart());
     }
   }, [orderId]);
-
+  useEffect(() => {
+    cart.length === 0 && navigate("/shop");
+  }, [cart]);
   useEffect(() => {
     shipping != undefined && setShippingDetails(shipping);
   }, [cart]);

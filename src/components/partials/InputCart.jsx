@@ -27,6 +27,7 @@ function InputCart({ counter, id }) {
           handleChangeCountItem(e.target.value);
         }}
         value={countState}
+        readOnly
       />
     </>
   );
