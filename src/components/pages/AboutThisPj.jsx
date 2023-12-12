@@ -53,12 +53,12 @@ function AboutThisPj() {
           </div>
 
           <div className="col-1"></div>
-          <div className="col-8">
+          <div className="col-12 col-md-8">
             <div className="d-flex justify-content-center align-items-start pt-5 flex-column ">
-              <p className="FontGaramond fs-1 text-start">
+              <p className="FontGaramond fs-1 text-center text-md-start">
                 TECNOLOGÍAS Y HERRAMIENTAS
               </p>
-              <p className="FontLato fs-5 text-start LS">
+              <p className="FontLato fs-5 text-center text-md-start LS">
                 Durante el bootcamp de programacion, exploramos varias
                 tecnologías, cubriendo gran parte del denominado Front End y
                 algunas estructuras básicas de lo que sería un Back End.
@@ -66,12 +66,12 @@ function AboutThisPj() {
                 nuestros datos y utilizamos herramientas de manera efectiva para
                 optimizar nuestros procesos de trabajo.
               </p>
-              <p className="FontLato fs-5 text-start LS">
+              <p className="FontLato fs-5 text-center text-md-start LS">
                 Para optimizar la productividad de este proyecto, seleccione
                 cuidadosamente el siguiente conjunto de herramientas.
               </p>
 
-              <div className="d-flex flex-wrap py-5">
+              <div className="d-flex flex-wrap justify-content-center py-5">
                 <div className="m-2">
                   <img
                     src={Boostrap}
