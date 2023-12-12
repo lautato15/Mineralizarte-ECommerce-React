@@ -16,7 +16,7 @@ Para generar identificadores únicos para las órdenes de compra, implementé la
 
 Adicionalmente, como puntos extras y para enriquecer la experiencia del usuario, me enfoqué en:
 
-- **Maquetación Prolija:** Realicé una maquetación cuidada y atractiva para asegurar una presentación visualmente agradable.
+- **Maquetación:** Realicé una maquetación cuidada y atractiva para asegurar una presentación visualmente agradable.
 
 - **Control de Stock:** Implementé un sistema de control de stock para garantizar la disponibilidad precisa de los productos.
 
