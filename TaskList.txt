@@ -21,6 +21,6 @@
 -Terminar About This PJ [LISTO]
 -Poner algun efecto al hover de los botones  [LISTO]
 -Arreglar Responsive de Card Category en Home [LISTO]
+-Logica de control de Stock [LISTO]
 
--Logica de control de Stock
 -Responsive del Slide

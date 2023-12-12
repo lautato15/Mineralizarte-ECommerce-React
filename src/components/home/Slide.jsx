@@ -12,7 +12,7 @@ function Slide() {
       <Carousel.Item>
         <img src={slide1} text="First slide" className="w-100" />
         <Carousel.Caption className="CaptionSlidePosition">
-          <h3 className="SlideText">Ahorra un 70%!</h3>
+          <h3 className="SlideText mt-5 mt-md-0">Ahorra un 70%!</h3>
           <p className="SlideSubText"> VENTA DE MEDIO AÑO</p>
           <Button bsPrefix="BtnSlide" variant="outline-light" radius="none">
             MÁS VENDIDOS
