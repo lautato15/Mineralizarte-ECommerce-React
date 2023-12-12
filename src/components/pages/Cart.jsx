@@ -28,60 +28,59 @@ function Cart() {
         <div className="container">
           <div className="row py-5">
             <div className="col-12 col-lg-8 ">
-              <table className="table" style={{ maxWidth: "100%" }}>
-                <thead className="">
-                  <tr>
-                    <th className={BgTable}>Producto</th>
-                    <th className={BgTable}>Precio</th>
-                    <th className={BgTable}>Cantidad</th>
-                    <th className={BgTable}>Subtotal</th>
-                    <th className={BgTable}>&nbsp;</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {cart.length > 0 &&
-                    cart.map((p) => {
-                      return <CartRow key={p.id} product={p} />;
-                    })}
-
-                  <tr>
-                    <td
-                      colSpan="6"
-                      className="bg-secondary align-middle border-0"
-                    >
-                      <div className="d-flex align-middle">
-                        <div className="cupon me-auto d-flex align-items-center">
-                          <input
-                            type="text"
-                            name="coupon_code"
-                            className="h-75 border-0 h-100 ps-2"
-                            id="coupon-code"
-                            placeholder="Codigo de Cupon"
-                            value={cupon}
-                            onChange={() => setCupon}
-                          />
-
-                          <button
-                            type="submit"
-                            name="apply_coupon"
-                            className="btn rounded-0 bg-black text-white ms-2 my-0 border-0 h-100"
-                            value="Apply coupon"
+              <div style={{ maxWidth: "95vw", overflow: "auto" }}>
+                <table className="table" style={{ maxWidth: "100%!important" }}>
+                  <thead className="">
+                    <tr>
+                      <th className={BgTable}>Producto</th>
+                      <th className={BgTable}>Precio</th>
+                      <th className={BgTable}>Cantidad</th>
+                      <th className={BgTable}>Subtotal</th>
+                      <th className={BgTable}>&nbsp;</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {cart.length > 0 &&
+                      cart.map((p) => {
+                        return <CartRow key={p.id} product={p} />;
+                      })}
+                    <tr>
+                      <td
+                        colSpan="6"
+                        className="bg-secondary align-middle border-0"
+                      >
+                        <div className="d-flex align-middle">
+                          <div className="cupon me-auto d-flex align-items-center">
+                            <input
+                              type="text"
+                              name="coupon_code"
+                              className="h-75 border-0 h-100 ps-2"
+                              id="coupon-code"
+                              placeholder="Codigo de Cupon"
+                              value={cupon}
+                              onChange={() => setCupon}
+                            />
+                            <button
+                              type="submit"
+                              name="apply_coupon"
+                              className="btn rounded-0 bg-black text-white ms-2 my-0 border-0 h-100"
+                              value="Apply coupon"
+                            >
+                              Aplicar Cupon
+                            </button>
+                          </div>
+                          <Link
+                            to="/shop"
+                            className="btn rounded-0 bg-black text-white ms-2"
                           >
-                            Aplicar Cupon
-                          </button>
+                            Continuar Comprando
+                          </Link>
                         </div>
-
-                        <Link
-                          to="/shop"
-                          className="btn rounded-0 bg-black text-white ms-2"
-                        >
-                          Continuar Comprando
-                        </Link>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
 
             <div className="col-12 col-lg-4 ">
