@@ -1,0 +1,21 @@
+¿Qué es Mineralizarte?
+
+Mineralizarte es una aplicación de comercio electrónico que surgió como la culminación de un recorrido a traves del Bootcamp en Coderhouse, una institución educativa que se especializa en cursos de programación entre otros. Este Bootcamp de dos meses, que abarca un total de 32 horas, permite a los aspirantes a desarrolladores acercarse a la experiencia de trabajar en un proyecto de mediana escala dentro de lo que es el Front End.
+
+Este trabajo final tiene como objetivo mostrar la aplicación de las diversas tecnologías aprendidas a lo largo del Bootcamp y re afirmar algunas otras que ya eran de mi conocimiento por estudios anteriores.
+
+La aplicación web fue desarrollada durante el transcurso de los dos meses de curso por mi persona, con un total de aproximadamente 50 horas de trabajo. Mineralizarte se presenta como una plataforma totalmente operativa, meticulosamente diseñada para ofrecer una experiencia de usuario intuitiva y fluida.
+
+En esta sección, puede explorar el proceso detrás de escena de la creación de Mineralizarte y obtener una comprensión integral del proceso de desarrollo detrás de nuestra aplicación de comercio electrónico.
+
+TECNOLOGÍAS Y HERRAMIENTAS
+
+Durante el bootcamp de programacion, exploramos varias tecnologías, cubriendo gran parte del denominado Front End y algunas estructuras básicas de lo que sería un Back End. Adquirimos experiencia práctica con FireBase para almacenar nuestros datos y utilizamos herramientas de manera efectiva para optimizar nuestros procesos de trabajo.
+
+Para optimizar la productividad de este proyecto, seleccione cuidadosamente el siguiente conjunto de herramientas.
+
+
+
+Soy Desarrollador Jr FullStack && Técnico en Informatica con varios años de experiencia en el soporte de Infraestructuras y me apasiona resolver problemas. Por esta misma razon decicdi salir de mi zona de confort y pasarme al mundo del desarrollo.
+
+Tambien soy bailarin de danzas urbanas y me apasiona el movimiento y la música. Actualmente me encuentro radicado en Montevideo - Uruguay Nomada Digital!
