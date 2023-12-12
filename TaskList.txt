@@ -18,7 +18,8 @@
 -Arreglar Navbar Responsive [LISTO]
 -Empezar con Responsive [LISTO]
 -No cierra el dropdown de categorias [LISTO]
+-Terminar About This PJ [LISTO]
+-Poner algun efecto al hover de los botones  [LISTO]
 
--Poner algun efecto al hover de los botones
 -Logica de control de Stock
--Terminar About This PJ
+-Arreglar Responsive de Card Category en Home

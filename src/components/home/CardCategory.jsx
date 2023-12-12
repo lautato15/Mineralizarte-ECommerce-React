@@ -6,7 +6,7 @@ function CardCategory({ category }) {
     <>
       <div className="col-4 col-lg-2 my-4">
         <div
-          className="NotInvert static shake-horizontal"
+          className="NotInvert static shake-horizontal position-relative"
           style={{ width: "auto" }}
         >
           <img src={category.image} alt="" className="img-fluid" />

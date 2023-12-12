@@ -50,3 +50,82 @@
 .LetterSpacing{
     letter-spacing: 1px;
 }
+
+.BtnHover {
+    transition: background-color 0.5s, color 0.5s; /* Transiciones suaves */
+
+  }
+
+.BtnHover:hover {
+    background-color: rgb(217, 182, 23); 
+    color: #ecf0f1; 
+  }
+
+
+/* EFECTO BTN HOVER */
+
+/* .BtnHover {
+    
+    position: relative;
+    
+    border: none;
+    outline: none;
+    
+    cursor: pointer;
+    transition: .5s;
+    overflow: hidden;
+}
+
+.BtnHover:hover {
+    color: #fff;
+}
+
+.BtnHover span {
+    position: absolute;
+    background: #fff;
+    transition: .5s;
+}
+
+.BtnHover span:nth-child(1) {
+    width: 100%;
+    height: 1px;
+    top: 0;
+    left: -100%;
+}
+
+.BtnHover span:nth-child(2) {
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    right: -100%;
+}
+
+.BtnHover span:nth-child(3) {
+    width: 1px;
+    height: 100%;
+    bottom: -100%;
+    left: 0;
+}
+
+.BtnHover span:nth-child(4) {
+    width: 1px;
+    height: 100%;
+    top: -100%;
+    right: 0;
+}
+
+.BtnHover:hover span:nth-child(1) {
+    left: 0;
+}
+
+.BtnHover:hover span:nth-child(2) {
+    right: 0;
+}
+
+.BtnHover:hover span:nth-child(3) {
+    bottom: 0;
+}
+
+.BtnHover:hover span:nth-child(4) {
+    top: 0;
+} */

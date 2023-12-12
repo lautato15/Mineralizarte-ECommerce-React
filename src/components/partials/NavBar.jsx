@@ -10,8 +10,10 @@ import Logo from "../../assets/img/logo.png";
 import { collection, getDocs, getFirestore } from "firebase/firestore";
 
 function NavBar() {
-  const ClassActive = "navActive text-decoration-none text-white nav-link ps-3";
-  const ClassInActive = "text-decoration-none text-white nav-link ps-3";
+  const ClassActive =
+    "navActive text-decoration-none text-white nav-link ps-3 m-1";
+  const ClassInActive =
+    "text-decoration-none text-white nav-link ps-3 BtnHover m-1";
 
   const ref = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -65,7 +67,7 @@ function NavBar() {
       ref={ref}
     >
       <Container className="position-relative">
-        <Navbar.Brand className="text-white">
+        <Navbar.Brand className="text-white me-0">
           <Link to="/" className="text-decoration-none text-white">
             <img
               src={Logo}
@@ -122,7 +124,7 @@ function NavBar() {
             <NavDropdown
               title="Categorias"
               id="collasible-nav-dropdown"
-              className="rounded-0 bg-black ps-3"
+              className="rounded-0 bg-black ps-1 pt-1 BtnHover"
             >
               {categories.length > 0 &&
                 categories.map((c) => {
@@ -133,7 +135,7 @@ function NavBar() {
                       className={({ isActive }) =>
                         isActive
                           ? ClassActive
-                          : "text-decoration-none text-white nav-link ps-3"
+                          : "text-decoration-none text-white nav-link ps-3 BtnHover"
                       }
                       onClick={() => setIsOpen(false)}
                     >
