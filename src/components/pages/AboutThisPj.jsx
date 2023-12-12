@@ -17,10 +17,10 @@ function AboutThisPj() {
           <div className="col-1"></div>
           <div className="col-11">
             <div className="d-flex justify-content-center align-items-start pt-5 flex-column ">
-              <p className="FontGaramond fs-1 w-100 text-start LS">
+              <p className="FontGaramond fs-1  text-center text-md-start w-100 LS">
                 ¿Qué es Mineralizarte?
               </p>
-              <p className="FontLato fs-5 w-100 text-start LS LS">
+              <p className="FontLato fs-5  text-center text-md-start  LS">
                 Mineralizarte es una aplicación de comercio electrónico que
                 surgió como la culminación de un recorrido a traves del Bootcamp
                 en Coderhouse, una institución educativa que se especializa en
@@ -29,13 +29,13 @@ function AboutThisPj() {
                 desarrolladores acercarse a la experiencia de trabajar en un
                 proyecto de mediana escala dentro de lo que es el Front End.
               </p>
-              <p className="FontLato fs-5 w-100 text-start LS">
+              <p className="FontLato fs-5  text-center text-md-start LS">
                 Este trabajo final tiene como objetivo mostrar la aplicación de
                 las diversas tecnologías aprendidas a lo largo del Bootcamp y re
                 afirmar algunas otras que ya eran de mi conocimiento por
                 estudios anteriores.
               </p>
-              <p className="FontLato fs-5 w-100 text-start LS">
+              <p className="FontLato fs-5  text-center text-md-start LS">
                 La aplicación web fue desarrollada durante el transcurso de los
                 dos meses de curso por mi persona, con un total de
                 aproximadamente 50 horas de trabajo. Mineralizarte se presenta
@@ -43,7 +43,7 @@ function AboutThisPj() {
                 diseñada para ofrecer una experiencia de usuario intuitiva y
                 fluida.
               </p>
-              <p className="FontLato fs-5 w-100 text-start LS">
+              <p className="FontLato fs-5  text-center text-md-start LS">
                 En esta sección, puede explorar el proceso detrás de escena de
                 la creación de Mineralizarte y obtener una comprensión integral
                 del proceso de desarrollo detrás de nuestra aplicación de
@@ -120,15 +120,17 @@ function AboutThisPj() {
           <div className="col-3"></div>
           <div className="col-1"></div>
           <div className="col-12 col-md-7">
-            <div className="d-flex justify-content-center align-items-start pt-5 flex-column ">
-              <p className="FontGaramond fs-2  text-start">SOBRE MI</p>
-              <p className="FontLato fs-5 text-start LS">
+            <div className="d-flex justify-content-center align-items-start pt-md-5  flex-column  FilterResponsive">
+              <p className="FontGaramond fs-2  text-center text-md-start w-100">
+                SOBRE MI
+              </p>
+              <p className="FontLato fs-5 text-center text-md-start LS">
                 Soy Desarrollador Jr FullStack && Técnico en Informatica con
                 varios años de experiencia en el soporte de Infraestructuras y
                 me apasiona resolver problemas. Por esta misma razon decicdi
                 salir de mi zona de confort y pasarme al mundo del desarrollo.
               </p>
-              <p className="FontLato fs-5  text-start LS">
+              <p className="FontLato fs-5  text-center text-md-start LS">
                 Tambien soy bailarin de danzas urbanas y me apasiona el
                 movimiento y la música. Actualmente me encuentro radicado en
                 Montevideo - Uruguay Nomada Digital!
@@ -136,27 +138,29 @@ function AboutThisPj() {
             </div>
           </div>
           <div className="col-12 col-md-4 ">
-            <div className="CardOfMe pt-4 pb-3  border mt-4">
-              <img
-                src={Yo}
-                className="Yo"
-                alt="Foto de Lautaro Lopez, desarrollador del proyecto."
-              />
-              <h5 className="mt-3 text-center">Lautaro López Diaz</h5>
-              <h6 className="text-center">Full Stack Developer</h6>
-              <div>
-                <a
-                  href="https://www.linkedin.com/in/lautaro-lopez-diaz/ "
-                  className="text-decoration-none text-white"
-                >
-                  <i className="fa-brands fa-linkedin pe-2 fs-3"></i>
-                </a>
-                <a
-                  href="https://github.com/lautato15 "
-                  className="text-decoration-none text-white"
-                >
-                  <i className="fa-brands fa-github pe-2 fs-3"></i>{" "}
-                </a>
+            <div className="h-100 d-flex justify-content-center align-items-center">
+              <div className="CardOfMe pt-4 pb-3  border mt-4">
+                <img
+                  src={Yo}
+                  className="Yo"
+                  alt="Foto de Lautaro Lopez, desarrollador del proyecto."
+                />
+                <h5 className="mt-3 text-center">Lautaro López Diaz</h5>
+                <h6 className="text-center">Full Stack Developer</h6>
+                <div>
+                  <a
+                    href="https://www.linkedin.com/in/lautaro-lopez-diaz/ "
+                    className="text-decoration-none text-white"
+                  >
+                    <i className="fa-brands fa-linkedin pe-2 fs-3"></i>
+                  </a>
+                  <a
+                    href="https://github.com/lautato15 "
+                    className="text-decoration-none text-white"
+                  >
+                    <i className="fa-brands fa-github pe-2 fs-3"></i>{" "}
+                  </a>
+                </div>
               </div>
             </div>
           </div>

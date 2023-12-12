@@ -23,7 +23,7 @@
     border-radius: 50%;
 }
 .CardOfMe{
-    max-width: 290px;
+   width: 290px;
     background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     align-items: center;
@@ -39,4 +39,7 @@
 }
 .LS{
     letter-spacing: 1.2px;
+}
+.FilterResponsive{
+    background-color: rgba(0, 0, 0, 0.7);
 }
