@@ -53,7 +53,7 @@ function Contact() {
           <p className="FontLato text-center fs-6 text-white">
             Nos comunicaremos con usted en el correr de dos días.
           </p>
-          <form action="" className="row">
+          <div className="row">
             <div className="col-12 col-md-6 d-flex flex-column my-2">
               <label htmlFor="name" className="fs-6 my-2">
                 Nombre *
@@ -75,7 +75,7 @@ function Contact() {
             <button className="btn btn-dark bg-black rounded-0 w-25 ms-auto me-auto mt-4">
               ENVIAR
             </button>
-          </form>
+          </div>
         </div>
       </div>
     </div>
