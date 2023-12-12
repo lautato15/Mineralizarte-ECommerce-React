@@ -58,7 +58,12 @@ function Contact() {
               <label htmlFor="name" className="fs-6 my-2">
                 Nombre <span className="text-danger">*</span>
               </label>
-              <input type="text" id="name" name="name" className="w-100" />
+              <input
+                type="text"
+                id="name"
+                name="name"
+                className="form-control"
+              />
             </div>
             <div className="col-12 col-md-6 d-flex flex-column my-2">
               <label htmlFor="mail" className="fs-6 my-2">
