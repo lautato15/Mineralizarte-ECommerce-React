@@ -1,8 +1,14 @@
-import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import CounterCart from "../CounterCart";
+import { useDispatch } from "react-redux";
+import { removeItem } from "../../../redux/cartSlice";
 
 function MainCartCanvas({ handleClose, cart }) {
+  const dispatch = useDispatch();
+
+  function handleDelItem(p) {
+    dispatch(removeItem(p.id));
+  }
   return cart.length > 0 ? (
     <div className="flex-grow-1 p-4">
       <div className="container">

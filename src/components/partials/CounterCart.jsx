@@ -1,12 +1,20 @@
 import { Button, ButtonGroup } from "react-bootstrap";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addItem, subItem } from "../../redux/cartSlice";
 import InputCart from "./InputCart";
+import { toast } from "react-hot-toast";
 
 function CounterCart({ product }) {
+  const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
+
   const handleAddBtn = (product) => {
-    dispatch(addItem(product));
+    if (product.counter >= 1 && product.counter < Number(product.stock)) {
+      dispatch(addItem(product));
+    } else
+      toast.error(
+        product.stock + " es el Stock con el que contamos por el momento."
+      );
   };
 
   const handleSubBtn = (product) => {
