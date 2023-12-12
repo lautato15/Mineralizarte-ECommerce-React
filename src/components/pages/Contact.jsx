@@ -46,7 +46,7 @@ function Contact() {
         </div>
       </div>
       <div className="DivContactForm">
-        <div className="NotInvert">
+        <div className="NotInvert" style={{ overflow: "auto" }}>
           <p className="FontGaramond text-center fs-1 text-white">
             ¡Envíanos tus preguntas!
           </p>
@@ -58,12 +58,7 @@ function Contact() {
               <label htmlFor="name" className="fs-6 my-2">
                 Nombre <span className="text-danger">*</span>
               </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                className="form-control"
-              />
+              <input type="text" id="name" name="name" />
             </div>
             <div className="col-12 col-md-6 d-flex flex-column my-2">
               <label htmlFor="mail" className="fs-6 my-2">
