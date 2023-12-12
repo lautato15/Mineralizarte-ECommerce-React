@@ -12,31 +12,43 @@ function Slide() {
       <Carousel.Item>
         <img src={slide1} text="First slide" className="w-100" />
         <Carousel.Caption className="CaptionSlidePosition">
-          <h3 className="SlideText mt-5 mt-md-0">Ahorra un 70%!</h3>
-          <p className="SlideSubText"> VENTA DE MEDIO AÑO</p>
-          <Button bsPrefix="BtnSlide" variant="outline-light" radius="none">
-            MÁS VENDIDOS
-          </Button>
+          <div className="h-100 w-100 d-flex justify-content-center align-items-center flex-column">
+            <h3 className="SlideText mt-2 mt-md-0 mb-0 mb-md-2">
+              Ahorra un 70%!
+            </h3>
+            <p className="SlideSubText"> VENTA DE MEDIO AÑO</p>
+            <Button bsPrefix="BtnSlide" variant="outline-light" radius="none">
+              MÁS VENDIDOS
+            </Button>
+          </div>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img src={slide2} text="Second slide" className="w-100" />
         <Carousel.Caption className="CaptionSlidePosition">
-          <h3 className="SlideText">Lo mejor de lo mejor!</h3>
-          <p className="SlideSubText"> VENTA DE MEDIO AÑO</p>
-          <Button bsPrefix="BtnSlide" variant="outline-light">
-            MÁS VENDIDOS
-          </Button>
+          <div className="h-100 w-100 d-flex justify-content-center align-items-center flex-column">
+            <h3 className="SlideText mt-2 mt-md-0 mb-0 mb-md-2">
+              Lo mejor de lo mejor!
+            </h3>
+            <p className="SlideSubText"> VENTA DE MEDIO AÑO</p>
+            <Button bsPrefix="BtnSlide" variant="outline-light" radius="none">
+              MÁS VENDIDOS
+            </Button>
+          </div>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img src={slide3} text="Third slide" className="w-100" />
         <Carousel.Caption className="CaptionSlidePosition">
-          <h3 className="SlideText">¡Decile hola a la Novedad!</h3>
-          <p className="SlideSubText"> VENTA DE MEDIO AÑO</p>
-          <Button bsPrefix="BtnSlide" variant="outline-light">
-            MÁS VENDIDOS
-          </Button>
+          <div className="h-100 w-100 d-flex justify-content-center align-items-center flex-column">
+            <h3 className="SlideText mt-2 mt-md-0 mb-0 mb-md-2">
+              ¡Decile hola a la Novedad!
+            </h3>
+            <p className="SlideSubText"> VENTA DE MEDIO AÑO</p>
+            <Button bsPrefix="BtnSlide" variant="outline-light" radius="none">
+              MÁS VENDIDOS
+            </Button>
+          </div>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
