@@ -66,7 +66,7 @@ function Ticket({
           <h5 className="FontGaramond text-center pt-4">
             Metodo de Pago <span className="text-danger">*</span>
           </h5>
-          <ul className="list-unstyled">
+          <ul className="list-unstyled ms-4">
             <li className=" my-3">
               <input
                 checked={paymentDetails === "transferencia_bancaria"}
