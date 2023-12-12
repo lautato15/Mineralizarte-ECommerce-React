@@ -124,7 +124,7 @@ function NavBar() {
             <NavDropdown
               title="Categorias"
               id="collasible-nav-dropdown"
-              className="rounded-0 bg-black ps-1 pt-1 BtnHover"
+              className="rounded-0 bg-black ps-md-1 ps-3 pt-1 BtnHover"
             >
               {categories.length > 0 &&
                 categories.map((c) => {
@@ -151,7 +151,7 @@ function NavBar() {
               }
               onClick={() => setIsOpen(false)}
             >
-              Sobre Este Proyecto!
+              <span className="heartbeat">Sobre Este Proyecto!</span>
             </NavLink>
           </Nav>
         </Navbar.Collapse>
